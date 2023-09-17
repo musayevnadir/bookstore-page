@@ -1,1 +1,10 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+/** @format */
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: red;
+}/*# sourceMappingURL=style.css.map */
