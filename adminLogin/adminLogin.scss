@@ -12,7 +12,7 @@ body {
 }
 
 .header {
-  //   background-color: green;
+  // background-color: green;
   margin-top: 75px;
   margin-left: 35px;
   margin-bottom: 121px;
@@ -23,7 +23,7 @@ body {
   width: 40%;
   margin: 0 auto;
   padding-top: 69px;
- margin-bottom: 20px;
+  margin-bottom: 20px;
 
   .admin-logintext {
     // background-color: green;
@@ -49,35 +49,35 @@ body {
     margin: 0 auto;
     .input-userNameContainer {
       input {
+        outline: none;
         width: 100%;
         padding-left: 51px;
         padding-top: 18px;
         padding-bottom: 18px;
         margin-bottom: 34px;
-        color: #fff;
+        color: #797667;
         font-family: $ff;
         font-size: 19px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        outline: none;
       }
     }
 
     .input-passwordContainer {
       input {
+        outline: none;
         width: 100%;
         padding-left: 51px;
         padding-top: 18px;
         padding-bottom: 18px;
         margin-bottom: 84px;
-        color: #fff;
+        color: #797667;
         font-family: $ff;
         font-size: 19px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        outline: none;
       }
     }
 
@@ -126,14 +126,6 @@ body {
     img {
       width: 151.217px;
       height: 54px;
-    }
-  }
-}
-
-@media (max-width: 280px) {
-  .admin-logintext {
-    h1 {
-      color: red;
     }
   }
 }
