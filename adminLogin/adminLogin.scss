@@ -1,131 +1,131 @@
 /** @format */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 $ff: Crimson Text;
 
 body {
-    background-color: #720418;
+  background-color: #720418;
 }
 
 .header {
-    background-color: green;
-    margin-top: 75px;
-    margin-left: 35px;
-    margin-bottom: 121px;
+  // background-color: green;
+  margin-top: 75px;
+  margin-left: 35px;
+  margin-bottom: 121px;
 }
 
 .main {
-    background-color: #fff;
-    width: 40%;
+  background-color: #fff;
+  width: 40%;
+  margin: 0 auto;
+  padding-top: 69px;
+  margin-bottom: 20px;
+
+  .admin-logintext {
+    // background-color: green;
+    margin-bottom: 18px;
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 18px;
+      color: #000;
+      font-family: Montserrat;
+      font-size: 44px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-align: center;
+    }
+  }
+
+  .inputs-container {
+    // background-color: aqua;
+    width: 80%;
     margin: 0 auto;
-    padding-top: 69px;
-    margin-bottom: 20px;
+    .input-userNameContainer {
+      input {
+        outline: none;
+        width: 100%;
+        padding-left: 51px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        margin-bottom: 34px;
+        color: #797667;
+        font-family: $ff;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
 
-    .admin-logintext {
-        background-color: green;
+    .input-passwordContainer {
+      input {
+        outline: none;
+        width: 100%;
+        padding-left: 51px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        margin-bottom: 84px;
+        color: #797667;
+        font-family: $ff;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    .btn-joinContainer {
+      button {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 18px;
         margin-bottom: 18px;
-        h1 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 18px;
-            color: #000;
-            font-family: Montserrat;
-            font-size: 44px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            text-align: center;
-        }
+        border-radius: 5px;
+        border: 1px solid #cecece;
+        background: #e16a00;
+        color: #fff;
+        text-align: center;
+        font-family: $ff;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        cursor: pointer;
+      }
     }
-
-    .inputs-container {
-        background-color: aqua;
-        width: 80%;
-        margin: 0 auto;
-        .input-userNameContainer {
-            input {
-                outline: none;
-                width: 100%;
-                padding-left: 51px;
-                padding-top: 18px;
-                padding-bottom: 18px;
-                margin-bottom: 34px;
-                color: #797667;
-                font-family: $ff;
-                font-size: 19px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-            }
-        }
-
-        .input-passwordContainer {
-            input {
-                outline: none;
-                width: 100%;
-                padding-left: 51px;
-                padding-top: 18px;
-                padding-bottom: 18px;
-                margin-bottom: 84px;
-                color: #797667;
-                font-family: $ff;
-                font-size: 19px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-            }
-        }
-
-        .btn-joinContainer {
-            button {
-                width: 100%;
-                padding-top: 20px;
-                padding-bottom: 18px;
-                margin-bottom: 18px;
-                border-radius: 5px;
-                border: 1px solid #cecece;
-                background: #e16a00;
-                color: #fff;
-                text-align: center;
-                font-family: $ff;
-                font-size: 19px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-                cursor: pointer;
-            }
-        }
-    }
+  }
 }
 
 // Response Login Page CSS
 
 @media (max-width: 961px) {
-    .header {
-        // background-color: greenyellow;
-        width: 95%;
-        margin: 0 auto;
-        margin-bottom: 95px;
-    }
+  .header {
+    // background-color: greenyellow;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 95px;
+  }
 
-    .main {
-        width: 80%;
-        margin: 0 auto;
-    }
+  .main {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 300px) {
-    .header {
-        margin: 0 auto;
-        margin-bottom: 95px;
-        img {
-            width: 151.217px;
-            height: 54px;
-        }
+  .header {
+    margin: 0 auto;
+    margin-bottom: 95px;
+    img {
+      width: 151.217px;
+      height: 54px;
     }
+  }
 }
