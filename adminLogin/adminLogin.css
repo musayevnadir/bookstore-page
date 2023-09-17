@@ -10,6 +10,7 @@ body {
 }
 
 .header {
+  background-color: green;
   margin-top: 75px;
   margin-left: 35px;
   margin-bottom: 121px;
@@ -23,6 +24,7 @@ body {
   margin-bottom: 20px;
 }
 .main .admin-logintext {
+  background-color: green;
   margin-bottom: 18px;
 }
 .main .admin-logintext h1 {
@@ -39,6 +41,7 @@ body {
   text-align: center;
 }
 .main .inputs-container {
+  background-color: aqua;
   width: 80%;
   margin: 0 auto;
 }
