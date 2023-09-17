@@ -1,7 +1,6 @@
 /** @format */
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -23,21 +22,13 @@ body {
   padding-top: 69px;
   margin-bottom: 20px;
 }
-
 .main .admin-logintext {
   margin-bottom: 18px;
 }
-
 .main .admin-logintext h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-top: 18px;
   color: #000;
   font-family: Montserrat;
@@ -47,12 +38,10 @@ body {
   line-height: normal;
   text-align: center;
 }
-
 .main .inputs-container {
   width: 80%;
   margin: 0 auto;
 }
-
 .main .inputs-container .input-userNameContainer input {
   outline: none;
   width: 100%;
@@ -67,7 +56,6 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-
 .main .inputs-container .input-passwordContainer input {
   outline: none;
   width: 100%;
@@ -82,7 +70,6 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-
 .main .inputs-container .btn-joinContainer button {
   width: 100%;
   padding-top: 20px;
@@ -112,7 +99,6 @@ body {
     margin: 0 auto;
   }
 }
-
 @media (max-width: 300px) {
   .header {
     margin: 0 auto;
@@ -122,5 +108,4 @@ body {
     width: 151.217px;
     height: 54px;
   }
-}
-/*# sourceMappingURL=adminLogin.css.map */
+}/*# sourceMappingURL=adminLogin.css.map */
