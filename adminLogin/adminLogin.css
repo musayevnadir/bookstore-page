@@ -43,32 +43,32 @@ body {
   margin: 0 auto;
 }
 .main .inputs-container .input-userNameContainer input {
+  outline: none;
   width: 100%;
   padding-left: 51px;
   padding-top: 18px;
   padding-bottom: 18px;
   margin-bottom: 34px;
-  color: #fff;
+  color: #797667;
   font-family: Crimson Text;
   font-size: 19px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  outline: none;
 }
 .main .inputs-container .input-passwordContainer input {
+  outline: none;
   width: 100%;
   padding-left: 51px;
   padding-top: 18px;
   padding-bottom: 18px;
   margin-bottom: 84px;
-  color: #fff;
+  color: #797667;
   font-family: Crimson Text;
   font-size: 19px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  outline: none;
 }
 .main .inputs-container .btn-joinContainer button {
   width: 100%;
@@ -107,10 +107,5 @@ body {
   .header img {
     width: 151.217px;
     height: 54px;
-  }
-}
-@media (max-width: 280px) {
-  .admin-logintext h1 {
-    color: red;
   }
 }/*# sourceMappingURL=adminLogin.css.map */
