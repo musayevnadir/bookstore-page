@@ -1,1 +1,9 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"bookpage.css"}
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "bookpage.scss"
+    ],
+    "names": [],
+    "file": "bookpage.css"
+}
