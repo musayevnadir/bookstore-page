@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "adminPanel.scss"
+    ],
+    "names": [],
+    "file": "adminPanel.css"
+}
