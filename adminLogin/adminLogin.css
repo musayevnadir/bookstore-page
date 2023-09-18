@@ -90,99 +90,102 @@ body {
   min-height: 600px;
 }
 
+.container {
+  margin: 0 auto;
+}
+
 .header {
-  margin-top: 3rem;
-  margin-bottom: 5rem;
+  margin: 3rem 2rem 5rem;
 }
 
 .main {
   background-color: #fff;
-  width: 40%;
+  width: 100%;
+  max-width: 662px;
   margin: 0 auto;
-  padding-top: 69px;
-  margin-bottom: 20px;
+  padding-top: 4.5rem;
+  margin-bottom: 1.2rem;
 }
 .main .admin-logintext {
-  margin-bottom: 18px;
+  margin-bottom: 1.1rem;
 }
 .main .admin-logintext h1 {
   display: flex;
+  width: 100%;
+  max-width: 400px;
   justify-content: center;
   align-items: center;
-  margin-top: 18px;
+  margin-top: 1.1rem;
   color: #000;
-  font-family: Montserrat;
-  font-size: 44px;
-  font-style: normal;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.8rem;
   font-weight: 700;
   line-height: normal;
   text-align: center;
-}
-.main .inputs-container {
-  width: 80%;
   margin: 0 auto;
 }
-.main .inputs-container .input-userNameContainer input {
-  outline: none;
-  width: 100%;
-  padding-left: 51px;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  margin-bottom: 34px;
-  color: #797667;
-  font-size: 19px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+.main .inputs-container {
+  width: 90%;
+  margin: 0 auto;
 }
-.main .inputs-container .input-passwordContainer input {
+.main .inputs-container input {
   outline: none;
   width: 100%;
-  padding-left: 51px;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  margin-bottom: 84px;
+  padding-left: 3.2rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  margin-bottom: 4rem;
   color: #797667;
-  font-size: 19px;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  border: 1px solid #cecece;
 }
 .main .inputs-container .btn-joinContainer button {
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 18px;
-  margin-bottom: 18px;
-  border-radius: 5px;
-  border: 1px solid #cecece;
-  background: #e16a00;
+  padding-top: 1.2rem;
+  padding-bottom: 1.1rem;
+  margin-bottom: 1.1rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid #cecece;
+  background-color: #e16a00;
   color: #fff;
   text-align: center;
-  font-size: 19px;
-  font-style: normal;
+  font-family: "Crimson Text", serif;
+  font-size: 1.2rem;
   font-weight: 700;
   line-height: normal;
   cursor: pointer;
+  transition: 0.3s ease;
+}
+.main .inputs-container .btn-joinContainer button:hover {
+  background-color: #720418;
 }
 
 @media (max-width: 961px) {
+  html {
+    font-size: 12px;
+  }
   .header {
     width: 95%;
     margin: 0 auto;
-    margin-bottom: 95px;
+    margin-bottom: 6rem;
   }
   .main {
     width: 80%;
     margin: 0 auto;
   }
 }
-@media (max-width: 300px) {
+@media all and (max-width: 300px) {
+  html {
+    font-size: 9px;
+  }
   .header {
     margin: 0 auto;
-    margin-bottom: 95px;
+    margin-bottom: 6rem;
   }
   .header img {
-    width: 151.217px;
-    height: 54px;
+    width: 25rem;
   }
 }/*# sourceMappingURL=adminLogin.css.map */
