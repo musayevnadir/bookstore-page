@@ -1,1 +1,118 @@
 @import "./config";
+
+// Header nav styles
+.header-container {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-family: $ff-montserrat;
+        margin-bottom: 9rem;
+
+        img {
+            cursor: pointer;
+        }
+
+        nav {
+            width: 35%;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+
+            a {
+                display: flex;
+                transition: 0.3s ease;
+            }
+
+            a:hover {
+                text-decoration: underline;
+                color: $orange-btn-dark;
+                font-weight: 700;
+            }
+
+            li {
+                list-style: none;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: $home-text-color;
+            font-weight: 400;
+        }
+
+        .join-us {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 12%;
+            font-size: 0.9rem;
+            font-family: $ff-roboto;
+
+            img {
+                margin-right: 0.6rem;
+                cursor: auto;
+            }
+        }
+    }
+}
+
+// Header section styles
+
+.header-section-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $home-text-color;
+
+    img {
+        margin-right: 1.6rem;
+    }
+
+    .header-section-left {
+        font-family: $ff-montserrat;
+        max-width: 400px;
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+        }
+        p {
+            font-size: 0.8rem;
+            line-height: 1.9;
+            margin-bottom: 1.3rem;
+            font-weight: 400;
+        }
+
+        button {
+            @include button(
+                $orange-btn-dark,
+                $ff-montserrat,
+                0.8rem,
+                900,
+                50%,
+                0.9rem 1rem
+            );
+            border-radius: 0;
+            text-align: left;
+        }
+
+        button:hover {
+            background-color: $bg-admin;
+        }
+    }
+}
+
+.main-container {
+    section {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+}
