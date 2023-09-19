@@ -80,7 +80,7 @@
     }
 
     .main-page {
-      background-color: #00bfff;
+      // background-color: #00bfff;
       width: 87.3%;
       margin-left: 2.06rem;
 
@@ -323,6 +323,8 @@
     }
   }
 
+  // ? Joins Us
+
   .join-us {
     h4 {
       color: $header-gray;
@@ -384,6 +386,78 @@
         font-weight: 400;
         line-height: 115%;
       }
+    }
+  }
+
+  // ? Book
+  .book {
+    h4 {
+      color: $header-gray;
+      font-family: $ff-montserrat;
+      font-size: 1.875rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 196.187%;
+      margin-bottom: 1.625rem;
+    }
+  }
+
+  .book-contect {
+    margin-bottom: 18rem;
+    .title-category-book {
+      display: flex;
+      gap: 11.25rem;
+      padding-left: 1.875rem;
+      background-color: $bg-admin;
+      p {
+        color: #fff;
+        font-family: $ff-nunito;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+    }
+
+    .info-book {
+      background-color: #fff;
+      box-shadow: 0px -1px 0px 0px #e6e7e9 inset, 0px 1px 0px 0px #e6e7e9 inset;
+      display: flex;
+      gap: 9.5rem;
+      padding-left: 1.875rem;
+
+      p {
+        color: #05111a;
+        font-family: $ff-nunito;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+  }
+
+  // ? Contact Us
+
+  .contact-us {
+    h4 {
+      color: $header-gray;
+      font-family: $ff-montserrat;
+      font-size: 1.875rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 196.187%;
+      margin-bottom: 1.625rem;
     }
   }
 }

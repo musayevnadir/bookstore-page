@@ -157,7 +157,6 @@ select {
   text-decoration: underline;
 }
 .container .admin-panel-container .main-page {
-  background-color: #00bfff;
   width: 87.3%;
   margin-left: 2.06rem;
 }
@@ -423,4 +422,63 @@ select {
   font-style: normal;
   font-weight: 400;
   line-height: 115%;
+}
+.container .book h4 {
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 196.187%;
+  margin-bottom: 1.625rem;
+}
+.container .book-contect {
+  margin-bottom: 18rem;
+}
+.container .book-contect .title-category-book {
+  display: flex;
+  gap: 11.25rem;
+  padding-left: 1.875rem;
+  background-color: #720418;
+}
+.container .book-contect .title-category-book p {
+  color: #fff;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.container .book-contect .info-book {
+  background-color: #fff;
+  box-shadow: 0px -1px 0px 0px #e6e7e9 inset, 0px 1px 0px 0px #e6e7e9 inset;
+  display: flex;
+  gap: 9.5rem;
+  padding-left: 1.875rem;
+}
+.container .book-contect .info-book p {
+  color: #05111a;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.container .book-contect .info-book div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.container .contact-us h4 {
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 196.187%;
+  margin-bottom: 1.625rem;
 }/*# sourceMappingURL=adminPanel.css.map */
