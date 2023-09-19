@@ -83,4 +83,121 @@ select {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.header-container {
+  width: 92%;
+  max-width: 1440px;
+  margin: 1rem 5rem 0 6.5rem;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.main-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header-container header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 9rem;
+}
+.header-container header img {
+  cursor: pointer;
+}
+.header-container header nav {
+  width: 35%;
+}
+.header-container header nav ul {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.header-container header nav ul a {
+  display: flex;
+  transition: 0.3s ease;
+}
+.header-container header nav ul a:hover {
+  text-decoration: underline;
+  color: #e16a00;
+  font-weight: 700;
+}
+.header-container header nav ul li {
+  list-style: none;
+}
+.header-container header a {
+  text-decoration: none;
+  color: #241400;
+  font-weight: 400;
+}
+.header-container header .join-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12%;
+  font-size: 0.9rem;
+  font-family: "Roboto", sans-serif;
+}
+.header-container header .join-us img {
+  margin-right: 0.6rem;
+  cursor: auto;
+}
+
+.header-section-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #241400;
+}
+.header-section-info img {
+  margin-right: 1.6rem;
+}
+.header-section-info .header-section-left {
+  font-family: "Montserrat", sans-serif;
+  max-width: 400px;
+}
+.header-section-info .header-section-left h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+.header-section-info .header-section-left p {
+  font-size: 0.8rem;
+  line-height: 1.9;
+  margin-bottom: 1.3rem;
+  font-weight: 400;
+}
+.header-section-info .header-section-left button {
+  background-color: #e16a00;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 900;
+  width: 50%;
+  text-align: center;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1.1rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid #cecece;
+  color: #fff;
+  line-height: normal;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 0;
+  text-align: left;
+}
+.header-section-info .header-section-left button:hover {
+  background-color: #720418;
+}
+
+.main-container section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */

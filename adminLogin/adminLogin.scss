@@ -81,23 +81,14 @@ body {
 
         .btn-joinContainer {
             button {
-                width: 100%;
-                padding-top: 1.2rem;
-                padding-bottom: 1.1rem;
-                margin-bottom: 1.1rem;
-                border-radius: 0.4rem;
-                border: 0.1rem solid #cecece;
-                background-color: $orange-btn-dark;
-                color: #fff;
-                text-align: center;
-                font-family: $ff-crimson;
-                font-size: 1.2rem;
-                font-weight: 700;
-                line-height: normal;
-                cursor: pointer;
-                transition: 0.3s ease; // *
+                @include button(
+                    $orange-btn-dark,
+                    $ff-crimson,
+                    1.2rem,
+                    700,
+                    1.2rem 0
+                );
             }
-            // *
             button:hover {
                 background-color: $bg-admin;
             }
