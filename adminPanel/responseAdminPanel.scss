@@ -1,0 +1,31 @@
+/** @format */
+@media (max-width: 1242px) {
+  .container {
+    .nav-container {
+      display: none;
+    }
+
+    .admin-panel-container {
+      // background-color: red;
+      width: 100%;
+      .main-page {
+        width: 90%;
+        margin: 0 auto;
+        .search-result-container {
+          width: 100%;
+        }
+      }
+    }
+
+    .table-responsive {
+      overflow-x: scroll;
+    }
+    .table-books {
+      overflow-x: scroll;
+    }
+
+    .contact-us-resp {
+      overflow-x: scroll;
+    }
+  }
+}
