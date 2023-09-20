@@ -63,6 +63,15 @@
       gap: 0.375rem;
       margin-bottom: 1.5rem;
 
+      .hamburger-menu {
+        display: none;
+      }
+
+      .response-none-container {
+        display: flex;
+        align-items: center;
+      }
+
       img {
         padding-bottom: 0.5rem;
       }
@@ -141,12 +150,6 @@
           padding-right: 1.5rem;
           padding-top: 0.62rem;
           padding-bottom: 0.62rem;
-          // img {
-          //   padding-left: 1.5rem;
-          //   padding-right: 1.5rem;
-          //   padding-top: 0.62rem;
-          //   padding-bottom: 0.62rem;
-          // }
         }
       }
 
@@ -363,7 +366,7 @@
 
   table {
     border-collapse: collapse;
-    width: 60%;
+    width: 100%;
     border-radius: 16px 16px 0px 0px;
     overflow: hidden;
     margin-bottom: 60px;
@@ -391,6 +394,10 @@
 
   table tbody tr td::last-child {
     background-color: red;
+  }
+
+  .table-responsive {
+    width: 60%;
   }
 
   // ? Book

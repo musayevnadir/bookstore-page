@@ -86,6 +86,20 @@ select {
   margin: 0 auto;
 }
 
+.header-container {
+  width: 92%;
+  margin: 1rem 6.5rem 0 6.5rem;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.main-container {
+  width: 88%;
+  margin: 0 6.5rem 0 6.5rem;
+}
+
 .container {
   display: flex;
 }
@@ -139,6 +153,13 @@ select {
   align-items: center;
   gap: 0.375rem;
   margin-bottom: 1.5rem;
+}
+.container .admin-panel-container .admin .hamburger-menu {
+  display: none;
+}
+.container .admin-panel-container .admin .response-none-container {
+  display: flex;
+  align-items: center;
 }
 .container .admin-panel-container .admin img {
   padding-bottom: 0.5rem;
@@ -393,7 +414,7 @@ select {
 }
 .container table {
   border-collapse: collapse;
-  width: 60%;
+  width: 100%;
   border-radius: 16px 16px 0px 0px;
   overflow: hidden;
   margin-bottom: 60px;
@@ -416,6 +437,9 @@ select {
 }
 .container table tbody tr td::last-child {
   background-color: red;
+}
+.container .table-responsive {
+  width: 60%;
 }
 .container .book h4 {
   color: #333;

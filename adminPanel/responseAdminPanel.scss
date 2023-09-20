@@ -1,13 +1,30 @@
 /** @format */
-@media (max-width: 1242px) {
+@media (max-width: 1183px) {
   .container {
     .nav-container {
       display: none;
     }
 
     .admin-panel-container {
-      // background-color: red;
       width: 100%;
+      .admin {
+        background-color: red;
+        width: 90%;
+        margin: 0 auto;
+        .hamburger-menu {
+          display: block;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+
+      .admin {
+        .response-none-container {
+          display: none;
+        }
+      }
+
       .main-page {
         width: 90%;
         margin: 0 auto;
@@ -29,3 +46,12 @@
     }
   }
 }
+
+/** @format */
+// @media (max-width: 791px) {
+//   .admin-panel-container {
+//     .admin {
+//       width: 100%;
+//     }
+//   }
+// }
