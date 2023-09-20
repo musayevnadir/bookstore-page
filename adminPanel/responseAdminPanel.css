@@ -1,14 +1,25 @@
 /** @format */
 @media (max-width: 1242px) {
-  .nav-container {
+  .container .nav-container {
     display: none;
   }
-  .admin-panel-container {
+  .container .admin-panel-container {
     width: 100%;
   }
-  .main-page {
-    background-color: red;
+  .container .admin-panel-container .main-page {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .container .admin-panel-container .main-page .search-result-container {
     width: 100%;
-    margin-left: 0;
+  }
+  .container .table-responsive {
+    overflow-x: scroll;
+  }
+  .container .table-books {
+    overflow-x: scroll;
+  }
+  .container .contact-us-resp {
+    overflow-x: scroll;
   }
 }/*# sourceMappingURL=responseAdminPanel.css.map */

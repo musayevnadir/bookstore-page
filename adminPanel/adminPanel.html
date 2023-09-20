@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="./adminPanel.css" />
-    <link rel="stylesheet" href="./responseAdminPanel.css">
+    <link rel="stylesheet" href="./responseAdminPanel.css" />
     <!-- Script JS -->
     <script defer src="./adminPanel.js"></script>
     <title>Admin Panel Page</title>
@@ -170,73 +170,76 @@
           <div class="join-us">
             <h4>Join Us</h4>
           </div>
-          <div class="join-us-contect">
-            <div class="adress-container">
-              <p>#</p>
-              <p class="full-name">Full Name</p>
-              <p>Email Address</p>
-            </div>
-            <div class="users-container">
-              <p>1</p>
-              <p>Audrey Mckinney</p>
-              <p>lisa.watson@example.com</p>
-            </div>
-
-            <div class="users-container">
-              <p>2</p>
-              <p>Audrey Mckinney</p>
-              <p>lisa.watson@example.com</p>
-            </div>
-
-            <div class="users-container">
-              <p>3</p>
-              <p>Audrey Mckinney</p>
-              <p>lisa.watson@example.com</p>
-            </div>
-
-            <div class="users-container">
-              <p>4</p>
-              <p>Audrey Mckinney</p>
-              <p>lisa.watson@example.com</p>
-            </div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="thead">
+                <tr>
+                  <th>#</th>
+                  <th>Full Name</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Tehran Hamidli</td>
+                  <td>hamidlitehran@gmail.com</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Nadir Musayev</td>
+                  <td>nadirmusayev@gmail.com</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <!-- ? Books -->
           <div class="book">
             <h4>Books</h4>
           </div>
-          <div class="book-contect">
-            <div class="title-category-book">
-              <p>#</p>
-              <p>Title</p>
-              <p>Description</p>
-              <p>Category</p>
-              <p>Author</p>
-            </div>
-            <div class="info-book">
-              <p>1</p>
-              <div>
-                <img src="../images/angels-book-img.svg" alt="" />
-                <p>Angels</p>
-              </div>
-              <p>Lorem ipsum test...</p>
-              <p>Dedectiv</p>
-              <p>Dan Brown</p>
-            </div>
-
-            <div class="info-book">
-              <p>2</p>
-              <div>
-                <img src="../images/angels-book-img.svg" alt="" />
-                <p>Angels</p>
-              </div>
-              <p>Lorem ipsum test...</p>
-              <p>Dedectiv</p>
-              <p>Dan Brown</p>
-            </div>
+          <div class="table-books">
+            <table class="books">
+              <thead class="books-thead">
+                <tr>
+                  <th>#</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Angels</td>
+                  <td>Lorem ipsum dolor sit amet.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <!-- ? Contact Us -->
           <div class="contact-us">
             <h4>Contact Us</h4>
+          </div>
+          <div class="contact-us-resp">
+            <table class="contact">
+              <thead class="contact-thead">
+                <tr>
+                  <th>#</th>
+                  <th>Full Name</th>
+                  <th>Address</th>
+                  <th>Email Address</th>
+                  <th>Phone Number</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Tehran Hamidli</td>
+                  <td>Baku</td>
+                  <td>hamidlitehran@gmail.com</td>
+                  <td>0559804424</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

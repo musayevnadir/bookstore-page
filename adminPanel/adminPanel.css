@@ -83,7 +83,6 @@ select {
 }
 .container {
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -157,7 +156,6 @@ select {
   text-decoration: underline;
 }
 .container .admin-panel-container .main-page {
-  background-color: #00bfff;
   width: 87.3%;
   margin-left: 2.06rem;
 }
@@ -208,8 +206,9 @@ select {
   border-radius: 2.125rem;
   background-color: #ff8b00;
   cursor: pointer;
-}
-.container .admin-panel-container .main-page .search-input-btn .btn-searcn img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 0.62rem;
@@ -218,7 +217,7 @@ select {
 .container .admin-panel-container .main-page .search-result-container {
   border-radius: 35px;
   background: #f1f0f0;
-  width: 24.68rem;
+  width: 40%;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   padding-left: 2.31rem;
@@ -378,51 +377,45 @@ select {
   line-height: 196.187%;
   margin-bottom: 1.625rem;
 }
-.container .join-us-contect {
-  width: 100%;
-  margin-bottom: 8.5rem;
+.container .table-wrap {
+  width: 30%;
+  overflow-x: auto;
 }
-.container .join-us-contect .adress-container {
-  width: 50%;
+.container table,
+.container td,
+.container th {
+  text-align: center;
+  font-size: 16px;
+}
+.container table thead tr {
   background-color: #720418;
-  display: flex;
-  justify-content: space-between;
-}
-.container .join-us-contect .adress-container p {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 0.87rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 115%; /* 16.1px */
-  letter-spacing: 0.14px;
   color: #fff;
-  padding-right: 5rem;
-  padding-left: 1.25rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
-.container .join-us-contect .adress-container .full-name {
-  margin-right: 1.87rem;
+.container table {
+  border-collapse: collapse;
+  width: 60%;
+  border-radius: 16px 16px 0px 0px;
+  overflow: hidden;
+  margin-bottom: 60px;
 }
-.container .join-us-contect .users-container {
-  width: 50%;
-  background-color: #fff;
-  box-shadow: 0px -1px 0px 0px #e6e7e9 inset, 0px 1px 0px 0px #e6e7e9 inset;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 0.016rem solid gray;
+.container table tbody tr td {
+  border: 1px solid #ddd;
 }
-.container .join-us-contect .users-container p {
-  padding-right: 2.5rem;
-  padding-left: 1.25rem;
-  padding-top: 0.62rem;
-  padding-bottom: 0.62rem;
-  color: #05111a;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 0.87rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 115%;
+.container th,
+.container td {
+  padding: 15px;
+  white-space: nowrap;
+}
+.container table tbody tr:nth-child(odd) {
+  background: rgba(180, 180, 180, 0.2588235294);
+  color: #000;
+  /* font-weight: 300; */
+}
+.container .box-wrap {
+  padding: 0px 16px;
+}
+.container table tbody tr td::last-child {
+  background-color: red;
 }
 .container .book h4 {
   color: #333;
@@ -432,47 +425,6 @@ select {
   font-weight: 600;
   line-height: 196.187%;
   margin-bottom: 1.625rem;
-}
-.container .book-contect {
-  margin-bottom: 18rem;
-}
-.container .book-contect .title-category-book {
-  display: flex;
-  gap: 11.25rem;
-  padding-left: 1.875rem;
-  background-color: #720418;
-}
-.container .book-contect .title-category-book p {
-  color: #fff;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 115%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-.container .book-contect .info-book {
-  background-color: #fff;
-  box-shadow: 0px -1px 0px 0px #e6e7e9 inset, 0px 1px 0px 0px #e6e7e9 inset;
-  display: flex;
-  gap: 9.5rem;
-  padding-left: 1.875rem;
-}
-.container .book-contect .info-book p {
-  color: #05111a;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 115%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-.container .book-contect .info-book div {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 .container .contact-us h4 {
   color: #333;
