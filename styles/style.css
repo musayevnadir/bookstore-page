@@ -87,8 +87,7 @@ select {
 
 .header-container {
   width: 92%;
-  max-width: 1440px;
-  margin: 1rem 5rem 0 6.5rem;
+  margin: 1rem 6.5rem 0 6.5rem;
 }
 
 .wrapper {
@@ -96,8 +95,13 @@ select {
 }
 
 .main-container {
-  width: 80%;
-  margin: 0 auto;
+  width: 88%;
+  margin: 0 6.5rem 0 6.5rem;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fffaf5;
 }
 
 .header-container header {
@@ -105,7 +109,6 @@ select {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
   margin-bottom: 9rem;
 }
 .header-container header img {
@@ -154,12 +157,12 @@ select {
   justify-content: space-between;
   align-items: center;
   color: #241400;
+  margin-bottom: 8rem;
 }
 .header-section-info img {
   margin-right: 1.6rem;
 }
 .header-section-info .header-section-left {
-  font-family: "Montserrat", sans-serif;
   max-width: 400px;
 }
 .header-section-info .header-section-left h1 {
@@ -194,10 +197,82 @@ select {
   background-color: #720418;
 }
 
-.main-container section {
+.main-container h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.main-container .catalog {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10rem;
+}
+.main-container .catalog .catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+.main-container .catalog .catalog-grid .catalog-grid-item {
+  background-color: #fff;
+  color: #241400;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 1.2rem 2.5rem;
+  box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.main-container .stats {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+  color: #241400;
+}
+.main-container .stats .stats-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-container .stats .stats-info .stats-info-item {
+  display: flex;
+  align-items: center;
+}
+.main-container .stats .stats-info .stats-info-item h1 {
+  font-size: 3.2rem;
+  margin-right: 1rem;
+  font-weight: 900;
+}
+.main-container .stats .stats-info .stats-info-item p {
+  font-size: 0.8rem;
+}
+.main-container .delivery {
+  margin-bottom: 9rem;
+}
+.main-container .delivery p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 196.187%;
+}
+.main-container .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10rem;
+  margin: 0 auto 9rem;
+}
+.main-container .links-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-container .links-items a {
+  margin: 0 1.5rem;
 }/*# sourceMappingURL=style.css.map */
