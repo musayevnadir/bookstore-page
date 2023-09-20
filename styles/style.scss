@@ -1,5 +1,10 @@
 @import "./config";
 
+body {
+    font-family: $ff-montserrat;
+    background-color: $bg-body;
+}
+
 // Header nav styles
 .header-container {
     header {
@@ -7,7 +12,6 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        font-family: $ff-montserrat;
         margin-bottom: 9rem;
 
         img {
@@ -68,13 +72,13 @@
     justify-content: space-between;
     align-items: center;
     color: $home-text-color;
+    margin-bottom: 8rem;
 
     img {
         margin-right: 1.6rem;
     }
 
     .header-section-left {
-        font-family: $ff-montserrat;
         max-width: 400px;
 
         h1 {
@@ -107,12 +111,101 @@
     }
 }
 
+// Main section start
+
 .main-container {
-    section {
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .catalog {
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
-        text-align: center;
         align-items: center;
         justify-content: center;
+        margin-bottom: 10rem;
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+
+            .catalog-grid-item {
+                background-color: #fff;
+                color: $home-text-color;
+                font-weight: 700;
+                font-size: 0.9rem;
+                padding: 1.2rem 2.5rem;
+                box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.25);
+                text-align: center;
+                border-radius: 0.5rem;
+                cursor: pointer;
+            }
+        }
     }
+    .stats {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 10rem;
+        color: $home-text-color;
+
+        .stats-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .stats-info-item {
+                display: flex;
+                align-items: center;
+
+                h1 {
+                    font-size: 3.2rem;
+                    margin-right: 1rem;
+                    font-weight: 900;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    .delivery {
+        margin-bottom: 9rem;
+        p {
+            text-align: center;
+            font-weight: 400;
+            font-size: 0.9rem;
+            line-height: 196.187%;
+        }
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10rem;
+        margin: 0 auto 9rem;
+    }
+
+    .links-items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+            margin: 0 1.5rem;
+        }
+    }
+}
+
+// Footer styles
+footer {
 }

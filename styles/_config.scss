@@ -18,6 +18,7 @@ $admin-text-black: #030102;
 $bg-footer: #391f00;
 $home-text-color: #241400;
 $comment-text-color: #232323;
+$bg-body: #fffaf5;
 
 /* Box sizing rules */
 *,
@@ -108,8 +109,7 @@ select {
 
 .header-container {
     width: 92%;
-    max-width: 1440px;
-    margin: 1rem 5rem 0 6.5rem;
+    margin: 1rem 6.5rem 0 6.5rem;
 }
 
 .wrapper {
@@ -117,8 +117,11 @@ select {
 }
 
 .main-container {
-    width: 80%;
-    margin: 0 auto;
+    // width: 80%;
+    // margin: 1rem 5rem 0 6.5rem;
+    // max-width: 1440px;
+    width: 88%;
+    margin: 0 6.5rem 0 6.5rem;
 }
 
 @mixin button($bg-color, $ff, $fsz, $fw, $width, $padding) {
