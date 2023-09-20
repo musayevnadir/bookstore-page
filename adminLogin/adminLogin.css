@@ -144,18 +144,18 @@ body {
   border: 1px solid #cecece;
 }
 .main .inputs-container .btn-joinContainer button {
+  background-color: #e16a00;
+  font-family: "Crimson Text", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
   width: 100%;
+  text-align: center;
   padding-top: 1.2rem;
   padding-bottom: 1.1rem;
   margin-bottom: 1.1rem;
   border-radius: 0.4rem;
   border: 0.1rem solid #cecece;
-  background-color: #e16a00;
   color: #fff;
-  text-align: center;
-  font-family: "Crimson Text", serif;
-  font-size: 1.2rem;
-  font-weight: 700;
   line-height: normal;
   cursor: pointer;
   transition: 0.3s ease;
