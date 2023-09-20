@@ -5,9 +5,241 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="./adminPanel.css" />
+    <link rel="stylesheet" href="./responseAdminPanel.css">
+    <!-- Script JS -->
+    <script defer src="./adminPanel.js"></script>
+    <title>Admin Panel Page</title>
   </head>
   <body>
-    <h1>Hello I am admin panel</h1>
+    <div class="container">
+      <!-- ? Nav Left Contect -->
+      <div class="nav-container">
+        <div class="logo-admin-img">
+          <img src="../images/Logo-admin-panel.svg" alt="" />
+        </div>
+        <div class="nav-address">
+          <div class="nav-links">
+            <img src="../images/nav-logoImgBook.svg" alt="" />
+            <li>
+              <a href="#">Home</a>
+            </li>
+          </div>
+        </div>
+
+        <div class="nav-address">
+          <div class="nav-links">
+            <img src="../images/nav-logoImgBook.svg" alt="" />
+            <li>
+              <a href="#">Books</a>
+            </li>
+          </div>
+        </div>
+
+        <div class="nav-address">
+          <div class="nav-links">
+            <img src="../images/nav-logoImgBook.svg" alt="" />
+            <li>
+              <a href="#">About</a>
+            </li>
+          </div>
+        </div>
+
+        <div class="nav-address">
+          <div class="nav-links">
+            <img src="../images/nav-logoImgBook.svg" alt="" />
+            <li>
+              <a href="#">Join Us</a>
+            </li>
+          </div>
+        </div>
+
+        <div class="nav-address">
+          <div class="nav-links">
+            <img src="../images/nav-logoImgBook.svg" alt="" />
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </div>
+        </div>
+
+        <div class="nav-address">
+          <div class="nav-links">
+            <img src="../images/nav-logoImgBook.svg" alt="" />
+            <li>
+              <a href="#">Logout </a>
+            </li>
+          </div>
+        </div>
+      </div>
+      <!-- ? Right contect -->
+      <div class="admin-panel-container">
+        <div class="admin">
+          <img src="../images/admin-panel-icon.svg" alt="" />
+          <a href="#">Admin</a>
+        </div>
+
+        <div class="main-page">
+          <div class="add-book">
+            <h4>Add book</h4>
+            <h5>Search book</h5>
+            <div class="search-input-btn">
+              <input type="text" name="" id="" placeholder="Dan Brown" />
+              <div class="btn-searcn">
+                <img src="../images/lupa-img-button-adminpanel.svg" alt="" />
+              </div>
+            </div>
+            <div class="search-result-container">
+              <div class="searc-result">
+                <div>
+                  <img src="../images/clock-adinPanel.svg" alt="" />
+                  <p>Dan Brown Davinc</p>
+                </div>
+
+                <div>
+                  <img src="../images/clock-adinPanel.svg" alt="" />
+                  <p>Dan Brown Angel</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ? Book Form -->
+          <div class="book-form">
+            <h5>Book form</h5>
+          </div>
+          <div class="book-form-contect">
+            <div>
+              <h4>Book Name</h4>
+              <input type="text" placeholder="Angels" />
+            </div>
+
+            <div>
+              <h4>Author Name</h4>
+              <input type="text" placeholder="Dan Brown" />
+            </div>
+
+            <div>
+              <h4>Book Image Url</h4>
+              <input type="text" placeholder="Alex Smith" />
+            </div>
+
+            <div class="description">
+              <h4>Description</h4>
+              <input
+                type="text"
+                placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..."
+              />
+            </div>
+
+            <div>
+              <h4>Book Type</h4>
+              <input type="text" placeholder="Fantastic" />
+            </div>
+            <div>
+              <button>Add</button>
+            </div>
+          </div>
+
+          <!-- ? About  -->
+          <div class="add">
+            <h4>About Store</h4>
+          </div>
+          <div class="add-contect">
+            <div>
+              <h4>Title</h4>
+              <input type="text" placeholder="About Store" />
+            </div>
+            <div>
+              <h4>Book Image Url</h4>
+              <input type="text" placeholder="https://image:url/" />
+            </div>
+
+            <div class="description-about">
+              <h4>Description</h4>
+              <input
+                type="text"
+                placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..."
+              />
+            </div>
+            <div>
+              <button>About info add</button>
+            </div>
+          </div>
+          <!-- ? Join Us -->
+          <div class="join-us">
+            <h4>Join Us</h4>
+          </div>
+          <div class="join-us-contect">
+            <div class="adress-container">
+              <p>#</p>
+              <p class="full-name">Full Name</p>
+              <p>Email Address</p>
+            </div>
+            <div class="users-container">
+              <p>1</p>
+              <p>Audrey Mckinney</p>
+              <p>lisa.watson@example.com</p>
+            </div>
+
+            <div class="users-container">
+              <p>2</p>
+              <p>Audrey Mckinney</p>
+              <p>lisa.watson@example.com</p>
+            </div>
+
+            <div class="users-container">
+              <p>3</p>
+              <p>Audrey Mckinney</p>
+              <p>lisa.watson@example.com</p>
+            </div>
+
+            <div class="users-container">
+              <p>4</p>
+              <p>Audrey Mckinney</p>
+              <p>lisa.watson@example.com</p>
+            </div>
+          </div>
+          <!-- ? Books -->
+          <div class="book">
+            <h4>Books</h4>
+          </div>
+          <div class="book-contect">
+            <div class="title-category-book">
+              <p>#</p>
+              <p>Title</p>
+              <p>Description</p>
+              <p>Category</p>
+              <p>Author</p>
+            </div>
+            <div class="info-book">
+              <p>1</p>
+              <div>
+                <img src="../images/angels-book-img.svg" alt="" />
+                <p>Angels</p>
+              </div>
+              <p>Lorem ipsum test...</p>
+              <p>Dedectiv</p>
+              <p>Dan Brown</p>
+            </div>
+
+            <div class="info-book">
+              <p>2</p>
+              <div>
+                <img src="../images/angels-book-img.svg" alt="" />
+                <p>Angels</p>
+              </div>
+              <p>Lorem ipsum test...</p>
+              <p>Dedectiv</p>
+              <p>Dan Brown</p>
+            </div>
+          </div>
+          <!-- ? Contact Us -->
+          <div class="contact-us">
+            <h4>Contact Us</h4>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
