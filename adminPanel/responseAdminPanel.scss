@@ -1,5 +1,5 @@
 /** @format */
-@media (max-width: 1183px) {
+@media (max-width: 900px) {
   .container {
     .nav-container {
       display: none;
@@ -8,14 +8,12 @@
     .admin-panel-container {
       width: 100%;
       .admin {
-        background-color: red;
         width: 90%;
         margin: 0 auto;
         .hamburger-menu {
-          display: block;
           display: flex;
+          width: 100%;
           justify-content: space-between;
-          align-items: center;
         }
       }
 
@@ -46,12 +44,3 @@
     }
   }
 }
-
-/** @format */
-// @media (max-width: 791px) {
-//   .admin-panel-container {
-//     .admin {
-//       width: 100%;
-//     }
-//   }
-// }
