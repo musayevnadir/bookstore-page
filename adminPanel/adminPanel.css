@@ -157,6 +157,7 @@ select {
   text-decoration: underline;
 }
 .container .admin-panel-container .main-page {
+  background-color: #00bfff;
   width: 87.3%;
   margin-left: 2.06rem;
 }
