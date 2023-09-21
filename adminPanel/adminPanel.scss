@@ -166,6 +166,13 @@
           padding-right: 1.5rem;
           padding-top: 0.62rem;
           padding-bottom: 0.62rem;
+          transition: transform 0.3s ease;
+        }
+
+        .btn-searcn:hover {
+          transform: scale(
+            1.1
+          ); /* Увеличиваем изображение на 10% при наведении */
         }
       }
 
@@ -271,6 +278,14 @@
       line-height: normal;
       margin-bottom: 1rem;
     }
+
+    .btn-add {
+      transition: transform 0.3s ease;
+    }
+
+    .btn-add:hover {
+      transform: scale(1.01); /* Увеличиваем изображение на 10% при наведении */
+    }
   }
 
   // About
@@ -347,6 +362,14 @@
       font-weight: 400;
       line-height: normal;
       margin-bottom: 1rem;
+    }
+
+    .btn-about {
+      transition: transform 0.3s ease;
+    }
+
+    .btn-about:hover {
+      transform: scale(1.01); /* Увеличиваем изображение на 10% при наведении */
     }
   }
 

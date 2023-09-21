@@ -157,7 +157,7 @@ select {
     font-size: 14px;
   }
   .container {
-    width: 100%;
+    width: 50%;
   }
 }
 @media (max-width: 400px) {
@@ -165,6 +165,6 @@ select {
     font-size: 14px;
   }
   .container {
-    width: 100%;
+    width: 80%;
   }
 }/*# sourceMappingURL=hamburgerAdminPanel.css.map */

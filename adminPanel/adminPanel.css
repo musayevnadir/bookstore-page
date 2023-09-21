@@ -243,6 +243,10 @@ select {
   padding-right: 1.5rem;
   padding-top: 0.62rem;
   padding-bottom: 0.62rem;
+  transition: transform 0.3s ease;
+}
+.container .admin-panel-container .main-page .search-input-btn .btn-searcn:hover {
+  transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
 }
 .container .admin-panel-container .main-page .search-result-container {
   border-radius: 35px;
@@ -332,6 +336,12 @@ select {
   line-height: normal;
   margin-bottom: 1rem;
 }
+.container .book-form-contect .btn-add {
+  transition: transform 0.3s ease;
+}
+.container .book-form-contect .btn-add:hover {
+  transform: scale(1.01); /* Увеличиваем изображение на 10% при наведении */
+}
 .container .add h4 {
   color: #333;
   font-family: "Montserrat", sans-serif;
@@ -397,6 +407,12 @@ select {
   font-weight: 400;
   line-height: normal;
   margin-bottom: 1rem;
+}
+.container .add-contect .btn-about {
+  transition: transform 0.3s ease;
+}
+.container .add-contect .btn-about:hover {
+  transform: scale(1.01); /* Увеличиваем изображение на 10% при наведении */
 }
 .container .join-us h4 {
   color: #333;
