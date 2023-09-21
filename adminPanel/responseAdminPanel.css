@@ -26,6 +26,7 @@
     width: 100%;
   }
   .container .table-responsive {
+    width: 100%;
     overflow-x: scroll;
   }
   .container .table-books {
