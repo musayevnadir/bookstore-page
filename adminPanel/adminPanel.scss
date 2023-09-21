@@ -39,9 +39,13 @@
           font-style: normal;
           font-weight: 400;
           line-height: 196.187%;
+          transition: transform 0.3s ease;
         }
         a:hover {
           text-decoration: underline;
+          transform: scale(
+            1.1
+          ); /* Увеличиваем изображение на 10% при наведении */
         }
       }
     }
@@ -74,6 +78,13 @@
 
       img {
         padding-bottom: 0.5rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      img:hover {
+        transform: scale(
+          1.1
+        ); /* Увеличиваем изображение на 10% при наведении */
       }
       a {
         color: $admin-text-black;
@@ -83,9 +94,14 @@
         font-weight: 400;
         line-height: normal;
         text-decoration: none;
+        transition: transform 0.3s ease;
       }
       a:hover {
         text-decoration: underline;
+        // box-shadow: 0px 0px 10px rgb(220, 208, 208); /* Тень при наведении */
+        transform: scale(
+          1.1
+        ); /* Увеличиваем изображение на 10% при наведении */
       }
     }
 
@@ -367,7 +383,6 @@
   table {
     border-collapse: collapse;
     width: 100%;
-    border-radius: 16px 16px 0px 0px;
     overflow: hidden;
     margin-bottom: 60px;
   }
