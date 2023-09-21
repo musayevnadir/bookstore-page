@@ -210,7 +210,12 @@ body {
 footer {
     background-color: $bg-footer;
 
-    .footer-container {
-        display: flex;
+    .main-container {
+        padding: 3rem 0 2rem;
+
+        .footer-container {
+            display: flex;
+            padding: 1.5rem 0 1rem;
+        }
     }
 }

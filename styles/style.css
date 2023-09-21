@@ -280,6 +280,10 @@ body {
 footer {
   background-color: #391f00;
 }
-footer .footer-container {
+footer .main-container {
+  padding: 3rem 0 2rem;
+}
+footer .main-container .footer-container {
   display: flex;
+  padding: 1.5rem 0 1rem;
 }/*# sourceMappingURL=style.css.map */
