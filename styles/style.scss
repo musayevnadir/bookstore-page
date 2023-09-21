@@ -208,4 +208,9 @@ body {
 
 // Footer styles
 footer {
+    background-color: $bg-footer;
+
+    .footer-container {
+        display: flex;
+    }
 }
