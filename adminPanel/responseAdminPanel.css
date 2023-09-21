@@ -1,0 +1,40 @@
+/** @format */
+@media (max-width: 1183px) {
+  .container .nav-container {
+    display: none;
+  }
+  .container .admin-panel-container {
+    width: 100%;
+  }
+  .container .admin-panel-container .admin {
+    background-color: red;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .container .admin-panel-container .admin .hamburger-menu {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container .admin-panel-container .admin .response-none-container {
+    display: none;
+  }
+  .container .admin-panel-container .main-page {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .container .admin-panel-container .main-page .search-result-container {
+    width: 100%;
+  }
+  .container .table-responsive {
+    overflow-x: scroll;
+  }
+  .container .table-books {
+    overflow-x: scroll;
+  }
+  .container .contact-us-resp {
+    overflow-x: scroll;
+  }
+}
+/** @format *//*# sourceMappingURL=responseAdminPanel.css.map */

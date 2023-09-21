@@ -1,1 +1,461 @@
-/*# sourceMappingURL=adminPanel.css.map */
+/** @format */
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Montserrat:wght@400;500;600;700;900&family=Nunito+Sans:opsz@6..12&family=Preahvihear&family=Roboto:wght@300;400&family=Rubik:wght@400;500&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header-container {
+  width: 92%;
+  margin: 1rem 6.5rem 0 6.5rem;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.main-container {
+  width: 88%;
+  margin: 0 6.5rem 0 6.5rem;
+}
+
+.container {
+  display: flex;
+}
+.container .nav-container {
+  background-color: #720418;
+  width: 20%;
+}
+.container .logo-admin-img {
+  width: 100%;
+  margin: auto;
+  padding-top: 5.875rem;
+  padding-left: 2.17rem;
+  padding-right: 2.17rem;
+  margin-bottom: 0.5rem;
+}
+.container .nav-address {
+  width: 100%;
+  margin: 0 auto;
+}
+.container .nav-address .nav-links {
+  display: flex;
+  gap: 0.68rem;
+}
+.container .nav-address .nav-links li {
+  padding-bottom: 0.625rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.container .nav-address .nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 196.187%;
+}
+.container .nav-address .nav-links li a:hover {
+  text-decoration: underline;
+}
+.container .admin-panel-container {
+  background-color: #fffaf5;
+  width: 80%;
+}
+.container .admin-panel-container .admin {
+  margin-top: 3rem;
+  margin-right: 3.625rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.375rem;
+  margin-bottom: 1.5rem;
+}
+.container .admin-panel-container .admin .hamburger-menu {
+  display: none;
+}
+.container .admin-panel-container .admin .response-none-container {
+  display: flex;
+  align-items: center;
+}
+.container .admin-panel-container .admin img {
+  padding-bottom: 0.5rem;
+}
+.container .admin-panel-container .admin a {
+  color: #030102;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+.container .admin-panel-container .admin a:hover {
+  text-decoration: underline;
+}
+.container .admin-panel-container .main-page {
+  width: 87.3%;
+  margin-left: 2.06rem;
+}
+.container .admin-panel-container .main-page .add-book {
+  margin-bottom: 5.06rem;
+  padding-bottom: 0.625rem;
+}
+.container .admin-panel-container .main-page .add-book h4 {
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 196.187%;
+  margin-bottom: 1.625rem;
+}
+.container .admin-panel-container .main-page .add-book h5 {
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  margin-bottom: 0.375rem;
+}
+.container .admin-panel-container .main-page .search-input-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.375rem;
+}
+.container .admin-panel-container .main-page .search-input-btn input {
+  width: 24.68rem;
+  border-radius: 2.125rem;
+  padding-left: 2.06rem;
+  padding-top: 0.62rem;
+  padding-bottom: 0.62rem;
+  margin-bottom: 0.375rem;
+  font-family: "Preahvihear", sans-serif;
+  font-size: 0.87rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #797667;
+  border-radius: 2.125rem;
+  border: 0.125rem solid rgba(57, 31, 0, 0.48);
+  background: #fff;
+  outline: none;
+}
+.container .admin-panel-container .main-page .search-input-btn .btn-searcn {
+  border-radius: 2.125rem;
+  background-color: #ff8b00;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.62rem;
+  padding-bottom: 0.62rem;
+}
+.container .admin-panel-container .main-page .search-result-container {
+  border-radius: 35px;
+  background: #f1f0f0;
+  width: 40%;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 2.31rem;
+}
+.container .admin-panel-container .main-page .search-result-container .searc-result {
+  width: 90%;
+}
+.container .admin-panel-container .main-page .search-result-container .searc-result div {
+  display: flex;
+  gap: 1.5rem;
+}
+.container .admin-panel-container .main-page .search-result-container .searc-result div p {
+  color: #bcbcbc;
+  font-family: "Preahvihear", sans-serif;
+  font-size: 0.87rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.container .book-form h5 {
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 196.187%; /* 35.314px */
+}
+.container .book-form-contect {
+  border-radius: 20px;
+  background: #fff;
+  margin-bottom: 10.06rem;
+}
+.container .book-form-contect div {
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+.container .book-form-contect div h4 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #030102;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.container .book-form-contect div input {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #030102;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 100%;
+  border-radius: 0.625rem;
+  border: 1px solid #e2e6ee;
+  background: #fff;
+  box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
+  padding-left: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  outline: none;
+}
+.container .book-form-contect .description input {
+  height: 4.5rem;
+}
+.container .book-form-contect button {
+  width: 100%;
+  border-radius: 0.625rem;
+  background: #ff8b00;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+.container .add h4 {
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 196.187%;
+  margin-bottom: 1.625rem;
+}
+.container .add-contect {
+  border-radius: 20px;
+  background: #fff;
+  margin-bottom: 8.5rem;
+}
+.container .add-contect div {
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+.container .add-contect div h4 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #030102;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.container .add-contect div input {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #030102;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 100%;
+  border-radius: 0.625rem;
+  border: 1px solid #e2e6ee;
+  background: #fff;
+  box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
+  padding-left: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  outline: none;
+}
+.container .add-contect .description-about input {
+  height: 4.5rem;
+}
+.container .add-contect button {
+  width: 100%;
+  border-radius: 0.625rem;
+  background: #ff8b00;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+.container .join-us h4 {
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 196.187%;
+  margin-bottom: 1.625rem;
+}
+.container .table-wrap {
+  width: 30%;
+  overflow-x: auto;
+}
+.container table,
+.container td,
+.container th {
+  text-align: center;
+  font-size: 16px;
+}
+.container table thead tr {
+  background-color: #720418;
+  color: #fff;
+}
+.container table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 16px 16px 0px 0px;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+.container table tbody tr td {
+  border: 1px solid #ddd;
+}
+.container th,
+.container td {
+  padding: 15px;
+  white-space: nowrap;
+}
+.container table tbody tr:nth-child(odd) {
+  background: rgba(180, 180, 180, 0.2588235294);
+  color: #000;
+  /* font-weight: 300; */
+}
+.container .box-wrap {
+  padding: 0px 16px;
+}
+.container table tbody tr td::last-child {
+  background-color: red;
+}
+.container .table-responsive {
+  width: 60%;
+}
+.container .book h4 {
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 196.187%;
+  margin-bottom: 1.625rem;
+}
+.container .contact-us h4 {
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 196.187%;
+  margin-bottom: 1.625rem;
+}/*# sourceMappingURL=adminPanel.css.map */
