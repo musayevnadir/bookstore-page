@@ -274,4 +274,11 @@ body {
 }
 .main-container .links-items a {
   margin: 0 1.5rem;
+}
+
+footer {
+  background-color: #391f00;
+}
+footer .footer-container {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
