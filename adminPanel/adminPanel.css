@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /** @format */
 /** @format */
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Montserrat:wght@400;500;600;700;900&family=Nunito+Sans:opsz@6..12&family=Preahvihear&family=Roboto:wght@300;400&family=Rubik:wght@400;500&display=swap");
@@ -56,7 +57,6 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
-  display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -137,9 +137,11 @@ select {
   font-style: normal;
   font-weight: 400;
   line-height: 196.187%;
+  transition: transform 0.3s ease;
 }
 .container .nav-address .nav-links li a:hover {
   text-decoration: underline;
+  transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
 }
 .container .admin-panel-container {
   background-color: #fffaf5;
@@ -163,6 +165,11 @@ select {
 }
 .container .admin-panel-container .admin img {
   padding-bottom: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.container .admin-panel-container .admin img:hover {
+  transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
 }
 .container .admin-panel-container .admin a {
   color: #030102;
@@ -172,9 +179,11 @@ select {
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+  transition: transform 0.3s ease;
 }
 .container .admin-panel-container .admin a:hover {
   text-decoration: underline;
+  transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
 }
 .container .admin-panel-container .main-page {
   width: 87.3%;
@@ -415,7 +424,6 @@ select {
 .container table {
   border-collapse: collapse;
   width: 100%;
-  border-radius: 16px 16px 0px 0px;
   overflow: hidden;
   margin-bottom: 60px;
 }
