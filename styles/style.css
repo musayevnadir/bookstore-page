@@ -112,7 +112,6 @@ body {
 }
 .header-container header img {
   cursor: pointer;
-  width: 16%;
 }
 .header-container header nav {
   width: 35%;
@@ -244,6 +243,8 @@ body {
 .main-container .stats .stats-info .stats-info-item {
   display: flex;
   align-items: center;
+  width: 100%;
+  max-width: 230px;
 }
 .main-container .stats .stats-info .stats-info-item h1 {
   font-size: 3.2rem;
@@ -268,14 +269,19 @@ body {
   align-items: center;
   margin-bottom: 10rem;
   margin: 0 auto 9rem;
+  width: 100%;
 }
 .main-container .links-items {
   display: flex;
   align-items: center;
+  justify-content: center;
   justify-content: space-between;
 }
 .main-container .links-items a {
   margin: 0 1.5rem;
+}
+.main-container .links-items a img {
+  width: 100%;
 }
 
 footer {
@@ -332,6 +338,9 @@ footer .main-container button {
   html {
     font-size: 13px;
   }
+  .main-container .links-items {
+    width: 40%;
+  }
   .books {
     width: 60%;
   }
@@ -350,6 +359,9 @@ footer .main-container button {
   }
 }
 @media all and (max-width: 650px) {
+  html {
+    font-size: 16px;
+  }
   .header-section-info,
   .stats-info {
     display: flex;
@@ -358,109 +370,26 @@ footer .main-container button {
     justify-content: center;
     text-align: center;
   }
-  .navbar {
-    width: 100%;
-    box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  .header-container,
+  .header-section-info,
+  .main-container {
+    margin: 0 auto;
   }
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 62px;
+  .header-section-info {
+    margin-bottom: 5rem;
   }
-  .navbar ul {
-    display: flex;
-  }
-  .navbar .nav-container li {
-    list-style: none;
-  }
-  .navbar .nav-container a {
-    text-decoration: none;
-    color: #0e2431;
-    font-weight: 500;
-    font-size: 1.2rem;
-    padding: 0.7rem;
-  }
-  .navbar .nav-container a:hover {
-    font-weight: bolder;
-  }
-  .nav-container {
-    display: block;
-    position: relative;
-    height: 60px;
-  }
-  .nav-container .checkbox {
-    position: absolute;
-    display: block;
-    height: 32px;
-    width: 32px;
-    top: 20px;
-    left: 20px;
-    z-index: 5;
-    opacity: 0;
-    cursor: pointer;
-  }
-  .nav-container .hamburger-lines {
-    display: block;
-    height: 26px;
-    width: 32px;
-    position: absolute;
-    top: 17px;
-    left: 20px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .nav-container .hamburger-lines .line {
-    display: block;
-    height: 4px;
-    width: 100%;
-    border-radius: 10px;
-    background: #0e2431;
-  }
-  .nav-container .hamburger-lines .line1 {
-    transform-origin: 0% 0%;
-    transition: transform 0.4s ease-in-out;
-  }
-  .nav-container .hamburger-lines .line2 {
-    transition: transform 0.2s ease-in-out;
-  }
-  .nav-container .hamburger-lines .line3 {
-    transform-origin: 0% 100%;
-    transition: transform 0.4s ease-in-out;
-  }
-  .navbar ul {
-    padding-top: 120px;
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-    height: 100vh;
-    width: 100%;
-    transform: translate(-150%);
-    display: flex;
-    flex-direction: column;
-    margin-left: -40px;
-    padding-left: 50px;
-    transition: transform 0.5s ease-in-out;
+  .header-section-info .header-section-left button {
     text-align: center;
   }
-  .navbar ul li {
-    margin-bottom: 1.2rem;
-    font-size: 1.5rem;
-    font-weight: 500;
+  .main-container .catalog .catalog-grid {
+    display: flex;
+    flex-direction: column;
   }
-  .nav-container input[type=checkbox]:checked ~ ul {
-    transform: translateX(0);
+  .main-container .stats .stats-info .stats-info-item {
+    width: 100%;
+    max-width: 230px;
   }
-  .nav-container input[type=checkbox]:checked ~ .hamburger-lines .line1 {
-    transform: rotate(45deg);
-  }
-  .nav-container input[type=checkbox]:checked ~ .hamburger-lines .line2 {
-    transform: scaleY(0);
-  }
-  .nav-container input[type=checkbox]:checked ~ .hamburger-lines .line3 {
-    transform: rotate(-45deg);
-  }
-  .nav-container input[type=checkbox]:checked ~ .logo {
-    display: none;
+  .main-container .links-items {
+    width: 60%;
   }
 }/*# sourceMappingURL=style.css.map */
