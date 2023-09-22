@@ -1,4 +1,5 @@
 /** @format */
+/** @format */
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Montserrat:wght@400;500;600;700;900&family=Nunito+Sans:opsz@6..12&family=Preahvihear&family=Roboto:wght@300;400&family=Rubik:wght@400;500&display=swap");
 /* Box sizing rules */
 *,
@@ -55,7 +56,6 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
-  display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -83,6 +83,20 @@ select {
 .container {
   width: 100%;
   margin: 0 auto;
+}
+
+.header-container {
+  width: 92%;
+  margin: 1rem 6.5rem 0 6.5rem;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.main-container {
+  width: 88%;
+  margin: 0 6.5rem 0 6.5rem;
 }
 
 body {
@@ -128,7 +142,7 @@ body {
   width: 90%;
   margin: 0 auto;
 }
-.main .inputs-container input {
+.main .inputs-container .inpt-main {
   outline: none;
   width: 100%;
   padding-left: 3.2rem;
@@ -142,6 +156,32 @@ body {
   line-height: normal;
   border: 1px solid #cecece;
 }
+.main .inputs-container .inpt-main::-moz-placeholder {
+  color: #797667;
+}
+.main .inputs-container .inpt-main::placeholder {
+  color: #797667;
+}
+.main .inputs-container .inputRedPlaceholder {
+  outline: none;
+  width: 100%;
+  padding-left: 3.2rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  margin-bottom: 4rem;
+  color: #797667;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: 1px solid #cecece;
+}
+.main .inputs-container .inputRedPlaceholder::-moz-placeholder {
+  color: red;
+}
+.main .inputs-container .inputRedPlaceholder::placeholder {
+  color: red;
+}
 .main .inputs-container .btn-joinContainer button {
   background-color: #e16a00;
   font-family: "Crimson Text", serif;
@@ -149,8 +189,7 @@ body {
   font-weight: 700;
   width: 100%;
   text-align: center;
-  padding-top: 1.2rem;
-  padding-bottom: 1.1rem;
+  padding: 0.9rem 1rem;
   margin-bottom: 1.1rem;
   border-radius: 0.4rem;
   border: 0.1rem solid #cecece;
