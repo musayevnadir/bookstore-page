@@ -5,6 +5,7 @@
   }
   .container .admin-panel-container {
     width: 100%;
+    margin-left: 0;
   }
   .container .admin-panel-container .admin {
     width: 90%;
