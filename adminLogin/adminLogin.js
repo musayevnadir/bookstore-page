@@ -6,15 +6,17 @@ const inputPassword = document.querySelector(".input-password");
 const btnJoin = document.querySelector(".btn-join");
 
 // ! Name and Password
-const adminName = "admin";
-const adminPassword = "admin";
+const adminName = ["nadir", "ali"];
+const adminPassword = "12345";
 
 // ! Valideyt Function
 function isAdmin(name, password) {
   let boolName = false;
   let boolPassword = false;
+  let visitorAdmin = "";
+
+  // userName valide
   if (inputUserName.value == "") {
-    // userName valide
     if (inputUserName.classList.contains("inpt-main")) {
       inputUserName.classList.remove("inpt-main");
       inputUserName.classList.add("inputRedPlaceholder");
@@ -22,18 +24,22 @@ function isAdmin(name, password) {
       inputUserName.placeholder = "This field is required";
     }
   } else {
-    if (inputUserName.value == name) {
-      boolName = true;
-      inputUserName.style.borderColor = "green";
-      inputUserName.style.color = "green";
-    } else {
-      inputUserName.style.borderColor = "red";
-      inputUserName.style.color = "red";
+    for (let i = 0; i < name.length; i++) {
+      if (inputUserName.value == name[i]) {
+        boolName = true;
+        visitorAdmin = inputUserName.value.toUpperCase();
+        inputUserName.style.borderColor = "green";
+        inputUserName.style.color = "green";
+        break;
+      } else {
+        inputUserName.style.borderColor = "red";
+        inputUserName.style.color = "red";
+      }
     }
   }
 
+  // userPassword valide
   if (inputPassword.value == "") {
-    // userPassword valide
     if (inputPassword.classList.contains("inpt-main")) {
       inputPassword.classList.remove("inpt-main");
       inputPassword.classList.add("inputRedPlaceholder");
@@ -50,10 +56,10 @@ function isAdmin(name, password) {
       inputPassword.style.color = "red";
     }
   }
-  welcomeToAdminPanele(boolName, boolPassword);
+  welcomeToAdminPanele(boolName, boolPassword, visitorAdmin);
 }
 
-function welcomeToAdminPanele(name, password) {
+function welcomeToAdminPanele(name, password, visitorAdmin) {
   setTimeout(() => {
     if (name && password) {
       window.location.href = "../adminPanel/adminPanel.html";
@@ -62,6 +68,7 @@ function welcomeToAdminPanele(name, password) {
 }
 
 // ! Button Join Admin
+
 btnJoin.addEventListener("click", () => {
   isAdmin(adminName, adminPassword);
 });
