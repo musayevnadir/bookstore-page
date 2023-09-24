@@ -3,9 +3,16 @@
 
 .container {
   display: flex;
+  // ! Nav Container
   .nav-container {
     background-color: $bg-admin;
     width: 20%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto; /* Разрешить прокручивание вертикально */
   }
 
   // Nav Start
@@ -51,11 +58,14 @@
     }
   }
   // ------------------------------------
-
+  //  ! Admin panel container
   .admin-panel-container {
     background-color: #fffaf5;
-    // background-color: red;
     width: 80%;
+
+    margin-left: 20%; /* Учтите ширину .nav-container */
+    height: 100%; /* Заполнить оставшееся пространство по высоте */
+    overflow-y: auto; /* Разрешить прокручивание вертикально */
 
     .admin {
       // background-color: #ff1493;
