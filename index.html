@@ -27,11 +27,17 @@
                             <a href="#"><li>Search</li></a>
                         </ul>
                         
-                        
+        
                     </nav>
                     <div class="join-us">
-                        <img src="/images/akar-icons_heart.svg" alt="User icon" />
-                        <a href="">Join Us</a>
+                        <img style="cursor: pointer;" class="showPopupIcon" id="showPopupIcon" src="/images/akar-icons_heart.svg" alt="User icon" />
+                        <button class="showPopupBtn" id="showPopupBtn">Join Us</button>
+
+                        <div class="hamburger">
+                            <span class="burger-line"></span>
+                            <span class="burger-line"></span>
+                            <span class="burger-line"></span>
+                        </div>
                     </div>
                 </header>
                 <!-- Header info text -->
@@ -45,6 +51,18 @@
                         <button>Go to catalog</button>
                     </div>
                     <img class="books" src="/images/Books.jpg" alt="Books" />
+                    <div class="popup">
+                        <div class="popup-content">
+                            <span style="font-size: 2rem;" class="close" id="closePopup">&times;</span>
+                            
+                            <div class="popup-info">
+                                <h1>Join Us</h1>
+                                <input placeholder="Full name" type="text" name="" id="">
+                                <input placeholder="Email" type="email" name="" id="">
+                                <button>Join</button>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </div>
             <!-- Start of the main section -->
@@ -96,7 +114,7 @@
                             <h1>898</h1>
                             <p>Products catalog</p>
                         </div>
-                        <div class="stats-info-item">
+                        <div class="stats-info-item stats-info-item3">
                             <h1>8659</h1>
                             <p>Buyers</p>
                         </div>
@@ -138,8 +156,28 @@
              <!-- Footer -->
             <footer>
                 <div class="main-container">
+                    <!-- Mobile footer -->  
+                    <div class="mobile-footer-container">
+                        <header>
+                            <img src="/images/logoFooter.svg" alt="">
+
+                            <nav class="mobile-footer-nav" style="margin-right: 3rem;">
+                                <ul style="margin-bottom: 4rem;">
+                                    <a  href="#"><li>Home</li></a>
+                                    <a href="#"><li>Catalog</li></a>
+                                    <a href="#"><li >About Store</li></a>
+                                    <a href="#"><li>Contact Us</li></a>
+                                    <a href="#"><li>Search</li></a>
+                                </ul>
+                            </nav>
+                            </header>
+                            <hr style="width: 80%; margin-left: 4rem;"/>
+                            <p style="margin-bottom: .9rem;">Library Bookstore Eacamp</p>
+                            <p>© 2003-2023</p>
+                            </div>
+
                     <div class="footer-container">
-                    <img src="/images/logoFooter.svg" alt="">
+                        <img src="/images/logoFooter.svg" alt="">
 
                         <div class="footer-container-item footer-container1">
                             <h4>Popular</h4>

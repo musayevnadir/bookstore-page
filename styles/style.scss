@@ -7,12 +7,19 @@ body {
 
 // Header nav styles
 .header-container {
+    position: relative;
+
     header {
+        position: fixed;
+        top: 0;
+        width: 92%;
+        height: 8%;
+        background-color: #fff;
+        z-index: 100;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 9rem;
 
         img {
             cursor: pointer;
@@ -62,8 +69,109 @@ body {
                 margin-right: 0.6rem;
                 cursor: auto;
             }
+
+            .hamburger {
+                display: none;
+                flex-direction: column;
+                cursor: pointer;
+                margin-right: 3rem;
+
+                .burger-line {
+                    width: 2rem;
+                    height: 2px;
+                    background-color: #000;
+                    margin: 3px 0;
+                }
+            }
         }
     }
+}
+// Pop-up
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(36, 20, 0, 0.9);
+    z-index: 1;
+    margin: 0 auto;
+
+    .popup-content {
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        max-width: 500px;
+        min-height: 200px;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        text-align: center;
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .popup-info {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin: 0 auto;
+
+            h1 {
+                margin: 2rem 0;
+                font-size: 2rem;
+                font-weight: 700;
+            }
+
+            input {
+                margin: 0.5rem 0;
+                outline: none;
+                width: 100%;
+                padding-left: 3.2rem;
+                padding-top: 1.2rem;
+                padding-bottom: 1.2rem;
+                color: #797667;
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 400;
+                font-family: $ff-crimson;
+                line-height: normal;
+                border: 1px solid #cecece; // *
+            }
+
+            .inpt-main::placeholder {
+                color: #797667;
+            }
+
+            button {
+                @include button(
+                    $orange-btn-dark,
+                    $ff-crimson,
+                    1.2rem,
+                    700,
+                    100%,
+                    0.9rem 1rem
+                );
+                margin-top: 2rem;
+            }
+            button:hover {
+                background-color: $bg-admin;
+            }
+        }
+    }
+}
+
+.showPopupBtn {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
 // Header section styles
@@ -74,6 +182,7 @@ body {
     align-items: center;
     color: $home-text-color;
     margin-bottom: 8rem;
+    margin-top: 10rem;
 
     img {
         margin-right: 1.6rem;
@@ -280,6 +389,43 @@ footer {
     }
 }
 
+.mobile-footer-container {
+    display: none;
+
+    header {
+        img {
+            width: 70%;
+        }
+    }
+
+    .mobile-footer-nav ul {
+        display: flex;
+        justify-content: space-around;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            transition: 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: $orange-btn-dark;
+            font-weight: 700;
+        }
+
+        li {
+            list-style: none;
+            margin: 0 0.4rem;
+            text-align: left;
+        }
+    }
+
+    a {
+        font-weight: 400;
+    }
+}
+
 @media all and (max-width: 1200px) {
     html {
         font-size: 13px;
@@ -314,6 +460,41 @@ footer {
         font-size: 16px;
     }
 
+    .showPopupBtn {
+        display: none;
+    }
+    .header-container header .join-us {
+        .hamburger {
+            display: flex;
+        }
+
+        .header-container header nav ul {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .header-container header nav ul.active {
+            display: flex;
+        }
+    }
+    .header-section-info .header-section-left button {
+        width: 100%;
+        margin-left: 0.5rem;
+    }
+
+    .header-container header img {
+        width: 40%;
+    }
+
+    .header-container header .join-us img {
+        width: 100%;
+    }
+
     // .header-section-info {
     //     display: flex;
     //     flex-direction: column;
@@ -336,6 +517,7 @@ footer {
 
     .header-section-info {
         margin-bottom: 5rem;
+        margin-top: 5rem;
         .header-section-left {
             button {
                 text-align: center;
@@ -348,12 +530,53 @@ footer {
         flex-direction: column;
     }
 
-    .main-container .stats .stats-info .stats-info-item {
-        width: 100%;
-        max-width: 230px;
+    .main-container .stats .stats-info {
+        .stats-info-item {
+            width: 100%;
+            max-width: 230px;
+            justify-content: center;
+        }
+
+        .stats-info-item3 h1 {
+            margin-right: 3rem;
+        }
     }
 
     .main-container .links-items {
         width: 60%;
+    }
+
+    footer .main-container .footer-container,
+    .terms {
+        display: none;
+    }
+    .mobile-footer-container {
+        display: block;
+        text-align: center;
+    }
+
+    .header-container header nav,
+    .join-us a {
+        display: none;
+    }
+}
+
+@media all and (max-width: 510px) {
+    html {
+        font-size: 10px;
+    }
+
+    .header-section-info {
+        margin-top: 8rem;
+    }
+}
+
+@media all and (max-width: 260px) {
+    html {
+        font-size: 7px;
+    }
+
+    .header-section-info {
+        margin-top: 9rem;
     }
 }
