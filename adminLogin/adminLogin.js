@@ -62,6 +62,7 @@ function isAdmin(name, password) {
 function welcomeToAdminPanele(name, password, visitorAdmin) {
   setTimeout(() => {
     if (name && password) {
+      localStorage.setItem("name", visitorAdmin);
       window.location.href = "../adminPanel/adminPanel.html";
     }
   }, 1000);

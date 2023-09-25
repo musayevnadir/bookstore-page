@@ -36,4 +36,19 @@
   .container .contact-us-resp {
     overflow-x: scroll;
   }
+}
+@media (max-width: 900px) {
+  .container .container-hamburger-menu {
+    width: 40%;
+  }
+}
+@media (max-width: 584px) {
+  .container .container-hamburger-menu {
+    width: 50%;
+  }
+}
+@media (max-width: 460px) {
+  .container .container-hamburger-menu {
+    width: 80%;
+  }
 }/*# sourceMappingURL=responseAdminPanel.css.map */
