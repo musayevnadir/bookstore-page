@@ -9,11 +9,50 @@
     <link rel="stylesheet" href="./adminPanel.css" />
     <link rel="stylesheet" href="./responseAdminPanel.css" />
     <!-- Script JS -->
-    <script defer src="./adminPanel.js"></script>
+    <script type="module" defer src="./adminPanel.js"></script>
     <title>Admin Panel Page</title>
   </head>
   <body>
     <div class="container">
+      <!-- ! Hamburger menu -->
+      <div class="container-hamburger-menu">
+        <div class="hamburger-nav">
+          <img src="../images/logoAdminPanel-hamb.svg" alt="" />
+          <img class="button-x" src="../images/x-adminPanel-btn.svg" alt="" />
+        </div>
+
+        <div class="links-hamburger-nav">
+          <div class="home-nav-container">
+            <img src="../images/books-stack-of-three 2.svg" alt="" />
+            <a class="button-home-nav" href="#admin-panel-nav-link">Home</a>
+          </div>
+
+          <div class="home-nav-container">
+            <img src="../images/books-stack-of-three 2.svg" alt="" />
+            <a class="button-about-nav" href="#about-nav-link">About</a>
+          </div>
+
+          <div class="home-nav-container">
+            <img src="../images/books-stack-of-three 2.svg" alt="" />
+            <a class="button-join-nav" href="#join-us-nav-link">Join</a>
+          </div>
+
+          <div class="home-nav-container">
+            <img src="../images/books-stack-of-three 2.svg" alt="" />
+            <a class="button-contact-nav" href="#contact-us-nav-link"
+              >Contact</a
+            >
+          </div>
+
+          <div class="home-nav-container">
+            <img src="../images/books-stack-of-three 2.svg" alt="" />
+            <a class="button-logout-nav" href="../adminLogin/adminLogin.html"
+              >Logout</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- ! Hamburger menu end -->
       <!-- ? Nav Left Contect -->
       <div class="nav-container">
         <div class="logo-admin-img">
@@ -79,7 +118,7 @@
         <div class="admin">
           <div class="response-none-container">
             <img src="../images/admin-panel-icon.svg" alt="" />
-            <a href="#">Admin</a>
+            <a class="visitorAdmin" href="#">Admin</a>
           </div>
 
           <div class="hamburger-menu">
@@ -88,7 +127,11 @@
               src="../images/loqo-admPanel-resp.svg"
               alt=""
             />
-            <img src="../images/hamburger-menu-adminpanel.svg" alt="" />
+            <img
+              class="hamburger-button"
+              src="../images/hamburger-menu-adminpanel.svg"
+              alt=""
+            />
           </div>
         </div>
 
