@@ -528,10 +528,12 @@ footer .main-container button {
     rotate: 45deg;
     width: 1.4142135624rem;
     translate: 0 1px;
+    background-color: #fff;
   }
   .hamburger:has(input:checked)::after {
     rotate: -45deg;
     width: 1.4142135624rem;
+    background-color: #fff;
   }
   .hamburger input:checked {
     opacity: 0;

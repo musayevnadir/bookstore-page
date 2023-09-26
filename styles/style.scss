@@ -502,11 +502,13 @@ footer {
         rotate: 45deg;
         width: $x-width;
         translate: 0 calc(2px / 2);
+        background-color: #fff;
     }
 
     .hamburger:has(input:checked)::after {
         rotate: -45deg;
         width: $x-width;
+        background-color: #fff;
     }
     .hamburger input:checked {
         opacity: 0;
