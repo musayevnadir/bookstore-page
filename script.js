@@ -1,43 +1,56 @@
-const footer = document.querySelector(".footer-container");
-const footerP = document.querySelector(".terms");
+const popup = document.querySelector(".popup");
+const showPopupIcon = document.querySelector(".showPopupIcon");
+const showPopupButton = document.querySelector(".showPopupBtn");
+const closePopupButton = document.getElementById("closePopup");
 const header = document.querySelector("header");
+const headerInfo = document.querySelector(".header-container");
+const sectionInfo = document.querySelector(".section-js");
+const input = document.querySelector(".hamburger");
+const style = document.createElement("style");
 
-// Store the original content of footer, footerP, and header
-const originalFooterContent = footer.innerHTML;
-const originalFooterPContent = footerP.innerHTML;
-const originalHeaderContent = header.innerHTML;
+function openPopup() {
+    popup.style.display = "block";
+    header.style.zIndex = "0";
+}
 
-window.addEventListener("resize", () => {
-    if (window.innerWidth < 650) {
-        footer.innerHTML = `
-            <div class="wrapper">
-            <div class="header-container" style="margin: 0 auto; display: flex; flex-direction: column;">
-                <header>
-                    <img src="/images/Лого.svg" alt="Logo" />
-                    <!-- Navigation -->
-                    <nav>
-                        <ul>
-                            <a href="#"><li>Home</li></a>
-                            <a href="#"><li>Catalog</li></a>
-                            <a href="#"><li>About Store</li></a>
-                            <a href="#"><li>Contact Us</li></a>
-                            <a href="#"><li>Search</li></a>
-                        </ul>
-                    </nav>
+function closePopup() {
+    popup.style.display = "none";
+}
 
-                    <hr/>
-                    <p>Library Bookstore EACamp</p>
-                    <p>© 2003-2023</p>
-                </header>
-            </div>
-            </div>
-        `;
-        footerP.innerHTML = "";
-        header.innerHTML = ""; // Clear the header content
-    } else {
-        // Restore the original content
-        footer.innerHTML = originalFooterContent;
-        footerP.innerHTML = originalFooterPContent;
-        header.innerHTML = originalHeaderContent;
+showPopupIcon.addEventListener("click", openPopup);
+showPopupButton.addEventListener("click", openPopup);
+closePopupButton.addEventListener("click", closePopup);
+
+window.addEventListener("click", (event) => {
+    if (event.target === popup) {
+        closePopup();
     }
 });
+
+// Hamburger menu
+const hamburger = document.getElementById("checkbox");
+const sideBar = document.querySelector(".burger header nav ul ");
+const wrapper = document.querySelector(".wrapper");
+
+hamburger.addEventListener("click", () => {
+    if (hamburger.checked) {
+        sideBar.style.display = "flex";
+        sideBar.style.zIndex = "2";
+        sideBar.style.alignItems = "flex-end";
+        wrapper.style.background = "rgba(36, 20, 0, 0.90)";
+        header.style.background = "rgba(36, 20, 0, 0.90)";
+        sectionInfo.style.marginTop = "0";
+        const style = document.createElement("style");
+        style.innerHTML = `
+  .hamburger::before {
+    background-color: red; /* Replace with your desired color */
+  }
+`;
+    } else {
+        sideBar.style.display = "none";
+        wrapper.style.background = "none";
+        header.style.background = "none";
+        sectionInfo.style.marginTop = "5rem";
+    }
+});
+document.head.append(style);
