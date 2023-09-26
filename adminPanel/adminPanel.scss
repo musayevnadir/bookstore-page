@@ -119,6 +119,7 @@
       }
       a:hover {
         text-decoration: underline;
+        color: $orange-btn-light;
         // box-shadow: 0px 0px 10px rgb(220, 208, 208); /* Тень при наведении */
         transform: scale(
           1.1
@@ -144,6 +145,7 @@
           line-height: 196.187%;
           margin-bottom: 1.625rem;
         }
+
         h5 {
           color: $header-gray;
           font-family: $ff-montserrat;
@@ -489,7 +491,7 @@
   // ! Hamburger menu
 }
 
-.container-hamburger-menu {
+.container .container-hamburger-menu {
   display: none;
   background-color: $bg-admin;
   width: 18%;
