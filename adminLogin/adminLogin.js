@@ -68,7 +68,7 @@ function welcomeToAdminPanele(name, password, visitorAdmin) {
   }, 1000);
 }
 
-// ! Button Join Admin
+// ! Button Join Admin and Enter click
 
 function clickMouse(event) {
   if (event.type === "click") {
@@ -77,7 +77,6 @@ function clickMouse(event) {
 }
 
 function clickEnter(event) {
-  console.log(event.code);
   if (event.type === "keydown" && event.code === "Enter") {
     isAdmin(adminName, adminPassword);
   }

@@ -40,12 +40,6 @@ hamburger.addEventListener("click", () => {
         wrapper.style.background = "rgba(36, 20, 0, 0.90)";
         header.style.background = "rgba(36, 20, 0, 0.90)";
         sectionInfo.style.marginTop = "0";
-        const style = document.createElement("style");
-        style.innerHTML = `
-  .hamburger::before {
-    background-color: red; /* Replace with your desired color */
-  }
-`;
     } else {
         sideBar.style.display = "none";
         wrapper.style.background = "none";
