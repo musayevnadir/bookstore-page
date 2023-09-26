@@ -21,6 +21,9 @@ $bg-footer: #391f00;
 $home-text-color: #241400;
 $comment-text-color: #232323;
 $bg-body: #fffaf5;
+$hamburger-height: calc(0.2rem * 3 + 0.2rem * 2);
+$x-width: calc($hamburger-height * 1.41421356237);
+$animation-timing: 200ms ease-in-out;
 
 /* Box sizing rules */
 *,
