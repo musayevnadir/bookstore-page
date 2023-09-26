@@ -70,6 +70,18 @@ function welcomeToAdminPanele(name, password, visitorAdmin) {
 
 // ! Button Join Admin
 
-btnJoin.addEventListener("click", () => {
-  isAdmin(adminName, adminPassword);
-});
+function clickMouse(event) {
+  if (event.type === "click") {
+    isAdmin(adminName, adminPassword);
+  }
+}
+
+function clickEnter(event) {
+  console.log(event.code);
+  if (event.type === "keydown" && event.code === "Enter") {
+    isAdmin(adminName, adminPassword);
+  }
+}
+
+btnJoin.addEventListener("click", clickMouse);
+window.addEventListener("keydown", clickEnter);
