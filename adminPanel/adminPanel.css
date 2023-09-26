@@ -196,6 +196,7 @@ select {
 }
 .container .admin-panel-container .admin a:hover {
   text-decoration: underline;
+  color: #ff8b00;
   transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
 }
 .container .admin-panel-container .main-page {
@@ -497,7 +498,7 @@ select {
   margin-bottom: 1.625rem;
 }
 
-.container-hamburger-menu {
+.container .container-hamburger-menu {
   display: none;
   background-color: #720418;
   width: 18%;
