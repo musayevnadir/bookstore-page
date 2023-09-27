@@ -1,0 +1,217 @@
+/** @format */
+
+@import "../styles/config"; // *
+
+.header-container header {
+  //   position: static;
+}
+
+.main-container {
+  .main-contact-us {
+    // background-color: red;
+    margin-top: 7rem;
+    margin-bottom: 7.875rem;
+    width: 90%;
+    h1 {
+      // background-color: greenyellow;
+      color: var(--Gray-1, #333);
+      font-family: $ff-montserrat;
+      font-size: 2.25rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 196.187%;
+      margin-bottom: 1.75rem;
+    }
+
+    .inputs-container {
+      // background-color: rgb(47, 144, 255);
+      display: flex;
+      //   justify-content: space-between;
+      gap: 2.305rem;
+      flex-wrap: wrap;
+      input {
+        width: 48.38%;
+        padding-left: 2.375rem;
+        padding-top: 1.625rem;
+        padding-bottom: 1.625rem;
+        color: #797667;
+        font-family: $ff-crimson;
+        font-size: 1.437rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        outline: none;
+        border: 1px solid #cecece;
+        background: #fff;
+      }
+
+      .input-note-container {
+        width: 100%;
+        margin-bottom: 5.31rem;
+        .note-input {
+          width: 100%;
+          padding-top: 0.81rem;
+          padding-bottom: 6.8rem;
+          border: 1px solid #cecece;
+          background: #fff;
+        }
+      }
+    }
+
+    .btn-send-contact-us {
+      //   background-color: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        background: #e16a00;
+        width: 50%;
+        padding-top: 1.06rem;
+        padding-bottom: 1.06rem;
+        color: #fff;
+        font-family: Crimson Text;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        cursor: pointer;
+        border: none;
+        transition: transform 0.3s ease;
+      }
+
+      button:hover {
+        transform: scale(
+          1.03
+        ); /* Увеличиваем изображение на 10% при наведении */
+      }
+    }
+  }
+}
+
+@media (max-width: 1436px) {
+  .main-container {
+    .main-contact-us {
+      .inputs-container {
+        //   background-color: rgb(47, 144, 255);
+        display: flex;
+        gap: 2.305rem;
+        flex-wrap: wrap;
+        input {
+          width: 100%;
+        }
+
+        .input-note-container {
+          width: 100%;
+          margin-bottom: 5.31rem;
+        }
+      }
+
+      .btn-send-contact-us {
+        //   background-color: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          background: #e16a00;
+          width: 50%;
+          padding-top: 1.06rem;
+          padding-bottom: 1.06rem;
+          color: #fff;
+          font-family: Crimson Text;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          cursor: pointer;
+          border: none;
+          transition: transform 0.3s ease;
+        }
+
+        button:hover {
+          transform: scale(
+            1.03
+          ); /* Увеличиваем изображение на 10% при наведении */
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1037px) {
+  .main-container {
+    .main-contact-us {
+      .btn-send-contact-us {
+        //   background-color: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          background: #e16a00;
+          width: 100%;
+          padding-top: 1.06rem;
+          padding-bottom: 1.06rem;
+          color: #fff;
+          font-family: Crimson Text;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          cursor: pointer;
+          border: none;
+          transition: transform 0.3s ease;
+        }
+
+        button:hover {
+          transform: scale(
+            1.03
+          ); /* Увеличиваем изображение на 10% при наведении */
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .main-container {
+    .main-contact-us {
+      h1 {
+        display: flex;
+        justify-content: center;
+        color: var(--Gray-1, #333);
+        font-family: $ff-montserrat;
+        font-size: 2.25rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 196.187%;
+        margin-bottom: 1.75rem;
+      }
+
+      .btn-send-contact-us {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          background: #e16a00;
+          width: 100%;
+          padding-top: 1.06rem;
+          padding-bottom: 1.06rem;
+          color: #fff;
+          font-family: Crimson Text;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          cursor: pointer;
+          border: none;
+          transition: transform 0.3s ease;
+        }
+
+        button:hover {
+          transform: scale(
+            1.03
+          ); /* Увеличиваем изображение на 10% при наведении */
+        }
+      }
+    }
+  }
+}
