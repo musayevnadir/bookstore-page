@@ -2,47 +2,54 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./adminLogin.css" />
-    <script type="module" defer src="./adminLogin.js"></script>
-    <title>Admin Login Page</title>
-  </head>
-  <body>
-    <div class="container">
-      <header class="header">
-        <img src="../images/Logo-Header.svg" alt="Library image" />
-      </header>
-      <main class="main">
-        <div class="admin-logintext">
-          <h1>Welcome Admin</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./adminLogin.css" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"
+        />
+
+        <script type="module" defer src="./adminLogin.js"></script>
+        <title>Admin Login Page</title>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <img src="../images/Logo-Header.svg" alt="Library image" />
+            </header>
+            <main class="main">
+                <div class="admin-logintext">
+                    <h1>Welcome Admin</h1>
+                </div>
+                <div class="inputs-container">
+                    <div class="input-userNameContainer">
+                        <input
+                            class="input-userName inpt-main"
+                            style="margin-bottom: 2rem"
+                            type="text"
+                            name=""
+                            id=""
+                            placeholder="Username"
+                        />
+                    </div>
+                    <div class="input-passwordContainer">
+                        <input
+                            class="input-password inpt-main"
+                            type="password"
+                            name=""
+                            id=""
+                            placeholder="Password"
+                        />
+                    </div>
+                    <div class="btn-joinContainer">
+                        <button class="btn-join">Join</button>
+                    </div>
+                </div>
+            </main>
         </div>
-        <div class="inputs-container">
-          <div class="input-userNameContainer">
-            <input
-              class="input-userName inpt-main"
-              style="margin-bottom: 2rem"
-              type="text"
-              name=""
-              id=""
-              placeholder="Username"
-            />
-          </div>
-          <div class="input-passwordContainer">
-            <input
-              class="input-password inpt-main"
-              type="password"
-              name=""
-              id=""
-              placeholder="Password"
-            />
-          </div>
-          <div class="btn-joinContainer">
-            <button class="btn-join">Join</button>
-          </div>
-        </div>
-      </main>
-    </div>
-  </body>
+    </body>
 </html>
