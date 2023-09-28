@@ -99,10 +99,6 @@ select {
   margin: 0 6.5rem 0 6.5rem;
 }
 
-.header-container header {
-  position: static;
-}
-
 .main {
   margin-top: 6.93rem;
   margin-bottom: 21.125rem;
