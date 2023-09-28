@@ -115,12 +115,20 @@ select {
   margin-bottom: 1.75rem;
 }
 .main-container .main-contact-us .inputs-container {
-  display: flex;
   gap: 2.305rem;
-  flex-wrap: wrap;
+}
+.main-container .main-contact-us .inputs-container .inp-one {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 33px;
+}
+.main-container .main-contact-us .inputs-container .inp-two {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 33px;
 }
 .main-container .main-contact-us .inputs-container input {
-  width: 48.38%;
+  width: 49%;
   padding-left: 2.375rem;
   padding-top: 1.625rem;
   padding-bottom: 1.625rem;
@@ -169,72 +177,13 @@ select {
   transform: scale(1.03); /* Увеличиваем изображение на 10% при наведении */
 }
 
-@media (max-width: 1436px) {
-  .main-container .main-contact-us .inputs-container {
-    display: flex;
-    gap: 2.305rem;
-    flex-wrap: wrap;
+@media (max-width: 813px) {
+  .main-container .main-contact-us {
+    margin-top: 7rem;
+    margin-bottom: 7.875rem;
+    width: 90%;
   }
-  .main-container .main-contact-us .inputs-container input {
-    width: 100%;
-  }
-  .main-container .main-contact-us .inputs-container .input-note-container {
-    width: 100%;
-    margin-bottom: 5.31rem;
-  }
-  .main-container .main-contact-us .btn-send-contact-us {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .main-container .main-contact-us .btn-send-contact-us button {
-    background: #e16a00;
-    width: 50%;
-    padding-top: 1.06rem;
-    padding-bottom: 1.06rem;
-    color: #fff;
-    font-family: Crimson Text;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    cursor: pointer;
-    border: none;
-    transition: transform 0.3s ease;
-  }
-  .main-container .main-contact-us .btn-send-contact-us button:hover {
-    transform: scale(1.03); /* Увеличиваем изображение на 10% при наведении */
-  }
-}
-@media (max-width: 1037px) {
-  .main-container .main-contact-us .btn-send-contact-us {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .main-container .main-contact-us .btn-send-contact-us button {
-    background: #e16a00;
-    width: 100%;
-    padding-top: 1.06rem;
-    padding-bottom: 1.06rem;
-    color: #fff;
-    font-family: Crimson Text;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    cursor: pointer;
-    border: none;
-    transition: transform 0.3s ease;
-  }
-  .main-container .main-contact-us .btn-send-contact-us button:hover {
-    transform: scale(1.03); /* Увеличиваем изображение на 10% при наведении */
-  }
-}
-@media (max-width: 560px) {
   .main-container .main-contact-us h1 {
-    display: flex;
-    justify-content: center;
     color: var(--Gray-1, #333);
     font-family: "Montserrat", sans-serif;
     font-size: 2.25rem;
@@ -242,6 +191,46 @@ select {
     font-weight: 900;
     line-height: 196.187%;
     margin-bottom: 1.75rem;
+  }
+  .main-container .main-contact-us .inputs-container {
+    gap: 2.305rem;
+  }
+  .main-container .main-contact-us .inputs-container .inp-one {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .main-container .main-contact-us .inputs-container .inp-two {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-container .main-contact-us .inputs-container input {
+    width: 100%;
+    padding-left: 2.375rem;
+    padding-top: 1.625rem;
+    padding-bottom: 1.625rem;
+    color: #797667;
+    font-family: "Crimson Text", serif;
+    font-size: 1.437rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    outline: none;
+    border: 1px solid #cecece;
+    background: #fff;
+    margin-bottom: 32px;
+  }
+  .main-container .main-contact-us .inputs-container .input-note-container {
+    display: none;
+    width: 100%;
+    margin-bottom: 5.31rem;
+  }
+  .main-container .main-contact-us .inputs-container .input-note-container .note-input {
+    width: 100%;
+    padding-top: 0.81rem;
+    padding-bottom: 6.8rem;
+    border: 1px solid #cecece;
+    background: #fff;
   }
   .main-container .main-contact-us .btn-send-contact-us {
     display: flex;
