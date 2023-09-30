@@ -53,4 +53,43 @@ buttonLogoutNav.addEventListener("click", () => {
     hamburgerButton.style.display = "block";
 });
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+import {
+    getDatabase,
+    ref,
+    get,
+    set,
+    onValue,
+    child,
+    push,
+} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyCOPLmzbWpJJqh3v9jxPilDKFrJlgiZi6E",
+    authDomain: "bookstore-3597f.firebaseapp.com",
+    databaseURL:
+        "https://bookstore-3597f-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "bookstore-3597f",
+    storageBucket: "bookstore-3597f.appspot.com",
+    messagingSenderId: "659320410615",
+    appId: "1:659320410615:web:0c78bc27aef1b9c2b65ef2",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 // Firebase
+const tableBody = document.getElementById("table-body");
+const usersRef = ref(db, `/users`);
+
+const button = document.querySelector(".btn-searcn");
+button.addEventListener("click", () => {
+    set(usersRef, count);
+});
+
+onValue(usersRef, (snapshot) => {
+    const users = Object.values(snapshot.val());
+    for (let user of users) {
+        showPopupBtn.textContent = user;
+    }
+});
