@@ -16,39 +16,41 @@ const buttonLogoutNav = document.querySelector(".button-logout-nav");
 visitorAdmin.innerHTML = userName;
 
 hamburgerButton.addEventListener("click", () => {
-  if ((navLinks.style.display = "none")) {
-    navLinks.style.display = "block";
-    hamburgerButton.style.display = "none";
-  }
+    if ((navLinks.style.display = "none")) {
+        navLinks.style.display = "block";
+        hamburgerButton.style.display = "none";
+    }
 });
 
 buttonX.addEventListener("click", () => {
-  navLinks.style.display = "none";
-  hamburgerButton.style.display = "block";
+    navLinks.style.display = "none";
+    hamburgerButton.style.display = "block";
 });
 
 // ! Buttons Hamburger Menu Navigation
 buttonHomeNav.addEventListener("click", () => {
-  navLinks.style.display = "none";
-  hamburgerButton.style.display = "block";
+    navLinks.style.display = "none";
+    hamburgerButton.style.display = "block";
 });
 
 buttonAboutNav.addEventListener("click", () => {
-  navLinks.style.display = "none";
-  hamburgerButton.style.display = "block";
+    navLinks.style.display = "none";
+    hamburgerButton.style.display = "block";
 });
 
 buttonJoinNav.addEventListener("click", () => {
-  navLinks.style.display = "none";
-  hamburgerButton.style.display = "block";
+    navLinks.style.display = "none";
+    hamburgerButton.style.display = "block";
 });
 
 buttonContactNav.addEventListener("click", () => {
-  navLinks.style.display = "none";
-  hamburgerButton.style.display = "block";
+    navLinks.style.display = "none";
+    hamburgerButton.style.display = "block";
 });
 
 buttonLogoutNav.addEventListener("click", () => {
-  navLinks.style.display = "none";
-  hamburgerButton.style.display = "block";
+    navLinks.style.display = "none";
+    hamburgerButton.style.display = "block";
 });
+
+// Firebase

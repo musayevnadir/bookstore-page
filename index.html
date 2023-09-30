@@ -8,7 +8,7 @@
         <title>Home Page</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
         <link rel="stylesheet" href="/styles/style.css" />
-        <script src="/script.js" defer></script>
+        <script src="/script.js" type="module" defer></script>
     </head>
     <body>
         <!-- Wrapper for header section -->
@@ -55,11 +55,14 @@
                         <div class="popup-content">
                             <span style="font-size: 2rem;" class="close" id="closePopup">&times;</span>
                             
-                            <div class="popup-info">
+                            <div id="popup-info" class="popup-info">
+                                <form id="form" action="">
                                 <h1>Join Us</h1>
-                                <input placeholder="Full name" type="text" name="" id="">
-                                <input placeholder="Email" type="email" name="" id="">
-                                <button>Join</button>
+                                <input placeholder="Full name" type="text" name="name" id="name">
+                                <input placeholder="Email" type="email" name="email" id="email">
+                                <div id="inputs"></div>
+                                <button id="joinUs">Join</button>
+                            </form>
                             </div>
                         </div>
                     </div>

@@ -1,3 +1,31 @@
+// Initialize Firebase
+// Firebase
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+import {
+    getDatabase,
+    ref,
+    get,
+    set,
+    onValue,
+    child,
+    push,
+} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyCOPLmzbWpJJqh3v9jxPilDKFrJlgiZi6E",
+    authDomain: "bookstore-3597f.firebaseapp.com",
+    databaseURL:
+        "https://bookstore-3597f-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "bookstore-3597f",
+    storageBucket: "bookstore-3597f.appspot.com",
+    messagingSenderId: "659320410615",
+    appId: "1:659320410615:web:0c78bc27aef1b9c2b65ef2",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
 const popup = document.querySelector(".popup");
 const showPopupIcon = document.querySelector(".showPopupIcon");
 const showPopupButton = document.querySelector(".showPopupBtn");
@@ -49,20 +77,41 @@ hamburger.addEventListener("click", () => {
 });
 document.head.append(style);
 
-// import { initializeApp } from "firebase/app";
-// import { getDatabase, ref, set, onValue, get } from "firebase/database";
+// Join us form validator
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const inputsDiv = document.getElementById("inputs");
+const showPopupBtn = document.getElementById("showPopupBtn");
+const errorP = document.createElement("p");
+const successP = document.createElement("p");
+const usersRef = ref(db, `/users`);
 
-// // TODO: Replace the following with your app's Firebase project configuration
-// const firebaseConfig = {
-//     apiKey: "AIzaSyCOPLmzbWpJJqh3v9jxPilDKFrJlgiZi6E",
-//     authDomain: "bookstore-3597f.firebaseapp.com",
-//     databaseURL:
-//         "https://bookstore-3597f-default-rtdb.europe-west1.firebasedatabase.app",
-//     projectId: "bookstore-3597f",
-//     storageBucket: "bookstore-3597f.appspot.com",
-//     messagingSenderId: "659320410615",
-//     appId: "1:659320410615:web:0c78bc27aef1b9c2b65ef2",
-// };
+document.getElementById("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (!nameInput.value.trim() || !emailInput.value.trim()) {
+        inputsDiv.innerHTML = "";
+        errorP.textContent = "Please fill in all fields";
+        errorP.classList.add("errorText");
+        inputsDiv.append(errorP);
+    } else {
+        inputsDiv.innerHTML = "";
+        successP.textContent = "Thank you for joining us!";
+        successP.classList.add("successText");
+        inputsDiv.append(successP);
+        setTimeout(closePopup, 2000);
+        showPopupBtn.innerHTML = "";
 
-// const app = initializeApp(firebaseConfig);
-// const db = getDatabase(app);
+        const userName = nameInput.value;
+        const newUserName = push(child(ref(db), `/users`)).key;
+        console.log(newUserName);
+
+        set(ref(db, `/users/${newUserName}`), userName);
+
+        onValue(usersRef, (snapshot) => {
+            const users = Object.values(snapshot.val());
+            for (let user of users) {
+                showPopupBtn.textContent = user;
+            }
+        });
+    }
+});
