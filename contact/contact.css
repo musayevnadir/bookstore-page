@@ -206,6 +206,7 @@ select {
     margin-bottom: 68.98px;
   }
   .main-container .main-contact-us .inputs-container input {
+    z-index: -1;
     width: 100%;
     padding-left: 2.375rem;
     padding-top: 1.625rem;
@@ -239,6 +240,7 @@ select {
     align-items: center;
   }
   .main-container .main-contact-us .btn-send-contact-us button {
+    z-index: -1;
     background: #e16a00;
     width: 100%;
     padding-top: 1.06rem;
