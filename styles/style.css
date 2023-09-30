@@ -103,6 +103,28 @@ body {
   background-color: #fffaf5;
 }
 
+.errorText {
+  color: red;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 1rem 0 0.2rem 0;
+  text-align: center;
+  border: 1px solid red;
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+}
+
+.successText {
+  color: green;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 1rem 0 0.2rem 0;
+  text-align: center;
+  border: 1px solid green;
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+}
+
 .header-container {
   position: relative;
 }

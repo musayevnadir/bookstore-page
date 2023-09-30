@@ -13,7 +13,7 @@
 
         <link rel="stylesheet" href="/styles/style.css" />
         <link rel="stylesheet" href="./search.css" />
-        <script src="/script.js" defer></script>
+        <script src="/script.js" type="module" defer></script>
         <script src="./search.js"></script>
     </head>
     <body>
@@ -60,21 +60,24 @@
                             >&times;</span
                         >
 
-                        <div class="popup-info">
-                            <h1>Join Us</h1>
-                            <input
-                                placeholder="Full name"
-                                type="text"
-                                name=""
-                                id=""
-                            />
-                            <input
-                                placeholder="Email"
-                                type="email"
-                                name=""
-                                id=""
-                            />
-                            <button>Join</button>
+                        <div id="popup-info" class="popup-info">
+                            <form id="form" action="">
+                                <h1>Join Us</h1>
+                                <input
+                                    placeholder="Full name"
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                />
+                                <input
+                                    placeholder="Email"
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                />
+                                <div id="inputs"></div>
+                                <button id="joinUs">Join</button>
+                            </form>
                         </div>
                     </div>
                 </div>
