@@ -15,7 +15,7 @@
             href="/images/favicon-32x32.png"
         />
 
-        <script src="/script.js" defer></script>
+        <script src="/script.js" type="module" defer></script>
         <script src="./about.js"></script>
     </head>
     <body>
@@ -62,21 +62,21 @@
                             >&times;</span
                         >
 
-                        <div class="popup-info">
+                        <div id="popup-info" class="popup-info">
                             <h1>Join Us</h1>
                             <input
                                 placeholder="Full name"
                                 type="text"
-                                name=""
-                                id=""
+                                name="name"
+                                id="name"
                             />
                             <input
                                 placeholder="Email"
                                 type="email"
-                                name=""
-                                id=""
+                                name="email"
+                                id="email"
                             />
-                            <button>Join</button>
+                            <button id="joinUs">Join</button>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,29 @@
             <!-- Start of the main section -->
             <div class="main-container">
                 <section class="section-js">
-                    <!-- CODE -->
+                    <div class="main">
+                        <h1>About Store</h1>
+                        <div class="about-contect-container">
+                            <div class="paragraph-container">
+                                <p>
+                                    We work without holidays and weekends!
+                                    Residents of Kiev can receive an order on
+                                    the day of its registration. Customers from
+                                    other cities of Ukraine can receive an order
+                                    within 1-5 days, depending on the location
+                                    of the settlement and the selected delivery
+                                    method. Orders over UAH 1000 are delivered
+                                    free of charge *. You can see the available
+                                    methods, exact terms and cost of delivery
+                                    during checkout in the order basket, after
+                                    selecting the delivery city.
+                                </p>
+                            </div>
+                            <div class="img-container">
+                                <img src="../images/3med.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <!-- Links -->
