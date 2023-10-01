@@ -31,7 +31,6 @@ const showPopupIcon = document.querySelector(".showPopupIcon");
 const showPopupButton = document.querySelector(".showPopupBtn");
 const closePopupButton = document.getElementById("closePopup");
 const header = document.querySelector("header");
-const headerInfo = document.querySelector(".header-container");
 const sectionInfo = document.querySelector(".section-js");
 const input = document.querySelector(".hamburger");
 const style = document.createElement("style");
@@ -67,8 +66,10 @@ hamburger.addEventListener("click", () => {
         sideBar.style.alignItems = "flex-end";
         wrapper.style.background = "rgba(36, 20, 0, 0.90)";
         header.style.background = "rgba(36, 20, 0, 0.90)";
+        // headerText.style.zIndex = "-1";
         sectionInfo.style.marginTop = "0";
     } else {
+        // headerText.style.zIndex = "0";
         sideBar.style.display = "none";
         wrapper.style.background = "none";
         header.style.background = "none";
@@ -102,10 +103,12 @@ document.getElementById("form").addEventListener("submit", (e) => {
         showPopupBtn.innerHTML = "";
 
         const userName = nameInput.value;
+        const userEmail = emailInput.value;
         const newUserName = push(child(ref(db), `/users`)).key;
-        console.log(newUserName);
+        const newEmail = push(child(ref(db), `/emails`)).key;
 
         set(ref(db, `/users/${newUserName}`), userName);
+        set(ref(db, `/emails/${newEmail}`), userEmail);
 
         onValue(usersRef, (snapshot) => {
             const users = Object.values(snapshot.val());

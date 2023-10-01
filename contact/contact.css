@@ -101,8 +101,7 @@ select {
 }
 
 .main-container .main-contact-us {
-  margin-top: 7rem;
-  margin-bottom: 7.875rem;
+  margin: 7rem auto;
   width: 90%;
 }
 .main-container .main-contact-us h1 {
@@ -414,5 +413,15 @@ select {
   }
   .header-container header .join-us a {
     display: none;
+  }
+}
+@media all and (max-width: 510px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media all and (max-width: 260px) {
+  html {
+    font-size: 7px;
   }
 }/*# sourceMappingURL=contact.css.map */

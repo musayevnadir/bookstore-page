@@ -81,15 +81,32 @@ const db = getDatabase(app);
 // Firebase
 const tableBody = document.getElementById("table-body");
 const usersRef = ref(db, `/users`);
-
-const button = document.querySelector(".btn-searcn");
-button.addEventListener("click", () => {
-    set(usersRef, count);
-});
+const emailRef = ref(db, `/emails`);
+const tr = document.createElement("tr");
+//
 
 onValue(usersRef, (snapshot) => {
     const users = Object.values(snapshot.val());
-    for (let user of users) {
-        showPopupBtn.textContent = user;
+    for (let i = 0; i < users.length; i++) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+        <td>${i}</td>
+        <td>${users[i]}</td>
+        `;
+        tableBody.append(tr);
     }
 });
+
+onValue(emailRef, (snapshot) => {
+    const emails = Object.values(snapshot.val());
+    for (let email of emails) {
+        const td = document.createElement("td");
+        td.innerHTML = `
+        ${email}
+        `;
+        tableBody.append(td);
+    }
+});
+
+// Connected with database, however, the structure of tables are not correct
+// Index of table element and username are together, but email is separated which causes us the problem where email appends on the new line
