@@ -48,7 +48,7 @@
                             In our store you can find a book for every taste. A
                             large assortment. Nice prices. Interesting stories.
                         </p>
-                        <button>Go to catalog</button>
+                        <button onclick="" id="go-to-catalog">Go to catalog</button>
                     </div>
                     <img class="books" src="/images/Books.jpg" alt="Books" />
                     <div class="popup">
@@ -211,5 +211,25 @@
             </footer>
 
         </div>
+
+
+        <script>
+            const goToCatalog = document.querySelector("#go-to-catalog");
+            goToCatalog.addEventListener("click", () => {
+            window.location.href = "http://127.0.0.1:5501/catalog/catalog.html";
+            });
+
+            const hamburger = document.getElementById("checkbox");
+            const headerText = document.querySelector(".header-section-left");
+
+
+            hamburger.addEventListener("click", () => {
+            if (hamburger.checked) {
+                        headerText.style.zIndex = "-1";
+            } else {
+                headerText.style.zIndex = '0'
+            }
+        })
+        </script>
     </body>
 </html>

@@ -90,7 +90,7 @@ body {
   background: #fff;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
   /* border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
-    border-top: 0.1px solid rgba(0, 0, 0, 0.25); */
+  border-top: 0.1px solid rgba(0, 0, 0, 0.25); */
 }
 
 .book-img-container img {
@@ -191,4 +191,14 @@ body {
       justify-content: center;
       align-items: center;
     }
-  } *//*# sourceMappingURL=catalog.css.map */
+  } */
+@media all and (max-width: 510px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media all and (max-width: 260px) {
+  html {
+    font-size: 7px;
+  }
+}/*# sourceMappingURL=catalog.css.map */
