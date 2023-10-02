@@ -82,31 +82,33 @@ const db = getDatabase(app);
 const tableBody = document.getElementById("table-body");
 const usersRef = ref(db, `/users`);
 const emailRef = ref(db, `/emails`);
-const tr = document.createElement("tr");
+const tableRows = document.querySelector(".container #table-row");
 //
 
 onValue(usersRef, (snapshot) => {
     const users = Object.values(snapshot.val());
+
     for (let i = 0; i < users.length; i++) {
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-        <td>${i}</td>
-        <td>${users[i]}</td>
-        `;
-        tableBody.append(tr);
+        const td1 = document.createElement("td");
+        const td2 = document.createElement("td");
+
+        td1.textContent = i;
+        td2.textContent = users[i];
+
+        // Add the user data to the corresponding row
+        tableRows.append(td1);
+        tableRows.append(td2);
     }
 });
 
 onValue(emailRef, (snapshot) => {
     const emails = Object.values(snapshot.val());
-    for (let email of emails) {
+
+    for (let i = 0; i < emails.length; i++) {
         const td = document.createElement("td");
-        td.innerHTML = `
-        ${email}
-        `;
-        tableBody.append(td);
+        td.textContent = emails[i];
+
+        // Add the email data to the corresponding row
+        tableRows.append(td);
     }
 });
-
-// Connected with database, however, the structure of tables are not correct
-// Index of table element and username are together, but email is separated which causes us the problem where email appends on the new line
