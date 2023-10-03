@@ -86,6 +86,7 @@ const showPopupBtn = document.getElementById("showPopupBtn");
 const errorP = document.createElement("p");
 const successP = document.createElement("p");
 const usersRef = ref(db, `/users`);
+const userDataRef = ref(db, `/userData`);
 
 document.getElementById("form").addEventListener("submit", (e) => {
     e.preventDefault();
@@ -104,16 +105,18 @@ document.getElementById("form").addEventListener("submit", (e) => {
 
         const userName = nameInput.value;
         const userEmail = emailInput.value;
-        const newUserName = push(child(ref(db), `/users`)).key;
-        const newEmail = push(child(ref(db), `/emails`)).key;
+        const userData = {
+            user: userName,
+            email: userEmail,
+        };
+        const newUserData = push(child(ref(db), `/userData`)).key;
+        set(ref(db, `/userData/${newUserData}`), userData);
 
-        set(ref(db, `/users/${newUserName}`), userName);
-        set(ref(db, `/emails/${newEmail}`), userEmail);
-
-        onValue(usersRef, (snapshot) => {
-            const users = Object.values(snapshot.val());
-            for (let user of users) {
-                showPopupBtn.textContent = user;
+        onValue(userDataRef, (snapshot) => {
+            const userData = snapshot.val();
+            for (const key in userData) {
+                const userValue = userData[key].user;
+                showPopupBtn.textContent = userValue;
             }
         });
     }

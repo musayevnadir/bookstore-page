@@ -78,37 +78,77 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
-// Firebase
-const tableBody = document.getElementById("table-body");
-const usersRef = ref(db, `/users`);
-const emailRef = ref(db, `/emails`);
-const tableRows = document.querySelector(".container #table-row");
-//
+const joinTableBody = document.getElementById("join-tbody");
+const contactTableBody = document.getElementById("contact-tbody");
+const userDataRef = ref(db, `/userData`);
+const userContactRef = ref(db, `/userContact`);
 
-onValue(usersRef, (snapshot) => {
-    const users = Object.values(snapshot.val());
+onValue(userDataRef, (snapshot) => {
+    const userData = snapshot.val();
+    const keys = Object.keys(userData);
 
-    for (let i = 0; i < users.length; i++) {
-        const td1 = document.createElement("td");
-        const td2 = document.createElement("td");
-
-        td1.textContent = i;
-        td2.textContent = users[i];
-
-        // Add the user data to the corresponding row
-        tableRows.append(td1);
-        tableRows.append(td2);
-    }
+    keys.map((key, index) => {
+        const userValue = userData[key].user;
+        const emailValue = userData[key].email;
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${(index += 1)}</td>
+          <td>${userValue}</td>
+          <td>${emailValue}</td>
+      `;
+        joinTableBody.append(tr);
+    });
 });
 
-onValue(emailRef, (snapshot) => {
-    const emails = Object.values(snapshot.val());
+onValue(userContactRef, (snapshot) => {
+    const userContact = snapshot.val();
+    const keys = Object.keys(userContact);
 
-    for (let i = 0; i < emails.length; i++) {
-        const td = document.createElement("td");
-        td.textContent = emails[i];
+    keys.map((key, index) => {
+        const fullName = userContact[key].name;
+        const email = userContact[key].email;
+        const phone = userContact[key].phone;
+        const adress = userContact[key].adress;
 
-        // Add the email data to the corresponding row
-        tableRows.append(td);
-    }
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${fullName}</td>
+        <td>${adress}</td>
+        <td>${email}</td>
+        <td>${phone}</td>
+        `;
+
+        contactTableBody.append(tr);
+    });
 });
+
+// Google book api JS
+const apiKey = "AIzaSyDLQJBjL-y_fWchHg9pg3QliuW53W4eIEc";
+// fetch(
+//     `https://www.googleapis.com/books/v1/volumes?q=${input}&key=${apiKey}`
+// )
+// const bookForm = document.getElementById("bookForm");
+// const  = document.getElementById("book-name");
+// const bookImage = ;
+
+const authorName = book;
+// const description = bookForm.elements["description"];
+// const bookType = bookForm.elements["book-type"];
+bookForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const bookForm = document.getElementById("bookForm");
+
+    console.log(bookName);
+
+    // const bookData = {
+    //     name: bookName,
+    //     author: authorName,
+    //     image: bookImage,
+    //     decrip: description,
+    //     type: bookType,
+    // };
+    // const newBookData = push(child(ref(db), `/bookData`)).key;
+    // set(ref(db, `/bookData/${newBookData}`), bookData);
+});
+// Sdelayem cerez obyekt
