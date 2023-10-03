@@ -258,6 +258,7 @@ select {
   padding-top: 0.62rem;
   padding-bottom: 0.62rem;
   transition: transform 0.3s ease;
+  border: none;
 }
 .container .admin-panel-container .main-page .search-input-btn .btn-searcn:hover {
   transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
