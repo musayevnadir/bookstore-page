@@ -211,41 +211,65 @@
                         </div>
                     </div>
                     <!-- ? Book Form -->
-                    <div class="book-form" id="book-nav-link">
-                        <h5>Book form</h5>
-                    </div>
-                    <div class="book-form-contect">
-                        <div>
-                            <h4>Book Name</h4>
-                            <input type="text" placeholder="Angels" />
+                    <form id="bookForm" action="">
+                        <div class="book-form" id="book-nav-link">
+                            <h5>Book form</h5>
                         </div>
+                        <div class="book-form-contect">
+                            <div>
+                                <h4>Book Name</h4>
+                                <input
+                                    id="book-name"
+                                    name="book-name"
+                                    type="text"
+                                    placeholder="Angels"
+                                />
+                            </div>
 
-                        <div>
-                            <h4>Author Name</h4>
-                            <input type="text" placeholder="Dan Brown" />
-                        </div>
+                            <div>
+                                <h4>Author Name</h4>
+                                <input
+                                    id="author-name"
+                                    name="author-name"
+                                    type="text"
+                                    placeholder="Dan Brown"
+                                />
+                            </div>
 
-                        <div>
-                            <h4>Book Image Url</h4>
-                            <input type="text" placeholder="Alex Smith" />
-                        </div>
+                            <div>
+                                <h4>Book Image Url</h4>
+                                <input
+                                    id="book-image"
+                                    name="book-image"
+                                    type="text"
+                                    placeholder="Alex Smith"
+                                />
+                            </div>
 
-                        <div class="description">
-                            <h4>Description</h4>
-                            <input
-                                type="text"
-                                placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..."
-                            />
-                        </div>
+                            <div class="description">
+                                <h4>Description</h4>
+                                <input
+                                    id="description"
+                                    name="description"
+                                    type="text"
+                                    placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..."
+                                />
+                            </div>
 
-                        <div>
-                            <h4>Book Type</h4>
-                            <input type="text" placeholder="Fantastic" />
+                            <div>
+                                <h4>Book Type</h4>
+                                <input
+                                    id="book-type"
+                                    name="book-type"
+                                    type="text"
+                                    placeholder="Fantastic"
+                                />
+                            </div>
+                            <div class="btn-add">
+                                <button>Add</button>
+                            </div>
                         </div>
-                        <div class="btn-add">
-                            <button>Add</button>
-                        </div>
-                    </div>
+                    </form>
 
                     <!-- ? About  -->
                     <div class="add" id="about-nav-link">
@@ -288,9 +312,7 @@
                                     <th>Email</th>
                                 </tr>
                             </thead>
-                            <tbody id="table-body">
-                                <tr id="table-row"></tr>
-                            </tbody>
+                            <tbody id="join-tbody"></tbody>
                         </table>
                     </div>
                     <!-- ? Books -->
@@ -334,14 +356,8 @@
                                     <th>Phone Number</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Tehran Hamidli</td>
-                                    <td>Baku</td>
-                                    <td>hamidlitehran@gmail.com</td>
-                                    <td>0559804424</td>
-                                </tr>
+                            <tbody id="contact-tbody">
+                                <tr></tr>
                             </tbody>
                         </table>
                     </div>
