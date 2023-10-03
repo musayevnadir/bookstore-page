@@ -123,32 +123,72 @@ onValue(userContactRef, (snapshot) => {
     });
 });
 
-// Google book api JS
 const apiKey = "AIzaSyDLQJBjL-y_fWchHg9pg3QliuW53W4eIEc";
-// fetch(
-//     `https://www.googleapis.com/books/v1/volumes?q=${input}&key=${apiKey}`
-// )
-// const bookForm = document.getElementById("bookForm");
-// const  = document.getElementById("book-name");
-// const bookImage = ;
+const searchBook = document.getElementById("search-book");
+const bookForm = document.getElementById("bookForm");
+const bookName = document.getElementById("book-name");
+const bookAuthor = document.getElementById("author-name");
+const bookImage = document.getElementById("book-image");
+const bookDescription = document.getElementById("description");
+const bookType = document.getElementById("book-type");
 
-const authorName = book;
-// const description = bookForm.elements["description"];
+const booksAPI = {
+    fillInputs: (e) => {
+        e.preventDefault();
+        fetch(
+            `https://www.googleapis.com/books/v1/volumes?q=${searchBook.value}&key=${apiKey}`
+        )
+            .then((response) => response.json())
+            .then((data) => {
+                const bookInfo = data.items;
+                for (let i = 0; i < bookInfo.length; i++) {
+                    bookName.value = bookInfo[i].volumeInfo.title;
+                    bookAuthor.value = bookInfo[i].volumeInfo.authors;
+                    bookImage.value =
+                        bookInfo[i].volumeInfo.imageLinks.thumbnail;
+                    bookDescription.value = bookInfo[i].volumeInfo.description;
+                    bookType.value = bookInfo[i].volumeInfo.categories;
+                }
+            });
+    },
+
+    sendData: (e) => {
+        e.preventDefault();
+        const bookData = {
+            name: bookName.value,
+            author: bookAuthor.value,
+            description: bookDescription.value,
+            image: bookImage.value,
+            type: bookType.value,
+        };
+
+        const newBookData = push(child(ref(db), `/bookData`)).key;
+        console.log(newBookData);
+
+        set(ref(db, `/bookData/${newBookData}`), bookData);
+    },
+};
+
+document
+    .getElementById("searchForm")
+    .addEventListener("submit", booksAPI.fillInputs);
+bookForm.addEventListener("submit", booksAPI.sendData);
+
 // const bookType = bookForm.elements["book-type"];
-bookForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const bookForm = document.getElementById("bookForm");
 
-    console.log(bookName);
+//     e.preventDefault();
+//     const bookForm = document.getElementById("bookForm");
 
-    // const bookData = {
-    //     name: bookName,
-    //     author: authorName,
-    //     image: bookImage,
-    //     decrip: description,
-    //     type: bookType,
-    // };
-    // const newBookData = push(child(ref(db), `/bookData`)).key;
-    // set(ref(db, `/bookData/${newBookData}`), bookData);
-});
+//     console.log(bookName);
+
+// const bookData = {
+//     name: bookName,
+//     author: authorName,
+//     image: bookImage,
+//     decrip: description,
+//     type: bookType,
+// };
+// const newBookData = push(child(ref(db), `/bookData`)).key;
+// set(ref(db, `/bookData/${newBookData}`), bookData);
+// });
 // Sdelayem cerez obyekt
