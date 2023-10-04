@@ -22,7 +22,7 @@
         <!-- ? Java Script -->
         <script src="/script.js" type="module" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-        <script src="./catalog.js" defer></script>
+        <script src="./catalog.js" type="module" defer></script>
     </head>
     <body>
         <div class="wrapper">
@@ -68,24 +68,21 @@
                             >&times;</span
                         >
 
-                        <div id="popup-info" class="popup-info">
-                            <form id="form" action="">
-                                <h1>Join Us</h1>
-                                <input
-                                    placeholder="Full name"
-                                    type="text"
-                                    name="name"
-                                    id="name"
-                                />
-                                <input
-                                    placeholder="Email"
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                />
-                                <div id="inputs"></div>
-                                <button id="joinUs">Join</button>
-                            </form>
+                        <div class="popup-info">
+                            <h1>Join Us</h1>
+                            <input
+                                placeholder="Full name"
+                                type="text"
+                                name=""
+                                id=""
+                            />
+                            <input
+                                placeholder="Email"
+                                type="email"
+                                name=""
+                                id=""
+                            />
+                            <button>Join</button>
                         </div>
                     </div>
                 </div>
@@ -97,10 +94,10 @@
                     <div class="nav-tex">
                         <h1>All Books</h1>
                         <div class="nav-links">
-                            <p>Fantastic</p>
-                            <p>Self-development</p>
-                            <p>Baby</p>
-                            <p>Clas</p>
+                            <p>Fiction</p>
+                            <p>Philosophy</p>
+                            <p>Drama</p>
+                            <p>Thriller</p>
                         </div>
                         <div class="nav-links-2"></div>
                     </div>
@@ -111,31 +108,31 @@
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
-                                <div
+                                <!-- <div
                                     class="swiper-slide slide-contect-container"
                                 >
-                                    <!-- <div class="book-img-container">
+                                    <div class="book-img-container">
                                         <img src="./img/image 3.svg" alt="" />
-                                        <p>Konstantin Koptelov</p>
+                                        <p>Ali Huseynzade</p>
                                         <div class="btn-container">
                                             <button>Read more</button>
                                         </div>
-                                    </div> -->
-                                </div>
-                                <div
+                                    </div>
+                                </div> -->
+                                <!-- <div
                                     class="swiper-slide slide-contect-container"
                                 >
-                                    <!-- <div class="book-img-container">
+                                    <div class="book-img-container">
                                         <img src="./img/image 2.svg" alt="" />
                                         <p>Konstantin Koptelov</p>
                                         <div class="btn-container">
                                             <button>Read more</button>
                                         </div>
-                                    </div> -->
-                                </div>
-                                <div
-                                    class="swiper-slide slide-contect-container"
-                                >
+                                    </div>
+                                </div> -->
+                                <!-- <div
+                                    class="swiper-slide slide-contect-container" -->
+                                
                                     <!-- <div class="book-img-container">
                                         <img src="./img/image 3.svg" alt="" />
                                         <p>Konstantin Koptelov</p>
@@ -143,11 +140,11 @@
                                             <button>Read more</button>
                                         </div>
                                     </div> -->
-                                </div>
-                                <div
-                                    class="swiper-slide slide-contect-container"
-                                >
-                                    <div class="book-img-container">
+                                    <!-- </div> -->
+                                    <!-- <div
+                                    class="swiper-slide slide-contect-container" -->
+
+                                    <!-- <div class="book-img-container">
                                         <img src="./img/image 4.svg" alt="" />
                                         <p>Konstantin Koptelov</p>
                                         <div class="btn-container">
@@ -248,7 +245,8 @@
                                         <div class="btn-container">
                                             <button>Read more</button>
                                         </div>
-                                    </div>
+                                    </div> -->
+                                    <!-- </div> -->
                                 </div>
                             </div>
                             <!-- If we need pagination -->
