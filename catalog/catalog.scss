@@ -130,6 +130,20 @@ body {
     transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
 }
 
+.book-img-container h4 {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    color: var(--, #241400);
+    font-family: Montserrat;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.book-img-container h4:hover {
+    transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
+}
+
 .btn-container {
     /* background-color: grey; */
     display: flex;
