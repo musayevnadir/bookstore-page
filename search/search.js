@@ -4,6 +4,11 @@ const searchBook = document.querySelector(".search-container");
 const btnSearch = document.querySelector(".search-btn");
 const inputSearch = document.querySelector(".inputSearch");
 
+const titleScreen = document.querySelector(".title-inner");
+const autorsScreen = document.querySelector(".autors-inner");
+const descriptionScreen = document.querySelector(".description-inner");
+const imgScreen = document.querySelector(".img-inner");
+
 // ! Click Search Button
 btnSearch.addEventListener("click", () => {
   fetch(
@@ -11,29 +16,22 @@ btnSearch.addEventListener("click", () => {
   )
     .then((response) => response.json())
     .then((data) => {
-      dataValue(data);
+      const dataItems = data.items;
+      for (let i = 0; i < dataItems.length; i++) {
+        const title = dataItems[i].volumeInfo.title;
+        console.log(title);
+        const authors = dataItems[i].volumeInfo.authors;
+        const description = dataItems[i].volumeInfo.description;
+        const imgBook = dataItems[i].volumeInfo.imageLinks.smallThumbnail;
+
+        if (title == inputSearch.value) {
+          titleScreen.innerHTML = title;
+          autorsScreen.innerHTML = authors;
+          descriptionScreen.innerHTML = description;
+          imgScreen.src = imgBook;
+          imgScreen.innerHTML = imgBook;
+          //   !bura baxarsan birdene img
+        }
+      }
     });
 });
-
-// ! Function Data Value
-
-function dataValue(data) {
-  const dataItems = data.items;
-
-  for (let i = 0; i < dataItems.length; i++) {
-    const title = dataItems[i].volumeInfo.title;
-    const authors = dataItems[i].volumeInfo.authors;
-    const description = dataItems[i].volumeInfo.description;
-    const imgBook = dataItems[i].volumeInfo.imageLinks.smallThumbnail;
-    showOnScreen(title, authors, description, imgBook);
-  }
-}
-
-// ! Function Data Value show on screen
-
-function showOnScreen(title, authors, description, imgBook) {
-    for (let i = 0; i < title.length; i++) {
-        
-    }
-    
-}
