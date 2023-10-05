@@ -1,13 +1,11 @@
 /** @format */
 const apiKey = "AIzaSyDLQJBjL-y_fWchHg9pg3QliuW53W4eIEc";
-const searchBook = document.querySelector(".search-container");
-const btnSearch = document.querySelector(".search-btn");
-const inputSearch = document.querySelector(".inputSearch");
-
-const titleScreen = document.querySelector(".title-inner");
-const autorsScreen = document.querySelector(".autors-inner");
-const descriptionScreen = document.querySelector(".description-inner");
-const imgScreen = document.querySelector(".img-inner");
+const searchBook=document.querySelector(".search-container")
+const inputSearch = document.querySelector(".search-input");
+const btnSearch = document.querySelector(".btn-search");
+const titleScreen = document.querySelector(".title");
+const authorsScreen = document.querySelector(".authors");
+const descriptionScreen = document.querySelector(".description");
 
 // ! Click Search Button
 btnSearch.addEventListener("click", () => {
@@ -26,10 +24,10 @@ btnSearch.addEventListener("click", () => {
 
         if (title == inputSearch.value) {
           titleScreen.innerHTML = title;
-          autorsScreen.innerHTML = authors;
+          authorsScreen.innerHTML = authors;
           descriptionScreen.innerHTML = description;
-          imgScreen.src = imgBook;
-          imgScreen.innerHTML = imgBook;
+        //   imgScreen.src = imgBook;
+        //   imgScreen.innerHTML = imgBook;
           //   !bura baxarsan birdene img
         }
       }
