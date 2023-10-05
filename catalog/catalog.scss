@@ -143,6 +143,13 @@ body {
 .book-img-container h4:hover {
   transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
 }
+#all-books {
+    transition: 0.3s ease;
+}
+
+#all-books:hover {
+    scale: 1.1;
+}
 
 .btn-container {
   /* background-color: grey; */

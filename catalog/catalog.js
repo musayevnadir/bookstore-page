@@ -71,15 +71,29 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const bookDataRef = ref(db, `/bookData`);
 const swiperContainer = document.querySelector(".swiper-wrapper");
-const finctionBooks = [];
+const allBooks = [];
+const fictionBooks = [];
+const philosophyBooks = [];
+const biographyBooks = [];
+const dramaBooks = [];
 
 onValue(bookDataRef, (snapshot) => {
+<<<<<<< HEAD
   const bookDatas = snapshot.val();
   for (const key in bookDatas) {
     const swiperSlideContainer = document.createElement("div");
     swiperSlideContainer.classList.add("swiper-slide");
     swiperSlideContainer.classList.add("slide-contect-container");
     swiperSlideContainer.classList.add("all-books");
+=======
+    const bookDatas = snapshot.val();
+
+    for (const key in bookDatas) {
+        allBooks.push(bookDatas[key]);
+        const swiperSlideContainer = document.createElement("div");
+        swiperSlideContainer.classList.add("swiper-slide");
+        swiperSlideContainer.classList.add("slide-contect-container");
+>>>>>>> origin
 
     swiperSlideContainer.innerHTML = `
         <div class='book-img-container'>
@@ -93,6 +107,7 @@ onValue(bookDataRef, (snapshot) => {
         
         `;
 
+<<<<<<< HEAD
     swiperContainer.append(swiperSlideContainer);
     document
       .getElementById(`${bookDatas[key].id}`)
@@ -137,5 +152,166 @@ onValue(bookDataRef, (snapshot) => {
     // const btnContainer = document.createElement("div");
     // btnContainer.classList.add("btn-container");
   }
+=======
+        swiperContainer.append(swiperSlideContainer);
+        document
+            .getElementById(`${bookDatas[key].id}`)
+            .addEventListener("click", () => {
+                alert(bookDatas[key].name);
+            });
+        if (bookDatas[key].type === "Fiction") {
+            fictionBooks.push(bookDatas[key]);
+        } else if (bookDatas[key].type === "Biography & Autobiography") {
+            biographyBooks.push(bookDatas[key]);
+        } else if (bookDatas[key].type === "Drama") {
+            dramaBooks.push(bookDatas[key]);
+        } else if (bookDatas[key].type === "Philosophy") {
+            philosophyBooks.push(bookDatas[key]);
+        }
+    }
 });
-console.log(finctionBooks);
+document.getElementById("all-books").addEventListener("click", () => {
+    const swiperCont = document.querySelectorAll(".slide-contect-container");
+    swiperCont.forEach((element) => {
+        element.style.display = "none";
+    });
+    for (let i = 0; i < allBooks.length; i++) {
+        const swiperSlide = document.createElement("div");
+        swiperSlide.classList.add("swiper-slide");
+        swiperSlide.classList.add("slide-contect-container");
+
+        swiperSlide.innerHTML = `
+            <div class='book-img-container'>
+            <img src="${allBooks[i].image}" />
+            <h4>${allBooks[i].name}</h4>
+            <p>${allBooks[i].author}</p>
+            <div class="btn-container">
+                <button id=${allBooks[i].id}>Read more</button>
+            </div>
+        </div>
+    
+        `;
+        swiperContainer.append(swiperSlide);
+    }
+});
+
+document.getElementById("fiction").addEventListener("click", () => {
+    const swiperCont = document.querySelectorAll(".slide-contect-container");
+    swiperCont.forEach((element) => {
+        element.style.display = "none";
+    });
+    for (let i = 0; i < fictionBooks.length; i++) {
+        const swiperSlide = document.createElement("div");
+        swiperSlide.classList.add("swiper-slide");
+        swiperSlide.classList.add("slide-contect-container");
+
+        swiperSlide.innerHTML = `
+            <div class='book-img-container'>
+            <img src="${fictionBooks[i].image}" />
+            <h4>${fictionBooks[i].name}</h4>
+            <p>${fictionBooks[i].author}</p>
+            <div class="btn-container">
+                <button id=${fictionBooks[i].id}>Read more</button>
+            </div>
+        </div>
+    
+        `;
+        swiperContainer.append(swiperSlide);
+    }
+    //     const swiperCont = document.querySelectorAll(".slide-contect-container");
+    //     swiperCont.forEach((element) => {
+    //         element.innerHTML = "";
+    //     });
+    //     for (let data in fictionBooks) {
+    //         const swiperSlide = document.createElement("div");
+    //         swiperSlide.classList.add("swiper-slide");
+    //         swiperSlide.classList.add("slide-contect-container");
+
+    //         swiperSlide.innerHTML = `
+    //     <div class='book-img-container'>
+    //     <img src="${fictionBooks[data].image}" />
+    //     <h4>${fictionBooks[data].name}</h4>
+    //     <p>${fictionBooks[data].author}</p>
+    //     <div class="btn-container">
+    //         <button id=${fictionBooks[data].id}>Read more</button>
+    //     </div>
+    // </div>
+
+    // `;
+    //         swiperContainer.append(swiperSlide);
+    //     }
+});
+
+document.getElementById("philosophy").addEventListener("click", () => {
+    const swiperCont = document.querySelectorAll(".slide-contect-container");
+    swiperCont.forEach((element) => {
+        element.style.display = "none";
+    });
+    for (let i = 0; i < philosophyBooks.length; i++) {
+        const swiperSlide = document.createElement("div");
+        swiperSlide.classList.add("swiper-slide");
+        swiperSlide.classList.add("slide-contect-container");
+
+        swiperSlide.innerHTML = `
+            <div class='book-img-container'>
+            <img src="${philosophyBooks[i].image}" />
+            <h4>${philosophyBooks[i].name}</h4>
+            <p>${philosophyBooks[i].author}</p>
+            <div class="btn-container">
+                <button id=${philosophyBooks[i].id}>Read more</button>
+            </div>
+        </div>
+    
+        `;
+        swiperContainer.append(swiperSlide);
+    }
+});
+document.getElementById("drama").addEventListener("click", () => {
+    const swiperCont = document.querySelectorAll(".slide-contect-container");
+    swiperCont.forEach((element) => {
+        element.style.display = "none";
+    });
+    for (let i = 0; i < dramaBooks.length; i++) {
+        const swiperSlide = document.createElement("div");
+        swiperSlide.classList.add("swiper-slide");
+        swiperSlide.classList.add("slide-contect-container");
+
+        swiperSlide.innerHTML = `
+            <div class='book-img-container'>
+            <img src="${dramaBooks[i].image}" />
+            <h4>${dramaBooks[i].name}</h4>
+            <p>${dramaBooks[i].author}</p>
+            <div class="btn-container">
+                <button id=${dramaBooks[i].id}>Read more</button>
+            </div>
+        </div>
+    
+        `;
+        swiperContainer.append(swiperSlide);
+    }
+});
+document.getElementById("biography").addEventListener("click", () => {
+    const swiperCont = document.querySelectorAll(".slide-contect-container");
+    swiperCont.forEach((element) => {
+        element.style.display = "none";
+    });
+    for (let i = 0; i < biographyBooks.length; i++) {
+        const swiperSlide = document.createElement("div");
+        swiperSlide.classList.add("swiper-slide");
+        swiperSlide.classList.add("slide-contect-container");
+
+        swiperSlide.innerHTML = `
+            <div class='book-img-container'>
+            <img src="${biographyBooks[i].image}" />
+            <h4>${biographyBooks[i].name}</h4>
+            <p>${biographyBooks[i].author}</p>
+            <div class="btn-container">
+                <button id=${biographyBooks[i].id}>Read more</button>
+            </div>
+        </div>
+    
+        `;
+        swiperContainer.append(swiperSlide);
+    }
+>>>>>>> origin
+});
