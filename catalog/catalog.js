@@ -85,6 +85,7 @@ onValue(bookDataRef, (snapshot) => {
         const swiperSlideContainer = document.createElement("div");
         swiperSlideContainer.classList.add("swiper-slide");
         swiperSlideContainer.classList.add("slide-contect-container");
+        // swiperSlideContainer.classList.add
 
         swiperSlideContainer.innerHTML = `
         <div class='book-img-container'>
