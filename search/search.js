@@ -14,10 +14,11 @@ btnSearch.addEventListener("click", () => {
   )
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       const dataItems = data.items;
+      console.log(dataItems);
       for (let i = 0; i < dataItems.length; i++) {
         const title = dataItems[i].volumeInfo.title;
-        console.log(title);
         const authors = dataItems[i].volumeInfo.authors;
         const description = dataItems[i].volumeInfo.description;
         const imgBook = dataItems[i].volumeInfo.imageLinks.smallThumbnail;
