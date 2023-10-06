@@ -70,7 +70,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const bookDataRef = ref(db, `/bookData`);
-const swiperContainer = document.querySelector(".swiper-wrapper");
+const allBooksContainer = document.querySelector(".wrapper-allbooks");
+const bestsellersContainer = document.querySelector(".wrapper-bestsellers");
+const newReleaseContainer = document.querySelector(".wrapper-newReleases");
 const allBooks = [];
 const fictionBooks = [];
 const philosophyBooks = [];
@@ -80,79 +82,44 @@ const dramaBooks = [];
 onValue(bookDataRef, (snapshot) => {
     const bookDatas = snapshot.val();
     for (const key in bookDatas) {
-        const swiperSlideContainer = document.createElement("div");
-        swiperSlideContainer.classList.add("swiper-slide");
-        swiperSlideContainer.classList.add("slide-contect-container");
-        swiperSlideContainer.classList.add("all-books");
-        const bookDatas = snapshot.val();
-
-        for (const key in bookDatas) {
-            allBooks.push(bookDatas[key]);
-            const swiperSlideContainer = document.createElement("div");
-            swiperSlideContainer.classList.add("swiper-slide");
-            swiperSlideContainer.classList.add("slide-contect-container");
-
-            swiperSlideContainer.innerHTML = `
-        <div class='book-img-container'>
-            <img src="${bookDatas[key].image}" />
-            <h4>${bookDatas[key].name}</h4>
-            <p>${bookDatas[key].author}</p>
-            <div class="btn-container">
-                <button id=${bookDatas[key].id}>Read more</button>
+        allBooks.push(bookDatas[key]);
+        const swiperSlideContainerForAllBooks = document.createElement("div");
+        swiperSlideContainerForAllBooks.classList.add("swiper-slide");
+        swiperSlideContainerForAllBooks.classList.add(
+            "slide-contect-container"
+        );
+        swiperSlideContainerForAllBooks.classList.add("fiction-books");
+        swiperSlideContainerForAllBooks.innerHTML = `
+            <div class='book-img-container'>
+                <img src="${bookDatas[key].image}" />
+                <h4>${bookDatas[key].name}</h4>
+                <p>${bookDatas[key].author}</p>
+                <div class="btn-container">
+                    <button>Read more</button>
+                </div>
             </div>
-        </div>
-        
         `;
-            swiperContainer.append(swiperSlideContainer);
-            document
-                .getElementById(`${bookDatas[key].id}`)
-                .addEventListener("click", () => {
-                    window.location.href = "https://google.com";
-                });
-            // if (bookDatas[key].type === "Fiction") {
-            //     finctionBooks.push(bookDatas[key]);
-            //     for (let i = 0; i < finctionBooks.length; i++) {
-            //         const swiperSlideCont = document.createElement("div");
-            //         swiperSlideCont.classList.add("swiper-slide");
-            //         swiperSlideCont.classList.add("slide-contect-container");
-            //         swiperSlideCont.classList.add("fiction-books");
-            //         swiperSlideCont.innerHTML = `
-            //             <div class='book-img-container'>
-            //                 <img src="${finctionBooks[i].image}" />
-            //                 <h4>${finctionBooks[i].name}</h4>
-            //                 <p>${finctionBooks[i].author}</p>
-            //                 <div class="btn-container">
-            //                     <button>Read more</button>
-            //                 </div>
-            //             </div>
 
-            //             `;
-            //         const allBooksElements =
-            //             document.querySelectorAll(".all-books");
-            //         const fictionBooksElements =
-            //             document.querySelectorAll(".fiction-books");
-
-            //         allBooksElements.forEach((element) => {
-            //             element.style.display = "none";
-            //         });
-
-            //         fictionBooksElements.forEach((element) => {
-            //             element.style.display = "block";
-            //         });
-            //         swiperContainer.append(swiperSlideCont);
-            //     }
-            // }
-            // const bookImgContainer = document.createElement("div");
-            // bookImgContainer.classList.add("book-img-container");
-            // const btnContainer = document.createElement("div");
-            // btnContainer.classList.add("btn-container");
-        }
-        swiperContainer.append(swiperSlideContainer);
-        document
-            .getElementById(`${bookDatas[key].id}`)
-            .addEventListener("click", () => {
-                alert(bookDatas[key].name);
-            });
+        // Create a new swiperSlideContainer for newReleaseContainer
+        const swiperSlideContainerForBestsellers =
+            document.createElement("div");
+        swiperSlideContainerForBestsellers.classList.add("swiper-slide");
+        swiperSlideContainerForBestsellers.classList.add(
+            "slide-contect-container"
+        );
+        swiperSlideContainerForBestsellers.classList.add("fiction-books");
+        swiperSlideContainerForBestsellers.innerHTML = `
+            <div class='book-img-container'>
+                <img src="${bookDatas[key].image}" />
+                <h4>${bookDatas[key].name}</h4>
+                <p>${bookDatas[key].author}</p>
+                <div class="btn-container">
+                    <button>Read more</button>
+                </div>
+            </div>
+        `;
+        allBooksContainer.append(swiperSlideContainerForAllBooks);
+        bestsellersContainer.append(swiperSlideContainerForBestsellers);
         if (bookDatas[key].type === "Fiction") {
             fictionBooks.push(bookDatas[key]);
         } else if (bookDatas[key].type === "Biography & Autobiography") {
@@ -185,7 +152,7 @@ document.getElementById("all-books").addEventListener("click", () => {
         </div>
     
         `;
-        swiperContainer.append(swiperSlide);
+        allBooksContainer.append(swiperSlide);
     }
 });
 
@@ -210,7 +177,7 @@ document.getElementById("fiction").addEventListener("click", () => {
         </div>
     
         `;
-        swiperContainer.append(swiperSlide);
+        allBooksContainer.append(swiperSlide);
     }
     //     const swiperCont = document.querySelectorAll(".slide-contect-container");
     //     swiperCont.forEach((element) => {
@@ -232,7 +199,7 @@ document.getElementById("fiction").addEventListener("click", () => {
     // </div>
 
     // `;
-    //         swiperContainer.append(swiperSlide);
+    //         allBooksContainer.append(swiperSlide);
     //     }
 });
 
@@ -257,7 +224,7 @@ document.getElementById("philosophy").addEventListener("click", () => {
         </div>
     
         `;
-        swiperContainer.append(swiperSlide);
+        allBooksContainer.append(swiperSlide);
     }
 });
 document.getElementById("drama").addEventListener("click", () => {
@@ -281,7 +248,7 @@ document.getElementById("drama").addEventListener("click", () => {
         </div>
     
         `;
-        swiperContainer.append(swiperSlide);
+        allBooksContainer.append(swiperSlide);
     }
 });
 document.getElementById("biography").addEventListener("click", () => {
@@ -305,6 +272,6 @@ document.getElementById("biography").addEventListener("click", () => {
         </div>
     
         `;
-        swiperContainer.append(swiperSlide);
+        allBooksContainer.append(swiperSlide);
     }
 });
