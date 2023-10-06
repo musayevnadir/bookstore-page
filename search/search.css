@@ -133,8 +133,8 @@ select {
   width: 100%;
   border-radius: 5px;
   background: #e16a00;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
   color: white;
   text-align: center;
   font-family: Crimson Text;
@@ -152,7 +152,7 @@ select {
 
 .book-info-container {
   width: 60%;
-  margin-top: 117px;
+  margin-top: 115px;
   background: #fff;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
 }
@@ -189,4 +189,12 @@ select {
   font-style: normal;
   font-weight: 400;
   line-height: 196.187%; /* 27.466px */
+}
+
+.slider-btn {
+  transition: transform 0.3s ease;
+}
+
+.slider-btn:hover {
+  transform: scale(1.3); /* Увеличиваем изображение на 10% при наведении */
 }/*# sourceMappingURL=search.css.map */
