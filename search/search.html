@@ -2,229 +2,292 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Book Page</title>
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/images/favicon-32x32.png"
-        />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
 
-        <link rel="stylesheet" href="/styles/style.css" />
-        <link rel="stylesheet" href="./search.css" />
-        <script src="/script.js" type="module" defer></script>
-        <script defer src="./search.js" defer type="module"></script>
-    </head>
-    <body>
-        <div class="wrapper">
-            <!-- Header -->
-            <div class="header-container burger">
-                <header>
-                    <img src="/images/Лого.svg" alt="Logo" />
-                    <!-- Navigation -->
-                    <nav>
-                        <ul>
-                            <a href="/index.html"><li>Home</li></a>
-                            <a href="/catalog/catalog.html"><li>Catalog</li></a>
-                            <a href="/about/about.html"><li>About Store</li></a>
-                            <a href="/contact/contact.html"
-                                ><li>Contact Us</li></a
-                            >
-                            <a href="/search/search.html"><li>Search</li></a>
-                        </ul>
-                    </nav>
-                    <div class="join-us">
-                        <img
-                            style="cursor: pointer"
-                            class="showPopupIcon"
-                            id="showPopupIcon"
-                            src="/images/akar-icons_heart.svg"
-                            alt="User icon"
-                        />
-                        <button class="showPopupBtn" id="showPopupBtn">
-                            Join Us
-                        </button>
-                        <label style="margin-right: 3rem" class="hamburger">
-                            <input id="checkbox" type="checkbox" />
-                        </label>
-                    </div>
-                </header>
-                <!-- Header info text -->
-                <div class="popup">
-                    <div class="popup-content">
-                        <span
-                            style="font-size: 2rem"
-                            class="close"
-                            id="closePopup"
-                            >&times;</span
-                        >
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./search.css" />
+    <script src="/script.js" type="module" defer></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+    ></script>
+    <script defer src="./search.js" defer type="module"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <div class="header-container burger">
+        <header>
+          <img src="/images/Лого.svg" alt="Logo" />
+          <!-- Navigation -->
+          <nav>
+            <ul>
+              <a href="/index.html"><li>Home</li></a>
+              <a href="/catalog/catalog.html"><li>Catalog</li></a>
+              <a href="/about/about.html"><li>About Store</li></a>
+              <a href="/contact/contact.html"><li>Contact Us</li></a>
+              <a href="/search/search.html"><li>Search</li></a>
+            </ul>
+          </nav>
+          <div class="join-us">
+            <img
+              style="cursor: pointer"
+              class="showPopupIcon"
+              id="showPopupIcon"
+              src="/images/akar-icons_heart.svg"
+              alt="User icon"
+            />
+            <button class="showPopupBtn" id="showPopupBtn">Join Us</button>
+            <label style="margin-right: 3rem" class="hamburger">
+              <input id="checkbox" type="checkbox" />
+            </label>
+          </div>
+        </header>
+        <!-- Header info text -->
+        <div class="popup">
+          <div class="popup-content">
+            <span style="font-size: 2rem" class="close" id="closePopup"
+              >&times;</span
+            >
 
-                        <div id="popup-info" class="popup-info">
-                            <form id="form" action="">
-                                <h1>Join Us</h1>
-                                <input
-                                    placeholder="Full name"
-                                    type="text"
-                                    name="name"
-                                    id="name"
-                                />
-                                <input
-                                    placeholder="Email"
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                />
-                                <div id="inputs"></div>
-                                <button id="joinUs">Join</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+            <div id="popup-info" class="popup-info">
+              <form id="form" action="">
+                <h1>Join Us</h1>
+                <input
+                  placeholder="Full name"
+                  type="text"
+                  name="name"
+                  id="name"
+                />
+                <input
+                  placeholder="Email"
+                  type="email"
+                  name="email"
+                  id="email"
+                />
+                <div id="inputs"></div>
+                <button id="joinUs">Join</button>
+              </form>
             </div>
-            <!-- Start of the main section -->
-            <div class="main-container">
-                <section style="margin-top: 150px" class="section-js">
-                    <div class="search-container">
-                        <div class="search-main">
-                            <h1>Search</h1>
-                            <input
-                                class="search-input"
-                                type="text"
-                                name=""
-                                id=""
-                                placeholder="Order in Chaos"
-                            />
-                            <button class="btn-search">Search</button>
-                        </div>
-
-                        <div class="book-info-container">
-                            <div class="info-main">
-                                <div class="img-container">
-                                    <img src="./img/image 2.svg" alt="" />
-                                </div>
-                                <div class="description-container">
-                                    <h2 class="title">Order in Chaos</h2>
-                                    <h4 class="authors">Konstantin Koptelov</h4>
-                                    <p class="description">
-                                        We work without holidays and weekends!
-                                        Residents of Kiev can receive an order
-                                        on the day of its registration.
-                                        Customers from other cities of Ukraine
-                                        can receive an order within 1-5 days,
-                                        depending on the location of the
-                                        settlement and the selected delivery
-                                        method. Orders over UAH 1000 are
-                                        delivered free of charge *. You can see
-                                        the available methods, exact terms and
-                                        cost of delivery during checkout in the
-                                        order basket, after selecting the
-                                        delivery city
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- Links -->
-                <section class="links">
-                    <h2>Follow us on social media</h2>
-
-                    <div class="links-items">
-                        <a href="#"
-                            ><img
-                                src="/images/akar-icons_facebook-fill.svg"
-                                alt="Facebook icon"
-                        /></a>
-                        <a href="#"
-                            ><img src="/images/Group.svg" alt="Twitter icon"
-                        /></a>
-                        <a href="#"
-                            ><img
-                                src="/images/akar-icons_instagram-fill.svg"
-                                alt="Instagram icon"
-                        /></a>
-                    </div>
-                </section>
-            </div>
-            <!-- Footer -->
-            <footer>
-                <div class="main-container">
-                    <!-- Mobile footer -->
-                    <div class="mobile-footer-container">
-                        <header>
-                            <img src="/images/logoFooter.svg" alt="" />
-
-                            <nav
-                                class="mobile-footer-nav"
-                                style="margin-right: 3rem"
-                            >
-                                <ul style="margin-bottom: 4rem">
-                                    <a href="/index.html"><li>Home</li></a>
-                                    <a href="/catalog/catalog.html"
-                                        ><li>Catalog</li></a
-                                    >
-                                    <a href="/about/about.html"
-                                        ><li>About Store</li></a
-                                    >
-                                    <a href="/contact/contact.html"
-                                        ><li>Contact Us</li></a
-                                    >
-                                    <a href="/search/search.html"
-                                        ><li>Search</li></a
-                                    >
-                                </ul>
-                            </nav>
-                        </header>
-                        <div
-                            style="
-                                width: 80%;
-                                height: 1px;
-                                background-color: #fff;
-                                margin: 0 auto;
-                            "
-                        ></div>
-                        <p style="margin-bottom: 0.9rem">
-                            Library Bookstore Eacamp
-                        </p>
-                        <p>© 2003-2023</p>
-                    </div>
-
-                    <div class="footer-container">
-                        <img src="/images/logoFooter.svg" alt="" />
-
-                        <div class="footer-container-item footer-container1">
-                            <h4>Popular</h4>
-                            <p>Programming</p>
-                            <p>Books for children</p>
-                            <p>Psychology</p>
-                            <p>Business</p>
-                        </div>
-                        <div class="footer-container-item footer-container2">
-                            <h4>Information</h4>
-                            <p>Delivery</p>
-                            <p>Payment</p>
-                            <p>About the store</p>
-                        </div>
-                        <div class="footer-container-item footer-container3">
-                            <h4>Help</h4>
-                            <p>Contacts</p>
-                            <p>Purchase returns</p>
-                            <p>Buyer help</p>
-                        </div>
-                        <div class="footer-container-item footer-container4">
-                            <h3>+994 50 594 54 54</h3>
-                            <button>Request a call</button>
-                        </div>
-                    </div>
-                    <p class="terms">
-                        All rights reserved © 2003-2023 LIBRARY TERMS OF USE |
-                        Privacy Policy
-                    </p>
-                </div>
-            </footer>
+          </div>
         </div>
-    </body>
+      </div>
+      <!-- Start of the main section -->
+      <div class="main-container">
+        <section style="margin-top: 150px" class="section-js">
+          <div class="search-container">
+            <div class="search-main">
+              <h1>Search</h1>
+              <input
+                class="search-input"
+                type="text"
+                name=""
+                id=""
+                placeholder="Order in Chaos"
+              />
+              <button class="btn-search">Search</button>
+            </div>
+
+            <!-- <button class="slider-btn-left">
+              <img src="./img/click left-icon.svg" alt="" />
+            </button> -->
+            <!-- ?Slider Swiper -->
+            <div class="book-info-container">
+              <!-- Slider main container -->
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <div class="info-main">
+                      <div class="img-container">
+                        <img class="img-book" src="./img/image 2.svg" alt="" />
+                      </div>
+                      <div class="description-container">
+                        <h2 class="title">Order in Chaos</h2>
+                        <h4 class="authors">Konstantin Koptelov</h4>
+                        <p class="description">
+                          We work without holidays and weekends! Residents of
+                          Kiev can receive an order on the day of its
+                          registration. Customers from other cities of Ukraine
+                          can receive an order within 1-5 days, depending on the
+                          location of the settlement and the selected delivery
+                          method. Orders over UAH 1000 are delivered free of
+                          charge *. You can see the available methods, exact
+                          terms and cost of delivery during checkout in the
+                          order basket, after selecting the delivery city
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="info-main">
+                      <div class="img-container">
+                        <img class="img-book" src="./img/image 2.svg" alt="" />
+                      </div>
+                      <div class="description-container">
+                        <h2 class="title">Order in Chaos</h2>
+                        <h4 class="authors">Konstantin Koptelov</h4>
+                        <p class="description">
+                          We work without holidays and weekends! Residents of
+                          Kiev can receive an order on the day of its
+                          registration. Customers from other cities of Ukraine
+                          can receive an order within 1-5 days, depending on the
+                          location of the settlement and the selected delivery
+                          method. Orders over UAH 1000 are delivered free of
+                          charge *. You can see the available methods, exact
+                          terms and cost of delivery during checkout in the
+                          order basket, after selecting the delivery city
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="info-main">
+                      <div class="img-container">
+                        <img class="img-book" src="./img/image 2.svg" alt="" />
+                      </div>
+                      <div class="description-container">
+                        <h2 class="title">Order in Chaos</h2>
+                        <h4 class="authors">Konstantin Koptelov</h4>
+                        <p class="description">
+                          We work without holidays and weekends! Residents of
+                          Kiev can receive an order on the day of its
+                          registration. Customers from other cities of Ukraine
+                          can receive an order within 1-5 days, depending on the
+                          location of the settlement and the selected delivery
+                          method. Orders over UAH 1000 are delivered free of
+                          charge *. You can see the available methods, exact
+                          terms and cost of delivery during checkout in the
+                          order basket, after selecting the delivery city
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev">
+                  <img
+                    class="slider-btn"
+                    src="./img/click left-icon.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-button-next">
+                  <img
+                    class="slider-btn"
+                    src="./img/click-rigth-icon.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- ?Slider Swiper -->
+            </div>
+
+            <!-- <button class="slider-btn-rigth">
+              <img src="./img/click-rigth-icon.svg" alt="" />
+            </button> -->
+          </div>
+        </section>
+        <!-- Links -->
+        <section class="links">
+          <h2>Follow us on social media</h2>
+
+          <div class="links-items">
+            <a href="#"
+              ><img
+                src="/images/akar-icons_facebook-fill.svg"
+                alt="Facebook icon"
+            /></a>
+            <a href="#"><img src="/images/Group.svg" alt="Twitter icon" /></a>
+            <a href="#"
+              ><img
+                src="/images/akar-icons_instagram-fill.svg"
+                alt="Instagram icon"
+            /></a>
+          </div>
+        </section>
+      </div>
+      <!-- Footer -->
+      <footer>
+        <div class="main-container">
+          <!-- Mobile footer -->
+          <div class="mobile-footer-container">
+            <header>
+              <img src="/images/logoFooter.svg" alt="" />
+
+              <nav class="mobile-footer-nav" style="margin-right: 3rem">
+                <ul style="margin-bottom: 4rem">
+                  <a href="/index.html"><li>Home</li></a>
+                  <a href="/catalog/catalog.html"><li>Catalog</li></a>
+                  <a href="/about/about.html"><li>About Store</li></a>
+                  <a href="/contact/contact.html"><li>Contact Us</li></a>
+                  <a href="/search/search.html"><li>Search</li></a>
+                </ul>
+              </nav>
+            </header>
+            <div
+              style="
+                width: 80%;
+                height: 1px;
+                background-color: #fff;
+                margin: 0 auto;
+              "
+            ></div>
+            <p style="margin-bottom: 0.9rem">Library Bookstore Eacamp</p>
+            <p>© 2003-2023</p>
+          </div>
+
+          <div class="footer-container">
+            <img src="/images/logoFooter.svg" alt="" />
+
+            <div class="footer-container-item footer-container1">
+              <h4>Popular</h4>
+              <p>Programming</p>
+              <p>Books for children</p>
+              <p>Psychology</p>
+              <p>Business</p>
+            </div>
+            <div class="footer-container-item footer-container2">
+              <h4>Information</h4>
+              <p>Delivery</p>
+              <p>Payment</p>
+              <p>About the store</p>
+            </div>
+            <div class="footer-container-item footer-container3">
+              <h4>Help</h4>
+              <p>Contacts</p>
+              <p>Purchase returns</p>
+              <p>Buyer help</p>
+            </div>
+            <div class="footer-container-item footer-container4">
+              <h3>+994 50 594 54 54</h3>
+              <button>Request a call</button>
+            </div>
+          </div>
+          <p class="terms">
+            All rights reserved © 2003-2023 LIBRARY TERMS OF USE | Privacy
+            Policy
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
