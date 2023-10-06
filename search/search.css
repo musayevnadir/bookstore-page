@@ -1,1 +1,192 @@
-/*# sourceMappingURL=search.css.map */
+@charset "UTF-8";
+/** @format */
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Montserrat:wght@400;500;600;700;900&family=Nunito+Sans:opsz@6..12&family=Preahvihear&family=Roboto:wght@300;400&family=Rubik:wght@400;500&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header-container {
+  width: 92%;
+  margin: 1rem 6.5rem 0 6.5rem;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.main-container {
+  width: 88%;
+  margin: 0 6.5rem 0 6.5rem;
+}
+
+.search-container {
+  margin-bottom: 7.75rem;
+  display: flex;
+  gap: 62.5px;
+}
+
+.search-main {
+  width: 35%;
+}
+.search-main h1 {
+  color: var(--, #241400);
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 196.187%; /* 70.627px */
+  margin-bottom: 2.75rem;
+}
+.search-main input {
+  display: block;
+  margin-bottom: 2.75rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1.69rem;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #cecece;
+  background: #fff;
+}
+.search-main button {
+  width: 100%;
+  border-radius: 5px;
+  background: #e16a00;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: white;
+  text-align: center;
+  font-family: Crimson Text;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.search-main button:hover {
+  transform: scale(1.05); /* Увеличиваем изображение на 10% при наведении */
+}
+
+.book-info-container {
+  width: 60%;
+  margin-top: 117px;
+  background: #fff;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+.info-main {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 64px;
+  margin-bottom: 134px;
+  display: flex;
+  gap: 37px;
+}
+
+.img-container {
+  width: 30%;
+}
+.img-container img {
+  width: 100%;
+}
+
+.description-container {
+  width: 70%;
+}
+.description-container h2 {
+  text-align: start;
+}
+.description-container h4 {
+  margin-bottom: 10px;
+}
+.description-container p {
+  color: var(--, #241400);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 196.187%; /* 27.466px */
+}/*# sourceMappingURL=search.css.map */
