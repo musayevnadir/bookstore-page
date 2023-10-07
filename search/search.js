@@ -30,15 +30,15 @@ btnSearch.addEventListener("click", () => {
       for (let i = 0; i < dataItems.length; i++) {
         const title = dataItems[i].volumeInfo.title;
         const authors = dataItems[i].volumeInfo.authors;
-        arrayBookAuthors.push(authors);
         const description = dataItems[i].volumeInfo.description;
         const imgBook = dataItems[i].volumeInfo.imageLinks.thumbnail;
-        console.log(imgBook);
+        
 
         titleScreen.innerHTML = title;
         authorsScreen.innerHTML = authors;
         descriptionScreen.innerHTML = description;
         imgScreen.src = imgBook;
+
       }
       console.log("arrayBookAuthors", arrayBookAuthors);
     });
