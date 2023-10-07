@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"bookpage.css"}
+{"version":3,"sources":["bookpage.scss","bookpage.css"],"names":[],"mappings":"AAAA;EACI;IACI,eAAA;ECCN;AACF;ADEA;EACI;IACI,cAAA;ECAN;AACF","file":"bookpage.css"}

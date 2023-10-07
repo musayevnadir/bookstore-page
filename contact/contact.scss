@@ -1,0 +1,370 @@
+/** @format */
+
+@import "../styles/config"; // *
+
+.main-container {
+    .main-contact-us {
+        // background-color: red;
+        margin: 7rem auto;
+        width: 90%;
+        h1 {
+            // background-color: greenyellow;
+            color: var(--Gray-1, #333);
+            font-family: $ff-montserrat;
+            font-size: 2.25rem;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 196.187%;
+            margin-bottom: 1.75rem;
+        }
+
+        .inputs-container {
+            // background-color: rgb(47, 144, 255);
+            //   justify-content: space-between;
+            gap: 2.305rem;
+            // flex-wrap: wrap;
+            .inp-one {
+                display: flex;
+                justify-content: space-between;
+                // background-color: red;
+                margin-bottom: 2.06rem;
+            }
+
+            .inp-two {
+                display: flex;
+                justify-content: space-between;
+                // background-color: green;
+                margin-bottom: 2.06rem;
+            }
+            input {
+                width: 49%;
+                padding-left: 2.375rem;
+                padding-top: 1.625rem;
+                padding-bottom: 1.625rem;
+                color: #797667;
+                font-family: $ff-crimson;
+                font-size: 1.437rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                outline: none;
+                border: 1px solid #cecece;
+                background: #fff;
+            }
+
+            .input-note-container {
+                width: 100%;
+                margin-bottom: 5.31rem;
+                .note-input {
+                    width: 100%;
+                    padding-top: 0.81rem;
+                    padding-bottom: 6.8rem;
+                    border: 1px solid #cecece;
+                    background: #fff;
+                }
+            }
+        }
+
+        .btn-send-contact-us {
+            //   background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+                background: #e16a00;
+                width: 50%;
+                padding-top: 1.06rem;
+                padding-bottom: 1.06rem;
+                color: #fff;
+                font-family: Crimson Text;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                cursor: pointer;
+                border: none;
+                transition: transform 0.3s ease;
+            }
+
+            button:hover {
+                transform: scale(
+                    1.03
+                ); /* Увеличиваем изображение на 10% при наведении */
+            }
+        }
+    }
+}
+
+// ! -----------------------------
+@media (max-width: 650px) {
+    .main-container {
+        .main-contact-us {
+            // background-color: red;
+            margin-top: 7rem;
+            margin-bottom: 7.875rem;
+            width: 90%;
+            h1 {
+                // background-color: greenyellow;
+                color: var(--Gray-1, #333);
+                font-family: $ff-montserrat;
+                font-size: 2.25rem;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 196.187%;
+                margin-bottom: 1.75rem;
+            }
+
+            .inputs-container {
+                // background-color: rgb(47, 144, 255);
+                //   justify-content: space-between;
+                gap: 2.305rem;
+                // flex-wrap: wrap;
+                .inp-one {
+                    // background-color: red;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 0;
+                    //   background-color: red;
+                }
+
+                .inp-two {
+                    display: flex;
+                    flex-direction: column;
+                    //   background-color: green;
+                    margin-bottom: 68.98px;
+                }
+                input {
+                    z-index: -1;
+                    width: 100%;
+                    padding-left: 2.375rem;
+                    padding-top: 1.625rem;
+                    padding-bottom: 1.625rem;
+                    color: #797667;
+                    font-family: $ff-crimson;
+                    font-size: 1.437rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    outline: none;
+                    border: 1px solid #cecece;
+                    background: #fff;
+                    margin-bottom: 32px;
+                }
+
+                .input-note-container {
+                    display: none;
+                    width: 100%;
+                    margin-bottom: 5.31rem;
+                    .note-input {
+                        width: 100%;
+                        padding-top: 0.81rem;
+                        padding-bottom: 6.8rem;
+                        border: 1px solid #cecece;
+                        background: #fff;
+                    }
+                }
+            }
+
+            .btn-send-contact-us {
+                //   background-color: green;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                button {
+                    z-index: -1;
+                    background: #e16a00;
+                    width: 100%;
+                    padding-top: 1.06rem;
+                    padding-bottom: 1.06rem;
+                    color: #fff;
+                    font-family: Crimson Text;
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    cursor: pointer;
+                    border: none;
+                    transition: transform 0.3s ease;
+                }
+
+                button:hover {
+                    transform: scale(
+                        1.03
+                    ); /* Увеличиваем изображение на 10% при наведении */
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1200px) {
+    html {
+        font-size: 13px;
+    }
+    .main-container .links-items {
+        width: 40%;
+    }
+    .books {
+        width: 60%;
+    }
+    .links-items img {
+        width: 100%;
+    }
+}
+@media all and (max-width: 1000px) {
+    html {
+        font-size: 11px;
+    }
+}
+@media all and (max-width: 800px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media all and (max-width: 650px) {
+    html {
+        font-size: 16px;
+    }
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    .hamburger::before,
+    .hamburger::after,
+    .hamburger input {
+        content: "";
+        width: 2.5rem;
+        height: 2px;
+        background-color: #000;
+        transition: opacity 200ms ease-in-out, width 200ms ease-in-out,
+            rotate 200ms ease-in-out, translate 200ms ease-in-out;
+        transform-origin: left center;
+    }
+    .hamburger input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 0;
+        margin: 0.2rem 0;
+        outline: none;
+        pointer-events: none;
+    }
+    .hamburger:has(input:checked)::before {
+        rotate: 45deg;
+        width: 1.4142135624rem;
+        translate: 0 1px;
+        background-color: #fff;
+    }
+    .hamburger:has(input:checked)::after {
+        rotate: -45deg;
+        width: 1.4142135624rem;
+        background-color: #fff;
+    }
+    .hamburger input:checked {
+        opacity: 0;
+        width: 0;
+    }
+    .burger header nav ul {
+        z-index: 1;
+        display: none;
+        position: absolute;
+        top: -560%;
+        right: 76%;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10rem;
+        transition: translate 200ms ease-in-out;
+        transform: translateX(150%);
+        padding: 0.5rem 1rem;
+        background-color: none;
+        color: #000;
+        width: 50%;
+        min-height: 100vh;
+    }
+    .burger header nav ul li {
+        margin: 0.9rem 0;
+        color: #fff;
+        font-size: 1.1rem;
+    }
+    .popup .popup-content {
+        margin: 0 2rem;
+        width: 80%;
+        left: 45%;
+    }
+    .showPopupBtn {
+        display: none;
+    }
+    .header-container header .join-us .hamburger {
+        display: flex;
+    }
+    .section-info .header-section-left button {
+        width: 100%;
+        margin-left: 0.5rem;
+    }
+    .header-container header img {
+        width: 40%;
+    }
+    .header-container header .join-us img {
+        width: 100%;
+    }
+    .section-info,
+    .stats-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .header-container,
+    .section-info,
+    .main-container {
+        margin: 0 auto;
+    }
+    .section-info {
+        margin-bottom: 5rem;
+        margin-top: 5rem;
+    }
+    .section-info .header-section-left button {
+        text-align: center;
+    }
+    .main-container .catalog .catalog-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .main-container .stats .stats-info .stats-info-item {
+        width: 100%;
+        max-width: 230px;
+        justify-content: center;
+    }
+    .main-container .stats .stats-info .stats-info-item3 h1 {
+        margin-right: 3rem;
+    }
+    .main-container .links-items {
+        width: 60%;
+    }
+    footer .main-container .footer-container,
+    .terms {
+        display: none;
+    }
+    .mobile-footer-container {
+        display: block;
+        text-align: center;
+    }
+    .header-container header .join-us a {
+        display: none;
+    }
+}
+
+@media all and (max-width: 510px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media all and (max-width: 260px) {
+    html {
+        font-size: 7px;
+    }
+}

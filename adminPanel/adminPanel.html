@@ -8,12 +8,58 @@
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="./adminPanel.css" />
     <link rel="stylesheet" href="./responseAdminPanel.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+
     <!-- Script JS -->
-    <script defer src="./adminPanel.js"></script>
+    <script type="module" src="./adminPanel.js" defer></script>
     <title>Admin Panel Page</title>
   </head>
   <body>
     <div class="container">
+      <!-- ! Hamburger menu -->
+      <div class="container-hamburger-menu">
+        <div class="hamburger-nav">
+          <img src="../images/logoAdminPanel-hamb.svg" alt="" />
+          <img class="button-x" src="../images/x-adminPanel-btn.svg" alt="" />
+        </div>
+
+        <div class="links-hamburger-nav">
+          <div class="home-nav-container">
+            <img src="../images/books-stack-of-three 2.svg" alt="" />
+            <a class="button-home-nav" href="#admin-panel-nav-link">Home</a>
+          </div>
+
+          <div class="home-nav-container">
+            <img src="../images/books-stack-of-three 2.svg" alt="" />
+            <a class="button-about-nav" href="#about-nav-link">About</a>
+          </div>
+
+          <div class="home-nav-container">
+            <img src="../images/books-stack-of-three 2.svg" alt="" />
+            <a class="button-join-nav" href="#join-us-nav-link">Join</a>
+          </div>
+
+          <div class="home-nav-container">
+            <img src="../images/books-stack-of-three 2.svg" alt="" />
+            <a class="button-contact-nav" href="#contact-us-nav-link"
+              >Contact</a
+            >
+          </div>
+
+          <div class="home-nav-container">
+            <img src="../images/books-stack-of-three 2.svg" alt="" />
+            <a class="button-logout-nav" href="../adminLogin/adminLogin.html"
+              >Logout</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- ! Hamburger menu end -->
       <!-- ? Nav Left Contect -->
       <div class="nav-container">
         <div class="logo-admin-img">
@@ -23,7 +69,7 @@
           <div class="nav-links">
             <img src="../images/nav-logoImgBook.svg" alt="" />
             <li>
-              <a href="#">Home</a>
+              <a href="#admin-panel-nav-link">Home</a>
             </li>
           </div>
         </div>
@@ -32,7 +78,7 @@
           <div class="nav-links">
             <img src="../images/nav-logoImgBook.svg" alt="" />
             <li>
-              <a href="#">Books</a>
+              <a href="#book-nav-link">Books</a>
             </li>
           </div>
         </div>
@@ -41,7 +87,7 @@
           <div class="nav-links">
             <img src="../images/nav-logoImgBook.svg" alt="" />
             <li>
-              <a href="#">About</a>
+              <a href="#about-nav-link">About</a>
             </li>
           </div>
         </div>
@@ -50,7 +96,7 @@
           <div class="nav-links">
             <img src="../images/nav-logoImgBook.svg" alt="" />
             <li>
-              <a href="#">Join Us</a>
+              <a href="#join-us-nav-link">Join Us</a>
             </li>
           </div>
         </div>
@@ -59,7 +105,7 @@
           <div class="nav-links">
             <img src="../images/nav-logoImgBook.svg" alt="" />
             <li>
-              <a href="#">Contact</a>
+              <a href="#contact-us-nav-link">Contact</a>
             </li>
           </div>
         </div>
@@ -68,18 +114,18 @@
           <div class="nav-links">
             <img src="../images/nav-logoImgBook.svg" alt="" />
             <li>
-              <a href="#">Logout </a>
+              <a href="../adminLogin/adminLogin.html">Logout </a>
             </li>
           </div>
         </div>
       </div>
       <!-- ? Right contect -->
       <!-- admin login -->
-      <div class="admin-panel-container">
+      <div class="admin-panel-container" id="admin-panel-nav-link">
         <div class="admin">
           <div class="response-none-container">
             <img src="../images/admin-panel-icon.svg" alt="" />
-            <a href="#">Admin</a>
+            <a class="visitorAdmin" href="#">Admin</a>
           </div>
 
           <div class="hamburger-menu">
@@ -88,7 +134,11 @@
               src="../images/loqo-admPanel-resp.svg"
               alt=""
             />
-            <img src="../images/hamburger-menu-adminpanel.svg" alt="" />
+            <img
+              class="hamburger-button"
+              src="../images/hamburger-menu-adminpanel.svg"
+              alt=""
+            />
           </div>
         </div>
 
@@ -96,65 +146,100 @@
           <div class="add-book">
             <h4>Add book</h4>
             <h5>Search book</h5>
-            <div class="search-input-btn">
-              <input type="text" name="" id="" placeholder="Dan Brown" />
-              <div class="btn-searcn">
-                <img src="../images/lupa-img-button-adminpanel.svg" alt="" />
+            <form id="searchForm" action="">
+              <div class="search-input-btn">
+                <input
+                  type="text"
+                  name=""
+                  id="search-book"
+                  placeholder="Dan Brown"
+                />
+                <button class="btn-searcn">
+                  <img
+                    class="btn"
+                    src="../images/lupa-img-button-adminpanel.svg"
+                    alt=""
+                  />
+                </button>
               </div>
-            </div>
-            <div class="search-result-container">
-              <div class="searc-result">
-                <div>
-                  <img src="../images/clock-adinPanel.svg" alt="" />
-                  <p>Dan Brown Davinc</p>
-                </div>
+              <div class="search-result-container">
+                <div class="searc-result">
+                  <div>
+                    <img src="../images/clock-adinPanel.svg" alt="" />
+                    <p>Dan Brown Davinc</p>
+                  </div>
 
-                <div>
-                  <img src="../images/clock-adinPanel.svg" alt="" />
-                  <p>Dan Brown Angel</p>
+                  <div>
+                    <img src="../images/clock-adinPanel.svg" alt="" />
+                    <p>Dan Brown Angel</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
           <!-- ? Book Form -->
-          <div class="book-form">
-            <h5>Book form</h5>
-          </div>
-          <div class="book-form-contect">
-            <div>
-              <h4>Book Name</h4>
-              <input type="text" placeholder="Angels" />
+          <form id="bookForm" action="">
+            <div class="book-form" id="book-nav-link">
+              <h5>Book form</h5>
             </div>
+            <div class="book-form-contect">
+              <div>
+                <h4>Book Name</h4>
+                <input
+                  id="book-name"
+                  name="book-name"
+                  type="text"
+                  placeholder="Angels"
+                />
+              </div>
 
-            <div>
-              <h4>Author Name</h4>
-              <input type="text" placeholder="Dan Brown" />
-            </div>
+              <div>
+                <h4>Author Name</h4>
+                <input
+                  id="author-name"
+                  name="author-name"
+                  type="text"
+                  placeholder="Dan Brown"
+                />
+              </div>
 
-            <div>
-              <h4>Book Image Url</h4>
-              <input type="text" placeholder="Alex Smith" />
-            </div>
+              <div>
+                <h4>Book Image Url</h4>
+                <input
+                  id="book-image"
+                  name="book-image"
+                  type="text"
+                  placeholder="Alex Smith"
+                />
+              </div>
 
-            <div class="description">
-              <h4>Description</h4>
-              <input
-                type="text"
-                placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..."
-              />
-            </div>
+              <div class="description">
+                <h4>Description</h4>
+                <input
+                  id="description"
+                  name="description"
+                  type="text"
+                  placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..."
+                />
+              </div>
 
-            <div>
-              <h4>Book Type</h4>
-              <input type="text" placeholder="Fantastic" />
+              <div>
+                <h4>Book Type</h4>
+                <input
+                  id="book-type"
+                  name="book-type"
+                  type="text"
+                  placeholder="Fantastic"
+                />
+              </div>
+              <div class="btn-add">
+                <button>Add</button>
+              </div>
             </div>
-            <div class="btn-add">
-              <button>Add</button>
-            </div>
-          </div>
+          </form>
 
           <!-- ? About  -->
-          <div class="add">
+          <div class="add" id="about-nav-link">
             <h4>About Store</h4>
           </div>
           <div class="add-contect">
@@ -179,7 +264,7 @@
             </div>
           </div>
           <!-- ? Join Us -->
-          <div class="join-us">
+          <div class="join-us" id="join-us-nav-link">
             <h4>Join Us</h4>
           </div>
           <div class="table-responsive">
@@ -191,27 +276,11 @@
                   <th>Email</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Tehran Hamidli</td>
-                  <td>hamidlitehran@gmail.com</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Nadir Musayev</td>
-                  <td>nadirmusayev@gmail.com</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Ali Huseinzade</td>
-                  <td>alihuseinzade@gmail.com</td>
-                </tr>
-              </tbody>
+              <tbody id="join-tbody"></tbody>
             </table>
           </div>
           <!-- ? Books -->
-          <div class="book">
+          <div class="book" id="book-table-nav-link">
             <h4>Books</h4>
           </div>
           <div class="table-books">
@@ -237,7 +306,7 @@
             </table>
           </div>
           <!-- ? Contact Us -->
-          <div class="contact-us">
+          <div class="contact-us" id="contact-us-nav-link">
             <h4>Contact Us</h4>
           </div>
           <div class="contact-us-resp">
@@ -251,14 +320,8 @@
                   <th>Phone Number</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Tehran Hamidli</td>
-                  <td>Baku</td>
-                  <td>hamidlitehran@gmail.com</td>
-                  <td>0559804424</td>
-                </tr>
+              <tbody id="contact-tbody">
+                <tr></tr>
               </tbody>
             </table>
           </div>

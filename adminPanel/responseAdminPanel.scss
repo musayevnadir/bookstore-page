@@ -7,6 +7,7 @@
 
     .admin-panel-container {
       width: 100%;
+      margin-left: 0;
       .admin {
         width: 90%;
         margin: 0 auto;
@@ -40,6 +41,33 @@
 
     .contact-us-resp {
       overflow-x: scroll;
+    }
+  }
+}
+
+// ! Hamburger menu
+
+@media (max-width: 900px) {
+  .container {
+    .container-hamburger-menu {
+      // display: block;
+      width: 40%;
+    }
+  }
+}
+
+@media (max-width: 584px) {
+  .container {
+    .container-hamburger-menu {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    .container-hamburger-menu {
+      width: 80%;
     }
   }
 }

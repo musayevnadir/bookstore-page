@@ -106,6 +106,11 @@ select {
 .container .nav-container {
   background-color: #720418;
   width: 20%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto; /* Разрешить прокручивание вертикально */
 }
 .container .logo-admin-img {
   width: 100%;
@@ -146,6 +151,9 @@ select {
 .container .admin-panel-container {
   background-color: #fffaf5;
   width: 80%;
+  margin-left: 20%; /* Учтите ширину .nav-container */
+  height: 100%; /* Заполнить оставшееся пространство по высоте */
+  overflow-y: auto; /* Разрешить прокручивание вертикально */
 }
 .container .admin-panel-container .admin {
   margin-top: 3rem;
@@ -158,6 +166,11 @@ select {
 }
 .container .admin-panel-container .admin .hamburger-menu {
   display: none;
+}
+.container .admin-panel-container .admin .hamburger-menu .hamburger-button {
+  position: fixed;
+  top: 10px; /* Устанавливаем верхний отступ от верхней границы окна */
+  right: 20px;
 }
 .container .admin-panel-container .admin .response-none-container {
   display: flex;
@@ -183,6 +196,7 @@ select {
 }
 .container .admin-panel-container .admin a:hover {
   text-decoration: underline;
+  color: #ff8b00;
   transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
 }
 .container .admin-panel-container .main-page {
@@ -244,6 +258,7 @@ select {
   padding-top: 0.62rem;
   padding-bottom: 0.62rem;
   transition: transform 0.3s ease;
+  border: none;
 }
 .container .admin-panel-container .main-page .search-input-btn .btn-searcn:hover {
   transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
@@ -482,4 +497,47 @@ select {
   font-weight: 600;
   line-height: 196.187%;
   margin-bottom: 1.625rem;
+}
+
+.container .container-hamburger-menu {
+  display: none;
+  background-color: #720418;
+  width: 18%;
+  height: 100vh;
+  padding-top: 1.226rem;
+  position: fixed;
+  height: 100%;
+}
+
+.hamburger-nav {
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 4.211rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hamburger-nav img {
+  cursor: pointer;
+}
+
+.home-nav-container {
+  display: flex;
+  align-items: center;
+  gap: 0.43rem;
+}
+.home-nav-container a {
+  padding-bottom: 0.4rem;
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 196.187%;
+  transition: transform 0.3s ease;
+}
+.home-nav-container a:hover {
+  text-decoration: underline;
+  transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
 }/*# sourceMappingURL=adminPanel.css.map */

@@ -6,45 +6,66 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Home Page</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
         <link rel="stylesheet" href="/styles/style.css" />
-        <script src="/script.js" defer></script>
+        <script src="/script.js" type="module" defer></script>
     </head>
     <body>
         <!-- Wrapper for header section -->
         <div class="wrapper">
             <!-- Header -->
-            <div class="header-container">
+            <div class="header-container burger">
                 <header>
                     <img src="/images/Лого.svg" alt="Logo" />
                     <!-- Navigation -->
                     <nav>
                         
                         <ul>
-                            <a href="#"><li>Home</li></a>
-                            <a href="#"><li>Catalog</li></a>
-                            <a href="#"><li>About Store</li></a>
-                            <a href="#"><li>Contact Us</li></a>
-                            <a href="#"><li>Search</li></a>
+                            <a href="/index.html"><li>Home</li></a>
+                            <a href="/catalog/catalog.html"><li>Catalog</li></a>
+                            <a href="/about/about.html"><li>About Store</li></a>
+                            <a href="/contact/contact.html"><li>Contact Us</li></a>
+                            <a href="/search/search.html"><li>Search</li></a>
                         </ul>
                         
-                        
+        
                     </nav>
                     <div class="join-us">
-                        <img src="/images/akar-icons_heart.svg" alt="User icon" />
-                        <a href="">Join Us</a>
+                        <img style="cursor: pointer;" class="showPopupIcon" id="showPopupIcon" src="/images/akar-icons_heart.svg" alt="User icon" />
+                        <button class="showPopupBtn" id="showPopupBtn">Join Us</button>
+                        <label style="margin-right: 3rem;" class="hamburger">
+                        <input id="checkbox" type="checkbox">
+                    </label>
+                        
                     </div>
+                    
                 </header>
                 <!-- Header info text -->
-                <section class="header-section-info">
+                <section class="section-info section-js">
                     <div class="header-section-left">
                         <h1>Books from A to Z</h1>
                         <p>
                             In our store you can find a book for every taste. A
                             large assortment. Nice prices. Interesting stories.
                         </p>
-                        <button>Go to catalog</button>
+                        <button onclick="" id="go-to-catalog">Go to catalog</button>
                     </div>
                     <img class="books" src="/images/Books.jpg" alt="Books" />
+                    <div class="popup">
+                        <div class="popup-content">
+                            <span style="font-size: 2rem;" class="close" id="closePopup">&times;</span>
+                            
+                            <div id="popup-info" class="popup-info">
+                                <form id="form" action="">
+                                <h1>Join Us</h1>
+                                <input placeholder="Full name" type="text" name="name" id="name">
+                                <input placeholder="Email" type="email" name="email" id="email">
+                                <div id="inputs"></div>
+                                <button id="joinUs">Join</button>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </div>
             <!-- Start of the main section -->
@@ -52,7 +73,6 @@
                 <section class="catalog">
                     <h2>Catalog</h2>
 
-                    <!-- Mojet p pomenyayu na button -->
                     <div class="catalog-grid">
                         <div class="catalog-grid-item">
                             <p>Books</p>
@@ -96,7 +116,7 @@
                             <h1>898</h1>
                             <p>Products catalog</p>
                         </div>
-                        <div class="stats-info-item">
+                        <div class="stats-info-item stats-info-item3">
                             <h1>8659</h1>
                             <p>Buyers</p>
                         </div>
@@ -138,8 +158,28 @@
              <!-- Footer -->
             <footer>
                 <div class="main-container">
+                    <!-- Mobile footer -->  
+                    <div class="mobile-footer-container">
+                        <header>
+                            <img src="/images/logoFooter.svg" alt="">
+
+                            <nav class="mobile-footer-nav" style="margin-right: 3rem;">
+                                <ul style="margin-bottom: 4rem;">
+                                    <a  href="/index.html"><li>Home</li></a>
+                                    <a href="/catalog/catalog.html"><li>Catalog</li></a>
+                                    <a href="/about/about.html"><li >About Store</li></a>
+                                    <a href="/contact/contact.html"><li>Contact Us</li></a>
+                                    <a href="/search/search.html"><li>Search</li></a>
+                                </ul>
+                            </nav>
+                            </header>
+                            <div style="width: 80%; height: 1px; background-color: #fff; margin: 0 auto;"></div>
+                            <p style="margin-bottom: .9rem;">Library Bookstore Eacamp</p>
+                            <p>© 2003-2023</p>
+                            </div>
+
                     <div class="footer-container">
-                    <img src="/images/logoFooter.svg" alt="">
+                        <img src="/images/logoFooter.svg" alt="">
 
                         <div class="footer-container-item footer-container1">
                             <h4>Popular</h4>
@@ -171,5 +211,25 @@
             </footer>
 
         </div>
+
+
+        <script>
+            const goToCatalog = document.querySelector("#go-to-catalog");
+            goToCatalog.addEventListener("click", () => {
+            window.location.href = "http://127.0.0.1:5501/catalog/catalog.html";
+            });
+
+            const hamburger = document.getElementById("checkbox");
+            const headerText = document.querySelector(".header-section-left");
+
+
+            hamburger.addEventListener("click", () => {
+            if (hamburger.checked) {
+                        headerText.style.zIndex = "-1";
+            } else {
+                headerText.style.zIndex = '0'
+            }
+        })
+        </script>
     </body>
 </html>
