@@ -1,7 +1,7 @@
 /** @format */
 const swiper = new Swiper(".swiper", {
     direction: "horizontal",
-    loop: false,
+    loop: true,
     speed: 800,
     slidesPerView: 5,
     slidesPerGroup: 1,
