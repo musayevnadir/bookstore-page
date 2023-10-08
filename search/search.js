@@ -15,6 +15,8 @@ const containerSlider = document.querySelector(".info-main");
 
 const SLIDER = document.querySelector(".swiper-wrapper");
 
+const bookInfoContainer = document.querySelector(".book-info-container");
+
 // ! Button Slider Dom Elements
 const btnSliderLeft = document.querySelector(".slider-btn-left");
 const btnSliderRight = document.querySelector(".slider-btn-rigth");
@@ -28,43 +30,55 @@ const swiper = new Swiper(".swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+
   speed: 800,
 });
 
-// ! Click Search Button
+// ! Click Search API
 btnSearch.addEventListener("click", () => {
-  fetch(
-    `https://www.googleapis.com/books/v1/volumes?q=${inputSearch.value}&key=${apiKey}`
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      const dataItems = data.items;
-      let arrayBookAuthors = [];
-      for (let i = 0; i < dataItems.length; i++) {
-        const title = dataItems[i].volumeInfo.title;
-        const description = dataItems[i].volumeInfo.description;
-        const imgBook = dataItems[i].volumeInfo.imageLinks.thumbnail;
-
-        //  authors push in array
-        const authors = dataItems[i].volumeInfo.authors;
-        arrayBookAuthors.push(authors);
-        for (let i = 0; i < arrayBookAuthors.length; i++) {
-          console.log(SLIDER);
-          SLIDER.innerHTML += `
-          <div class="swiper-slide">
-          <div class="info-main">
-            <div class="img-container">
-              <img class="img-book" src="${imgBook}" alt="" />
-            </div>
-            <div class="description-container">
-              <h2 class="title">${title}</h2>
-              <h4 class="authors">${arrayBookAuthors[i][0]}</h4>
-              <p class="description">${description}</p>
-            </div>
-          </div>
-        </div>
-          `;
-        }
-      }
-    });
+  if (inputSearch.value !== "") {
+    fetch(
+      `https://www.googleapis.com/books/v1/volumes?q=${inputSearch.value}&key=${apiKey}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        inputSearch.value = "";
+        console.log("salam");
+        const dataItems = data.items;
+        manageSlider(dataItems);
+      });
+  } else {
+    alert("Введите текст !!");
+  }
 });
+
+// ! Function ManageSlider
+function manageSlider(dataItems) {
+  bookInfoContainer.style.display = "block";
+  let arrayBookAuthors = [];
+  for (let i = 0; i < dataItems.length; i++) {
+    const title = dataItems[i].volumeInfo.title;
+    const description = dataItems[i].volumeInfo.description;
+    const imgBook = dataItems[i].volumeInfo.imageLinks.thumbnail;
+
+    //  authors push in array
+    const authors = dataItems[i].volumeInfo.authors;
+    arrayBookAuthors.push(authors);
+    for (let i = 0; i < arrayBookAuthors.length; i++) {
+      SLIDER.innerHTML += `
+      <div class="swiper-slide">
+      <div class="info-main">
+        <div class="img-container">
+          <img class="img-book" src="${imgBook}" alt="" />
+        </div>
+        <div class="description-container">
+          <h2 class="title">${title}</h2>
+          <h4 class="authors">${arrayBookAuthors[i][0]}</h4>
+          <p class="description">${description}</p>
+        </div>
+      </div>
+    </div>
+      `;
+    }
+  }
+}

@@ -115,6 +115,11 @@
   transform: scale(1.3); /* Увеличиваем изображение на 10% при наведении */
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  top: 20%;
+}
+
 // ? Main Response-----------------------------
 
 // ! Screen 1200px
