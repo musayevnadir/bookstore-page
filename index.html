@@ -2,234 +2,279 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home Page</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-        <link rel="stylesheet" href="/styles/style.css" />
-        <script src="/script.js" type="module" defer></script>
-    </head>
-    <body>
-        <!-- Wrapper for header section -->
-        <div class="wrapper">
-            <!-- Header -->
-            <div class="header-container burger">
-                <header>
-                    <img src="/images/Лого.svg" alt="Logo" />
-                    <!-- Navigation -->
-                    <nav>
-                        
-                        <ul>
-                            <a href="/index.html"><li>Home</li></a>
-                            <a href="/catalog/catalog.html"><li>Catalog</li></a>
-                            <a href="/about/about.html"><li>About Store</li></a>
-                            <a href="/contact/contact.html"><li>Contact Us</li></a>
-                            <a href="/search/search.html"><li>Search</li></a>
-                        </ul>
-                        
-        
-                    </nav>
-                    <div class="join-us">
-                        <img style="cursor: pointer;" class="showPopupIcon" id="showPopupIcon" src="/images/akar-icons_heart.svg" alt="User icon" />
-                        <button class="showPopupBtn" id="showPopupBtn">Join Us</button>
-                        <label style="margin-right: 3rem;" class="hamburger">
-                        <input id="checkbox" type="checkbox">
-                    </label>
-                        
-                    </div>
-                    
-                </header>
-                <!-- Header info text -->
-                <section class="section-info section-js">
-                    <div class="header-section-left">
-                        <h1>Books from A to Z</h1>
-                        <p>
-                            In our store you can find a book for every taste. A
-                            large assortment. Nice prices. Interesting stories.
-                        </p>
-                        <button onclick="" id="go-to-catalog">Go to catalog</button>
-                    </div>
-                    <img class="books" src="/images/Books.jpg" alt="Books" />
-                    <div class="popup">
-                        <div class="popup-content">
-                            <span style="font-size: 2rem;" class="close" id="closePopup">&times;</span>
-                            
-                            <div id="popup-info" class="popup-info">
-                                <form id="form" action="">
-                                <h1>Join Us</h1>
-                                <input placeholder="Full name" type="text" name="name" id="name">
-                                <input placeholder="Email" type="email" name="email" id="email">
-                                <div id="inputs"></div>
-                                <button id="joinUs">Join</button>
-                            </form>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <script src="/script.js" type="module" defer></script>
+  </head>
+  <body>
+    <!-- Wrapper for header section -->
+    <div class="wrapper">
+      <!-- Header -->
+      <div class="header-container burger">
+        <header>
+          <img src="/images/Лого.svg" alt="Logo" />
+          <!-- Navigation -->
+          <nav>
+            <ul>
+              <li>
+                <a class="page-link" href="/index.html">Home</a>
+              </li>
+
+              <li></li>
+
+              <li>
+                <a class="page-link" href="/catalog/catalog.html">Catalog</a>
+              </li>
+
+              <li>
+                <a class="page-link" href="/about/about.html">About Store</a>
+              </li>
+
+              <li>
+                <a class="page-link" href="/contact/contact.html">Contact Us</a>
+              </li>
+
+              <li>
+                <a class="page-link" href="/search/search.html">Search</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="join-us">
+            <img
+              style="cursor: pointer"
+              class="showPopupIcon"
+              id="showPopupIcon"
+              src="/images/akar-icons_heart.svg"
+              alt="User icon"
+            />
+            <button class="showPopupBtn" id="showPopupBtn">Join Us</button>
+            <label style="margin-right: 3rem" class="hamburger">
+              <input id="checkbox" type="checkbox" />
+            </label>
+          </div>
+        </header>
+        <!-- Header info text -->
+        <section class="section-info section-js">
+          <div class="header-section-left">
+            <h1>Books from A to Z</h1>
+            <p>
+              In our store you can find a book for every taste. A large
+              assortment. Nice prices. Interesting stories.
+            </p>
+            <button onclick="" id="go-to-catalog">Go to catalog</button>
+          </div>
+          <img class="books" src="/images/Books.jpg" alt="Books" />
+          <div class="popup">
+            <div class="popup-content">
+              <span style="font-size: 2rem" class="close" id="closePopup"
+                >&times;</span
+              >
+
+              <div id="popup-info" class="popup-info">
+                <form id="form" action="">
+                  <h1>Join Us</h1>
+                  <input
+                    placeholder="Full name"
+                    type="text"
+                    name="name"
+                    id="name"
+                  />
+                  <input
+                    placeholder="Email"
+                    type="email"
+                    name="email"
+                    id="email"
+                  />
+                  <div id="inputs"></div>
+                  <button id="joinUs">Join</button>
+                </form>
+              </div>
             </div>
-            <!-- Start of the main section -->
-            <div class="main-container">
-                <section class="catalog">
-                    <h2>Catalog</h2>
+          </div>
+        </section>
+      </div>
+      <!-- Start of the main section -->
+      <div class="main-container">
+        <section class="catalog">
+          <h2>Catalog</h2>
 
-                    <div class="catalog-grid">
-                        <div class="catalog-grid-item">
-                            <p>Books</p>
-                        </div>
-                        <div class="catalog-grid-item">
-                            <p>Electronic books</p>
-                        </div>
-                        <div class="catalog-grid-item">
-                            <p>Audiobooks</p>
-                        </div>
-                        <div class="catalog-grid-item">
-                            <p>Toys, creativity</p>
-                        </div>
-                        <div class="catalog-grid-item">
-                            <p>Book accessories</p>
-                        </div>
-                        <div class="catalog-grid-item">
-                            <p>Notepads</p>
-                        </div>
-                        <div class="catalog-grid-item">
-                            <p>Board games</p>
-                        </div>
-                        <div class="catalog-grid-item">
-                            <p>Present</p>
-                        </div>
-                        <div class="catalog-grid-item">
-                            <p>Stock</p>
-                        </div>
-                    </div>
-                </section>
-                <!-- Stats -->
-                <section class="stats">
-                    <h2>About store</h2>
-
-                    <div class="stats-info">
-                        <div class="stats-info-item">
-                            <h1>35</h1>
-                            <p>Branches the country</p>
-                        </div>
-                        <div class="stats-info-item">
-                            <h1>898</h1>
-                            <p>Products catalog</p>
-                        </div>
-                        <div class="stats-info-item stats-info-item3">
-                            <h1>8659</h1>
-                            <p>Buyers</p>
-                        </div>
-                        <div class="stats-info-item">
-                            <h1>72</h1>
-                            <p>Hours delivery to cities</p>
-                        </div>
-                    </div>
-                </section>
-                <!-- Delivery -->
-                <section class="delivery">
-                    <h2>Delivery</h2>
-
-                    <p>
-                        We work without holidays and weekends! Residents of Kiev
-                        can receive an order on the day of its registration.
-                        Customers from other cities of Ukraine can receive an
-                        order within 1-5 days, depending on the location of the
-                        settlement and the selected delivery method. Orders over
-                        UAH 1000 are delivered free of charge *. You can see the
-                        available methods, exact terms and cost of delivery
-                        during checkout in the order basket, aafter selecting
-                        the delivery city.
-                        <p>More details</p>
-                    </p>
-                </section>
-                <!-- Links -->
-                <section class="links">
-                    <h2>Follow us on social media</h2>
-
-                    <div class="links-items">
-                        <a href="#"><img src="/images/akar-icons_facebook-fill.svg" alt="Facebook icon"></a>
-                        <a href="#"><img src="/images/Group.svg" alt="Twitter icon"></a>
-                        <a href="#"><img src="/images/akar-icons_instagram-fill.svg" alt="Instagram icon"></a>
-                    </div>
-                </section>
-
+          <div class="catalog-grid">
+            <div class="catalog-grid-item">
+              <p>Books</p>
             </div>
-             <!-- Footer -->
-            <footer>
-                <div class="main-container">
-                    <!-- Mobile footer -->  
-                    <div class="mobile-footer-container">
-                        <header>
-                            <img src="/images/logoFooter.svg" alt="">
+            <div class="catalog-grid-item">
+              <p>Electronic books</p>
+            </div>
+            <div class="catalog-grid-item">
+              <p>Audiobooks</p>
+            </div>
+            <div class="catalog-grid-item">
+              <p>Toys, creativity</p>
+            </div>
+            <div class="catalog-grid-item">
+              <p>Book accessories</p>
+            </div>
+            <div class="catalog-grid-item">
+              <p>Notepads</p>
+            </div>
+            <div class="catalog-grid-item">
+              <p>Board games</p>
+            </div>
+            <div class="catalog-grid-item">
+              <p>Present</p>
+            </div>
+            <div class="catalog-grid-item">
+              <p>Stock</p>
+            </div>
+          </div>
+        </section>
+        <!-- Stats -->
+        <section class="stats">
+          <h2>About store</h2>
 
-                            <nav class="mobile-footer-nav" style="margin-right: 3rem;">
-                                <ul style="margin-bottom: 4rem;">
-                                    <a  href="/index.html"><li>Home</li></a>
-                                    <a href="/catalog/catalog.html"><li>Catalog</li></a>
-                                    <a href="/about/about.html"><li >About Store</li></a>
-                                    <a href="/contact/contact.html"><li>Contact Us</li></a>
-                                    <a href="/search/search.html"><li>Search</li></a>
-                                </ul>
-                            </nav>
-                            </header>
-                            <div style="width: 80%; height: 1px; background-color: #fff; margin: 0 auto;"></div>
-                            <p style="margin-bottom: .9rem;">Library Bookstore Eacamp</p>
-                            <p>© 2003-2023</p>
-                            </div>
+          <div class="stats-info">
+            <div class="stats-info-item">
+              <h1>35</h1>
+              <p>Branches the country</p>
+            </div>
+            <div class="stats-info-item">
+              <h1>898</h1>
+              <p>Products catalog</p>
+            </div>
+            <div class="stats-info-item stats-info-item3">
+              <h1>8659</h1>
+              <p>Buyers</p>
+            </div>
+            <div class="stats-info-item">
+              <h1>72</h1>
+              <p>Hours delivery to cities</p>
+            </div>
+          </div>
+        </section>
+        <!-- Delivery -->
+        <section class="delivery">
+          <h2>Delivery</h2>
 
-                    <div class="footer-container">
-                        <img src="/images/logoFooter.svg" alt="">
+          <p>
+            We work without holidays and weekends! Residents of Kiev can receive
+            an order on the day of its registration. Customers from other cities
+            of Ukraine can receive an order within 1-5 days, depending on the
+            location of the settlement and the selected delivery method. Orders
+            over UAH 1000 are delivered free of charge *. You can see the
+            available methods, exact terms and cost of delivery during checkout
+            in the order basket, aafter selecting the delivery city. <br />More
+            details
+          </p>
+        </section>
+        <!-- Links -->
+        <section class="links">
+          <h2>Follow us on social media</h2>
 
-                        <div class="footer-container-item footer-container1">
-                            <h4>Popular</h4>
-                            <p>Programming</p>
-                            <p>Books for children</p>
-                            <p>Psychology</p>
-                            <p>Business</p>
-                        </div>
-                        <div class="footer-container-item  footer-container2">
-                            <h4>Information</h4>
-                            <p>Delivery</p>
-                            <p>Payment</p>
-                            <p>About the store</p>
-                        </div>
-                        <div class="footer-container-item  footer-container3">
-                            <h4>Help</h4>
-                            <p>Contacts</p>
-                            <p>Purchase returns</p>
-                            <p>Buyer help</p>
-                        </div>
-                        <div class="footer-container-item footer-container4">
-                            <h3>+994 50 594 54 54</h3>
-                            <button>Request a call</button>
-                        </div>
-                    </div>
-                    <p class="terms">All rights reserved © 2003-2023 LIBRARY TERMS OF USE | Privacy Policy</p>
-                        
-                </div>
-            </footer>
+          <div class="links-items">
+            <a href="#"
+              ><img
+                src="/images/akar-icons_facebook-fill.svg"
+                alt="Facebook icon"
+            /></a>
+            <a href="#"><img src="/images/Group.svg" alt="Twitter icon" /></a>
+            <a href="#"
+              ><img
+                src="/images/akar-icons_instagram-fill.svg"
+                alt="Instagram icon"
+            /></a>
+          </div>
+        </section>
+      </div>
+      <!-- Footer -->
+      <footer>
+        <div class="main-container">
+          <!-- Mobile footer -->
+          <div class="mobile-footer-container">
+            <header>
+              <img src="/images/logoFooter.svg" alt="" />
 
+              <nav class="mobile-footer-nav" style="margin-right: 3rem">
+                <ul style="margin-bottom: 4rem">
+                  <a href="/index.html"><li>Home</li></a>
+                  <a href="/catalog/catalog.html"><li>Catalog</li></a>
+                  <a href="/about/about.html"><li>About Store</li></a>
+                  <a href="/contact/contact.html"><li>Contact Us</li></a>
+                  <a href="/search/search.html"><li>Search</li></a>
+                </ul>
+              </nav>
+            </header>
+            <div
+              style="
+                width: 80%;
+                height: 1px;
+                background-color: #fff;
+                margin: 0 auto;
+              "
+            ></div>
+            <p style="margin-bottom: 0.9rem">Library Bookstore Eacamp</p>
+            <p>© 2003-2023</p>
+          </div>
+
+          <div class="footer-container">
+            <img src="/images/logoFooter.svg" alt="" />
+
+            <div class="footer-container-item footer-container1">
+              <h4>Popular</h4>
+              <p>Programming</p>
+              <p>Books for children</p>
+              <p>Psychology</p>
+              <p>Business</p>
+            </div>
+            <div class="footer-container-item footer-container2">
+              <h4>Information</h4>
+              <p>Delivery</p>
+              <p>Payment</p>
+              <p>About the store</p>
+            </div>
+            <div class="footer-container-item footer-container3">
+              <h4>Help</h4>
+              <p>Contacts</p>
+              <p>Purchase returns</p>
+              <p>Buyer help</p>
+            </div>
+            <div class="footer-container-item footer-container4">
+              <h3>+994 50 594 54 54</h3>
+              <button>Request a call</button>
+            </div>
+          </div>
+          <p class="terms">
+            All rights reserved © 2003-2023 LIBRARY TERMS OF USE | Privacy
+            Policy
+          </p>
         </div>
+      </footer>
+    </div>
 
+    <script>
+      const goToCatalog = document.querySelector("#go-to-catalog");
+      goToCatalog.addEventListener("click", () => {
+        window.location.href = "http://127.0.0.1:5501/catalog/catalog.html";
+      });
 
-        <script>
-            const goToCatalog = document.querySelector("#go-to-catalog");
-            goToCatalog.addEventListener("click", () => {
-            window.location.href = "http://127.0.0.1:5501/catalog/catalog.html";
-            });
+      const hamburger = document.getElementById("checkbox");
+      const headerText = document.querySelector(".header-section-left");
 
-            const hamburger = document.getElementById("checkbox");
-            const headerText = document.querySelector(".header-section-left");
-
-
-            hamburger.addEventListener("click", () => {
-            if (hamburger.checked) {
-                        headerText.style.zIndex = "-1";
-            } else {
-                headerText.style.zIndex = '0'
-            }
-        })
-        </script>
-    </body>
+      hamburger.addEventListener("click", () => {
+        if (hamburger.checked) {
+          headerText.style.zIndex = "-1";
+        } else {
+          headerText.style.zIndex = "0";
+        }
+      });
+    </script>
+  </body>
 </html>

@@ -176,9 +176,6 @@
 
 // ! Swiper Main Style CSS End----------------------
 
-
-
-
 .errorText {
   color: red;
   font-weight: 700;
@@ -229,6 +226,7 @@
       display: flex;
       justify-content: space-between;
       font-size: 0.9rem;
+      text-align: center;
 
       a {
         display: flex;
@@ -640,6 +638,10 @@ footer {
   }
   .main-container .links-items {
     width: 40%;
+  }
+
+  .header-container header nav ul li {
+    text-align: center;
   }
 
   .books {

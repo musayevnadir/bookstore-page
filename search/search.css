@@ -290,6 +290,7 @@ select {
   display: flex;
   justify-content: space-between;
   font-size: 0.9rem;
+  text-align: center;
 }
 .header-container header nav ul a {
   display: flex;
@@ -639,6 +640,9 @@ footer .main-container button {
   }
   .main-container .links-items {
     width: 40%;
+  }
+  .header-container header nav ul li {
+    text-align: center;
   }
   .books {
     width: 60%;
