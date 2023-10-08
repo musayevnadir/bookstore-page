@@ -13,9 +13,23 @@ const descriptionScreen = document.querySelector(".description");
 const imgScreen = document.querySelector(".img-book");
 const containerSlider = document.querySelector(".info-main");
 
+const SLIDER = document.querySelector(".swiper-wrapper");
+
 // ! Button Slider Dom Elements
 const btnSliderLeft = document.querySelector(".slider-btn-left");
 const btnSliderRight = document.querySelector(".slider-btn-rigth");
+
+// ! Click Button Slider
+const swiper = new Swiper(".swiper", {
+  direction: "horizontal",
+  // loop: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  speed: 800,
+});
 
 // ! Click Search Button
 btnSearch.addEventListener("click", () => {
@@ -24,36 +38,33 @@ btnSearch.addEventListener("click", () => {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       const dataItems = data.items;
       let arrayBookAuthors = [];
       for (let i = 0; i < dataItems.length; i++) {
         const title = dataItems[i].volumeInfo.title;
-        const authors = dataItems[i].volumeInfo.authors;
         const description = dataItems[i].volumeInfo.description;
         const imgBook = dataItems[i].volumeInfo.imageLinks.thumbnail;
-        
 
-        titleScreen.innerHTML = title;
-        authorsScreen.innerHTML = authors;
-        descriptionScreen.innerHTML = description;
-        imgScreen.src = imgBook;
-
+        //  authors push in array
+        const authors = dataItems[i].volumeInfo.authors;
+        arrayBookAuthors.push(authors);
+        for (let i = 0; i < arrayBookAuthors.length; i++) {
+          console.log(SLIDER);
+          SLIDER.innerHTML += `
+          <div class="swiper-slide">
+          <div class="info-main">
+            <div class="img-container">
+              <img class="img-book" src="${imgBook}" alt="" />
+            </div>
+            <div class="description-container">
+              <h2 class="title">${title}</h2>
+              <h4 class="authors">${arrayBookAuthors[i][0]}</h4>
+              <p class="description">${description}</p>
+            </div>
+          </div>
+        </div>
+          `;
+        }
       }
-      console.log("arrayBookAuthors", arrayBookAuthors);
     });
-});
-
-// ! Click Button Slider
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: true,
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  speed: 800,
 });
