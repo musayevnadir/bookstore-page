@@ -200,6 +200,11 @@ select {
   transform: scale(1.3); /* Увеличиваем изображение на 10% при наведении */
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  top: 20%;
+}
+
 @media (max-width: 1200px) {
   .search-container {
     margin-bottom: 7.75rem;
