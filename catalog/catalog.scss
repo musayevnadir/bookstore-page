@@ -1,148 +1,148 @@
 /** @format */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-color: #fffaf5;
+    background-color: #fffaf5;
 }
 
 .section-js {
     // background-color: red;
     // background-color: rgb(75, 75, 190);
-  margin-top: 150px;
+    margin-top: 150px;
 }
 
 .nav-tex {
     // background-color: #e16a00;
-  margin-top: 123px;
-  //   width: 86.5%;
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    margin-top: 123px;
+    //   width: 86.5%;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-tex-bestseller {
     // background-color: yellow;
-  width: 86.5%;
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 86.5%;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-tex h1 {
-  font-family: Montserrat;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 196.187%; /* 49.047px */
+    font-family: Montserrat;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 196.187%; /* 49.047px */
 }
 
 .nav-links {
-  // background-color: green;
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    // background-color: green;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-links p {
-  color: var(--, #241400);
-  /* Текст в параграфах */
-  font-family: Montserrat;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 196.187%; /* 25.504px */
-  cursor: pointer;
-  transition: transform 0.3s ease;
+    color: var(--, #241400);
+    /* Текст в параграфах */
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 196.187%; /* 25.504px */
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .nav-links p:hover {
-  transform: scale(1.2); /* Увеличиваем изображение на 10% при наведении */
+    transform: scale(1.2); /* Увеличиваем изображение на 10% при наведении */
 }
 
 /* .nav-links-2 {
     background-color: #d2a56e;
   } */
 .main-swiper-container {
-  // background-color: green;
-  width: 90%;
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 128px;
+    // background-color: green;
+    width: 90%;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 128px;
 }
 
 .slide-contect-container {
-  // background-color: yellow;
-  width: 25%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    // background-color: yellow;
+    width: 25%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .book-img-container {
-  // background-color: rgb(62, 147, 147);
-//   background: #fff;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
-  /* border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
+    // background-color: rgb(62, 147, 147);
+    //   background: #fff;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+    /* border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
     border-top: 0.1px solid rgba(0, 0, 0, 0.25); */
 }
 
 .book-img-container img {
-  padding-top: 24px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-bottom: 47px;
-  max-width: 100%;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+    padding-top: 24px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 47px;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .book-img-container img:hover {
-  transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
+    transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
 }
 
 .book-img-container p {
-  display: flex;
-  justify-content: center;
-  /* background-color: red; */
-  color: var(--, #241400);
-  font-family: Montserrat;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 196.187%; /* 23.542px */
-  margin-bottom: 16px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+    color: var(--, #241400);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 196.187%; /* 23.542px */
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .book-img-container p:hover {
-  transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
+    transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
 }
 
 .book-img-container h4 {
-  font-size: 12px;
-  display: flex;
-  justify-content: center;
-  color: var(--, #241400);
-  font-family: Montserrat;
-  margin-bottom: 16px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    color: var(--, #241400);
+    font-family: Montserrat;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 .book-img-container h4:hover {
-  transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
+    transform: scale(1.1); /* Увеличиваем изображение на 10% при наведении */
 }
 #all-books {
     transition: 0.3s ease;
@@ -153,79 +153,79 @@ body {
 }
 
 .btn-container {
-  /* background-color: grey; */
-  display: flex;
-  justify-content: center;
-  margin-bottom: 17px;
+    /* background-color: grey; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 17px;
 }
 
 .btn-container button {
-  width: 70%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: #fff;
-  font-family: Montserrat;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 196.187%; /* 23.542px */
-  text-transform: uppercase;
-  cursor: pointer;
-  border: none;
-  border-radius: 3px;
-  background: var(--2, #e16a00);
-  box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
-  transition: transform 0.3s ease;
+    width: 70%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 196.187%; /* 23.542px */
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background: var(--2, #e16a00);
+    box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
+    transition: transform 0.3s ease;
 }
 
 .btn-container button:hover {
-  transform: scale(1.2); /* Увеличиваем изображение на 10% при наведении */
+    transform: scale(1.2); /* Увеличиваем изображение на 10% при наведении */
 }
 
 /* ! SWIPER */
 
 .swiper-scrollbar-drag {
-  background: transparent;
+    background: transparent;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  // background-color: red;
-  color: rgb(212, 126, 49);
-  //   transition: transform 0.3s ease;
+    // background-color: red;
+    color: rgb(212, 126, 49);
+    //   transition: transform 0.3s ease;
 }
 
 .swiper-button-prev img {
-  // background-color: red;
-  margin-right: 25px;
+    // background-color: red;
+    margin-right: 25px;
 }
 
 .swiper-button-next img {
-  // background-color: red;
-  margin-left: 25px;
+    // background-color: red;
+    margin-left: 25px;
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  //   transform: scale(1.2);
+    //   transform: scale(1.2);
 }
 
 .links {
-  //   background-color: red;
-  h2 {
-    // background-color: green;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    //   background-color: red;
+    h2 {
+        // background-color: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-  .links-items {
-    // background-color: #e16a00;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
+    .links-items {
+        // background-color: #e16a00;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
 }
 /* ! Response */
 
@@ -248,16 +248,13 @@ body {
   } */
 
 @media all and (max-width: 510px) {
-  html {
-    font-size: 10px;
-  }
+    html {
+        font-size: 10px;
+    }
 }
 
 @media all and (max-width: 260px) {
-  html {
-    font-size: 7px;
-  }
+    html {
+        font-size: 7px;
+    }
 }
-
-
-

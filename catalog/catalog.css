@@ -86,7 +86,7 @@ body {
 .book-img-container {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
   /* border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
-    border-top: 0.1px solid rgba(0, 0, 0, 0.25); */
+  border-top: 0.1px solid rgba(0, 0, 0, 0.25); */
 }
 
 .book-img-container img {
