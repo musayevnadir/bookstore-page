@@ -132,6 +132,8 @@ const bookImage = document.getElementById("book-image");
 const bookDescription = document.getElementById("description");
 const bookType = document.getElementById("book-type");
 let bookID;
+let bookSaleInfo;
+let bookPublishDate;
 
 const booksAPI = {
     fillInputs: (e) => {
@@ -151,6 +153,8 @@ const booksAPI = {
                     bookDescription.value = bookInfo[i].volumeInfo.description;
                     bookType.value = bookInfo[i].volumeInfo.categories;
                     bookID = bookInfo[i].id;
+                    bookSaleInfo = bookInfo[i].saleInfo.listPrice.amount;
+                    bookPublishDate = bookInfo[i].volumeInfo.publishedDate;
                 }
             });
     },
@@ -164,6 +168,8 @@ const booksAPI = {
             image: bookImage.value,
             type: bookType.value,
             id: bookID,
+            saleInfo: bookSaleInfo,
+            publishedDate: bookPublishDate,
         };
 
         const newBookData = push(child(ref(db), `/bookData`)).key;
