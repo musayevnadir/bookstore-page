@@ -64,21 +64,19 @@ function manageSlider(dataItems) {
     //  authors push in array
     const authors = dataItems[i].volumeInfo.authors;
     arrayBookAuthors.push(authors);
-    for (let i = 0; i < arrayBookAuthors.length; i++) {
-      SLIDER.innerHTML += `
-      <div class="swiper-slide">
-      <div class="info-main">
-        <div class="img-container">
-          <img class="img-book" src="${imgBook}" alt="" />
-        </div>
-        <div class="description-container">
-          <h2 class="title">${title}</h2>
-          <h4 class="authors">${arrayBookAuthors[i][0]}</h4>
-          <p class="description">${description}</p>
-        </div>
+    SLIDER.innerHTML += `
+    <div class="swiper-slide">
+    <div class="info-main">
+      <div class="img-container">
+        <img class="img-book" src="${imgBook}" alt="" />
+      </div>
+      <div class="description-container">
+        <h2 class="title">${title}</h2>
+        <h4 class="authors">${arrayBookAuthors[i][0]}</h4>
+        <p class="description">${description}</p>
       </div>
     </div>
-      `;
-    }
+  </div>
+    `;
   }
 }
