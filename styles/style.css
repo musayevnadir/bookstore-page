@@ -521,6 +521,9 @@ footer .main-container button {
   html {
     font-size: 16px;
   }
+  .header-container header a {
+    color: #fff;
+  }
   .hamburger {
     display: flex;
     flex-direction: column;

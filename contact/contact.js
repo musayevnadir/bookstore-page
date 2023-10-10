@@ -35,13 +35,13 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const userContactRef = ref(db, `/userContact`);
 
-const form = document.querySelector("#form");
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const userName = form.elements["name"].value;
-    const userEmail = form.elements["email"].value;
-    const userAdress = form.elements["adress"].value;
-    const userPhone = form.elements["phone"].value;
+const contactForm = document.querySelector("#contactForm");
+contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const userName = contactForm.elements["name"].value;
+    const userEmail = contactForm.elements["email"].value;
+    const userAdress = contactForm.elements["adress"].value;
+    const userPhone = contactForm.elements["phone"].value;
 
     const userContact = {
         name: userName,

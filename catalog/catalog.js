@@ -103,7 +103,7 @@ onValue(bookDataRef, (snapshot) => {
 
         allBooksContainer.append(swiperSlideContainerForAllBooks);
 
-        if (bookDatas[key].saleInfo > 1) {
+        if (bookDatas[key].saleInfo > 15) {
             const swiperSlideContainer = document.createElement("div");
             swiperSlideContainer.classList.add("swiper-slide");
             swiperSlideContainer.classList.add("slide-contect-container");
@@ -154,7 +154,21 @@ onValue(bookDataRef, (snapshot) => {
             element.addEventListener("click", () => {
                 window.location.href =
                     "http://127.0.0.1:5501/aboutBook/aboutBook.html";
-                bookName = bookDatas[key].name;
+                // bookName = bookDatas[key].name;
+                window.localStorage.setItem("bookName", bookDatas[key].name);
+                window.localStorage.setItem(
+                    "bookDescription",
+                    bookDatas[key].description
+                );
+                window.localStorage.setItem(
+                    "bookAuthor",
+                    bookDatas[key].author
+                );
+                window.localStorage.setItem("bookImage", bookDatas[key].image);
+                window.localStorage.setItem(
+                    "bookPublishedData",
+                    bookDatas[key].publishedDate.slice(0, 4)
+                );
             });
         });
     }
@@ -175,12 +189,35 @@ document.getElementById("all-books").addEventListener("click", () => {
             <h4>${allBooks[i].name}</h4>
             <p>${allBooks[i].author}</p>
             <div class="btn-container">
-                <button class=${allBooks[i].id}>Read more</button>
+                <button id="bookButton_${allBooks[i].id}">Read more</button>
             </div>
         </div>
     
         `;
+
         allBooksContainer.append(swiperSlide);
+        const allBooksID = document.querySelectorAll(
+            `#bookButton_${allBooks[i].id}`
+        );
+        allBooksID.forEach((element) => {
+            console.log("test");
+            element.addEventListener("click", () => {
+                window.location.href =
+                    "http://127.0.0.1:5501/aboutBook/aboutBook.html";
+                // bookName = bookDatas[key].name;
+                window.localStorage.setItem("bookName", allBooks[i].name);
+                window.localStorage.setItem(
+                    "bookDescription",
+                    allBooks[i].description
+                );
+                window.localStorage.setItem("bookAuthor", allBooks[i].author);
+                window.localStorage.setItem("bookImage", allBooks[i].image);
+                window.localStorage.setItem(
+                    "bookPublishedData",
+                    allBooks[i].publishedDate.slice(0, 4)
+                );
+            });
+        });
     }
 });
 
@@ -200,12 +237,36 @@ document.getElementById("fiction").addEventListener("click", () => {
             <h4>${fictionBooks[i].name}</h4>
             <p>${fictionBooks[i].author}</p>
             <div class="btn-container">
-                <button class=${fictionBooks[i].id}>Read more</button>
+                <button id="bookButton_${fictionBooks[i].id}">Read more</button>
             </div>
         </div>
     
         `;
         allBooksContainer.append(swiperSlide);
+        const fictionBooksID = document.querySelectorAll(
+            `#bookButton_${fictionBooks[i].id}`
+        );
+        fictionBooksID.forEach((element) => {
+            element.addEventListener("click", () => {
+                window.location.href =
+                    "http://127.0.0.1:5501/aboutBook/aboutBook.html";
+                // bookName = bookDatas[key].name;
+                window.localStorage.setItem("bookName", fictionBooks[i].name);
+                window.localStorage.setItem(
+                    "bookDescription",
+                    fictionBooks[i].description
+                );
+                window.localStorage.setItem(
+                    "bookAuthor",
+                    fictionBooks[i].author
+                );
+                window.localStorage.setItem("bookImage", fictionBooks[i].image);
+                window.localStorage.setItem(
+                    "bookPublishedData",
+                    fictionBooks[i].publishedDate.slice(0, 4)
+                );
+            });
+        });
     }
 });
 
@@ -225,12 +286,43 @@ document.getElementById("philosophy").addEventListener("click", () => {
             <h4>${philosophyBooks[i].name}</h4>
             <p>${philosophyBooks[i].author}</p>
             <div class="btn-container">
-                <button class=${philosophyBooks[i].id}>Read more</button>
+            <button id="bookButton_${philosophyBooks[i].id}">Read more</button>
             </div>
         </div>
     
         `;
         allBooksContainer.append(swiperSlide);
+
+        const philosophyBooksID = document.querySelectorAll(
+            `#bookButton_${philosophyBooks[i].id}`
+        );
+        philosophyBooksID.forEach((element) => {
+            element.addEventListener("click", () => {
+                window.location.href =
+                    "http://127.0.0.1:5501/aboutBook/aboutBook.html";
+                // bookName = bookDatas[key].name;
+                window.localStorage.setItem(
+                    "bookName",
+                    philosophyBooks[i].name
+                );
+                window.localStorage.setItem(
+                    "bookDescription",
+                    philosophyBooks[i].description
+                );
+                window.localStorage.setItem(
+                    "bookAuthor",
+                    philosophyBooks[i].author
+                );
+                window.localStorage.setItem(
+                    "bookImage",
+                    philosophyBooks[i].image
+                );
+                window.localStorage.setItem(
+                    "bookPublishedData",
+                    philosophyBooks[i].publishedDate.slice(0, 4)
+                );
+            });
+        });
     }
 });
 document.getElementById("drama").addEventListener("click", () => {
@@ -249,12 +341,33 @@ document.getElementById("drama").addEventListener("click", () => {
             <h4>${dramaBooks[i].name}</h4>
             <p>${dramaBooks[i].author}</p>
             <div class="btn-container">
-                <button class=${dramaBooks[i].id}>Read more</button>
+            <button id="bookButton_${dramaBooks[i].id}">Read more</button>
             </div>
         </div>
     
         `;
         allBooksContainer.append(swiperSlide);
+        const dramaBooksID = document.querySelectorAll(
+            `#bookButton_${dramaBooks[i].id}`
+        );
+        dramaBooksID.forEach((element) => {
+            element.addEventListener("click", () => {
+                window.location.href =
+                    "http://127.0.0.1:5501/aboutBook/aboutBook.html";
+                // bookName = bookDatas[key].name;
+                window.localStorage.setItem("bookName", dramaBooks[i].name);
+                window.localStorage.setItem(
+                    "bookDescription",
+                    dramaBooks[i].description
+                );
+                window.localStorage.setItem("bookAuthor", dramaBooks[i].author);
+                window.localStorage.setItem("bookImage", dramaBooks[i].image);
+                window.localStorage.setItem(
+                    "bookPublishedData",
+                    dramaBooks[i].publishedDate.slice(0, 4)
+                );
+            });
+        });
     }
 });
 document.getElementById("biography").addEventListener("click", () => {
@@ -273,12 +386,40 @@ document.getElementById("biography").addEventListener("click", () => {
             <h4>${biographyBooks[i].name}</h4>
             <p>${biographyBooks[i].author}</p>
             <div class="btn-container">
-                <button class=${biographyBooks[i].id}>Read more</button>
+            <button id="bookButton_${biographyBooks[i].id}">Read more</button>
             </div>
         </div>
     
         `;
         allBooksContainer.append(swiperSlide);
+
+        const biographyBooksID = document.querySelectorAll(
+            `#bookButton_${biographyBooks[i].id}`
+        );
+        biographyBooksID.forEach((element) => {
+            element.addEventListener("click", () => {
+                window.location.href =
+                    "http://127.0.0.1:5501/aboutBook/aboutBook.html";
+                // bookName = bookDatas[key].name;
+                window.localStorage.setItem("bookName", biographyBooks[i].name);
+                window.localStorage.setItem(
+                    "bookDescription",
+                    biographyBooks[i].description
+                );
+                window.localStorage.setItem(
+                    "bookAuthor",
+                    biographyBooks[i].author
+                );
+                window.localStorage.setItem(
+                    "bookImage",
+                    biographyBooks[i].image
+                );
+                window.localStorage.setItem(
+                    "bookPublishedData",
+                    biographyBooks[i].publishedDate.slice(0, 4)
+                );
+            });
+        });
     }
 });
-export let bookName;
+// export let bookName;

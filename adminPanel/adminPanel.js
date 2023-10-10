@@ -80,8 +80,10 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const joinTableBody = document.getElementById("join-tbody");
 const contactTableBody = document.getElementById("contact-tbody");
+const booksTableBody = document.getElementById("books-tbody");
 const userDataRef = ref(db, `/userData`);
 const userContactRef = ref(db, `/userContact`);
+const booksDataRef = ref(db, `/bookData`);
 
 onValue(userDataRef, (snapshot) => {
     const userData = snapshot.val();
@@ -120,6 +122,27 @@ onValue(userContactRef, (snapshot) => {
         `;
 
         contactTableBody.append(tr);
+    });
+});
+
+onValue(booksDataRef, (snapshot) => {
+    const bookData = snapshot.val();
+    const keys = Object.keys(bookData);
+
+    keys.map((key, index) => {
+        const bookName = bookData[key].name;
+        const bookDescription = bookData[key].description.slice(0, 40) + "...";
+        const bookCategory = bookData[key].type;
+        const bookAuthor = bookData[key].author;
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${(index += 1)}</td>
+          <td>${bookName}</td>
+          <td>${bookDescription}</td>
+          <td>${bookCategory}</td>
+          <td>${bookAuthor}</td>
+      `;
+        booksTableBody.append(tr);
     });
 });
 
@@ -171,6 +194,7 @@ const booksAPI = {
             saleInfo: bookSaleInfo,
             publishedDate: bookPublishDate,
         };
+        console.log(bookData.description);
 
         const newBookData = push(child(ref(db), `/bookData`)).key;
 
@@ -182,22 +206,3 @@ document
     .getElementById("searchForm")
     .addEventListener("submit", booksAPI.fillInputs);
 bookForm.addEventListener("submit", booksAPI.sendData);
-
-// const bookType = bookForm.elements["book-type"];
-
-//     e.preventDefault();
-//     const bookForm = document.getElementById("bookForm");
-
-//     console.log(bookName);
-
-// const bookData = {
-//     name: bookName,
-//     author: authorName,
-//     image: bookImage,
-//     decrip: description,
-//     type: bookType,
-// };
-// const newBookData = push(child(ref(db), `/bookData`)).key;
-// set(ref(db, `/bookData/${newBookData}`), bookData);
-// });
-// Sdelayem cerez obyekt
