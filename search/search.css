@@ -194,6 +194,8 @@ select {
   font-style: normal;
   font-weight: 400;
   line-height: 196.187%; /* 27.466px */
+  overflow-y: scroll;
+  height: 400px;
 }
 
 .slider-btn {
@@ -206,7 +208,7 @@ select {
 
 .swiper-button-next,
 .swiper-button-prev {
-  top: 20%;
+  top: 40%;
 }
 
 @media (max-width: 1200px) {
@@ -230,6 +232,9 @@ select {
   }
 }
 @media (max-width: 716px) {
+  .book-info-container {
+    height: 1000px;
+  }
   .info-main {
     display: flex;
     flex-direction: column;

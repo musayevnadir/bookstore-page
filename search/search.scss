@@ -90,7 +90,7 @@
 }
 
 .description-container {
-  //   background-color: #a1743d;
+  // background-color: #a1743d;
   width: 70%;
   h2 {
     text-align: start;
@@ -101,16 +101,16 @@
     margin-bottom: 10px;
   }
   p {
-    // background-color: #29b59e;
     color: var(--, #241400);
     font-family: Montserrat;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 196.187%; /* 27.466px */
+    overflow-y: scroll;
+    height: 400px;
   }
 }
-
 .slider-btn {
   transition: transform 0.3s ease;
 }
@@ -121,7 +121,7 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  top: 20%;
+  top: 40%;
 }
 
 // ? Main Response-----------------------------
@@ -156,6 +156,9 @@
 // ! Screen 716px
 
 @media (max-width: 716px) {
+  .book-info-container {
+    height: 1000px
+  }
   .info-main {
     display: flex;
     flex-direction: column;
