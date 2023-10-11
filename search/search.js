@@ -17,6 +17,8 @@ const SLIDER = document.querySelector(".swiper-wrapper");
 
 const bookInfoContainer = document.querySelector(".book-info-container");
 
+const myForm = document.querySelector("#myForm");
+
 // ! Button Slider Dom Elements
 const btnSliderLeft = document.querySelector(".slider-btn-left");
 const btnSliderRight = document.querySelector(".slider-btn-rigth");
@@ -35,7 +37,10 @@ const swiper = new Swiper(".swiper", {
 });
 
 // ! Click Search API
-btnSearch.addEventListener("click", () => {
+
+myForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  SLIDER.innerHTML = "";
   if (inputSearch.value !== "") {
     fetch(
       `https://www.googleapis.com/books/v1/volumes?q=${inputSearch.value}&key=${apiKey}`
