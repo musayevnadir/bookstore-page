@@ -232,4 +232,8 @@ body {
   html {
     font-size: 7px;
   }
+}
+.main-container {
+  width: 90%;
+  margin: 0 auto;
 }/*# sourceMappingURL=catalog.css.map */

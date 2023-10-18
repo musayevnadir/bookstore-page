@@ -150,15 +150,14 @@ body {
   display: flex;
   justify-content: space-between;
   font-size: 0.9rem;
+  /* Active link styles (for the current page) */
 }
 .header-container header nav ul a {
   display: flex;
   transition: 0.3s ease;
 }
-.header-container header nav ul a:hover {
-  text-decoration: underline;
-  color: #e16a00;
-  font-weight: 700;
+.header-container header nav ul a .active {
+  color: #e16a00; /* Color for active links */
 }
 .header-container header nav ul li {
   list-style: none;
