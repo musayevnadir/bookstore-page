@@ -4,25 +4,25 @@
 // Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
 import {
-  getDatabase,
-  ref,
-  get,
-  set,
-  onValue,
-  child,
-  push,
+    getDatabase,
+    ref,
+    get,
+    set,
+    onValue,
+    child,
+    push,
 } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCOPLmzbWpJJqh3v9jxPilDKFrJlgiZi6E",
-  authDomain: "bookstore-3597f.firebaseapp.com",
-  databaseURL:
-    "https://bookstore-3597f-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "bookstore-3597f",
-  storageBucket: "bookstore-3597f.appspot.com",
-  messagingSenderId: "659320410615",
-  appId: "1:659320410615:web:0c78bc27aef1b9c2b65ef2",
+    apiKey: "AIzaSyCOPLmzbWpJJqh3v9jxPilDKFrJlgiZi6E",
+    authDomain: "bookstore-3597f.firebaseapp.com",
+    databaseURL:
+        "https://bookstore-3597f-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "bookstore-3597f",
+    storageBucket: "bookstore-3597f.appspot.com",
+    messagingSenderId: "659320410615",
+    appId: "1:659320410615:web:0c78bc27aef1b9c2b65ef2",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -38,12 +38,12 @@ const input = document.querySelector(".hamburger");
 const style = document.createElement("style");
 
 function openPopup() {
-  popup.style.display = "block";
-  header.style.zIndex = "0";
+    popup.style.display = "block";
+    header.style.zIndex = "0";
 }
 
 function closePopup() {
-  popup.style.display = "none";
+    popup.style.display = "none";
 }
 
 showPopupIcon.addEventListener("click", openPopup);
@@ -51,9 +51,9 @@ showPopupButton.addEventListener("click", openPopup);
 closePopupButton.addEventListener("click", closePopup);
 
 window.addEventListener("click", (event) => {
-  if (event.target === popup) {
-    closePopup();
-  }
+    if (event.target === popup) {
+        closePopup();
+    }
 });
 
 // Hamburger menu
@@ -62,21 +62,21 @@ const sideBar = document.querySelector(".burger header nav ul ");
 const wrapper = document.querySelector(".wrapper");
 
 hamburger.addEventListener("click", () => {
-  if (hamburger.checked) {
-    sideBar.style.display = "flex";
-    sideBar.style.zIndex = "2";
-    sideBar.style.alignItems = "flex-end";
-    wrapper.style.background = "rgba(36, 20, 0, 0.90)";
-    header.style.background = "rgba(36, 20, 0, 0.90)";
-    // headerText.style.zIndex = "-1";
-    sectionInfo.style.marginTop = "0";
-  } else {
-    // headerText.style.zIndex = "0";
-    sideBar.style.display = "none";
-    wrapper.style.background = "none";
-    header.style.background = "none";
-    sectionInfo.style.marginTop = "5rem";
-  }
+    if (hamburger.checked) {
+        sideBar.style.display = "flex";
+        sideBar.style.zIndex = "2";
+        sideBar.style.alignItems = "flex-end";
+        wrapper.style.background = "rgba(36, 20, 0, 0.90)";
+        header.style.background = "rgba(36, 20, 0, 0.90)";
+        // headerText.style.zIndex = "-1";
+        sectionInfo.style.marginTop = "0";
+    } else {
+        // headerText.style.zIndex = "0";
+        sideBar.style.display = "none";
+        wrapper.style.background = "none";
+        header.style.background = "none";
+        sectionInfo.style.marginTop = "5rem";
+    }
 });
 document.head.append(style);
 
@@ -91,57 +91,52 @@ const usersRef = ref(db, `/users`);
 const userDataRef = ref(db, `/userData`);
 
 document.getElementById("form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (!nameInput.value.trim() || !emailInput.value.trim()) {
-    inputsDiv.innerHTML = "";
-    errorP.textContent = "Please fill in all fields";
-    errorP.classList.add("errorText");
-    inputsDiv.append(errorP);
-  } else {
-    inputsDiv.innerHTML = "";
-    successP.textContent = "Thank you for joining us!";
-    successP.classList.add("successText");
-    inputsDiv.append(successP);
-    setTimeout(closePopup, 2000);
-    showPopupBtn.innerHTML = "";
+    e.preventDefault();
+    if (!nameInput.value.trim() || !emailInput.value.trim()) {
+        inputsDiv.innerHTML = "";
+        errorP.textContent = "Please fill in all fields";
+        errorP.classList.add("errorText");
+        inputsDiv.append(errorP);
+    } else {
+        inputsDiv.innerHTML = "";
+        successP.textContent = "Thank you for joining us!";
+        successP.classList.add("successText");
+        inputsDiv.append(successP);
+        setTimeout(closePopup, 2000);
+        showPopupBtn.innerHTML = "";
 
-    const userName = nameInput.value;
-    const userEmail = emailInput.value;
-    const userData = {
-      user: userName,
-      email: userEmail,
-    };
-    const newUserData = push(child(ref(db), `/userData`)).key;
-    set(ref(db, `/userData/${newUserData}`), userData);
+        const userName = nameInput.value;
+        const userEmail = emailInput.value;
+        const userData = {
+            user: userName,
+            email: userEmail,
+        };
+        const newUserData = push(child(ref(db), `/userData`)).key;
+        set(ref(db, `/userData/${newUserData}`), userData);
 
-    onValue(userDataRef, (snapshot) => {
-      const userData = snapshot.val();
-      for (const key in userData) {
-        const userValue = userData[key].user;
-        showPopupBtn.textContent = userValue;
-      }
-    });
-  }
+        onValue(userDataRef, (snapshot) => {
+            const userData = snapshot.val();
+            for (const key in userData) {
+                const userValue = userData[key].user;
+                showPopupBtn.textContent = userValue;
+            }
+        });
+    }
 });
 
-// ! Link Click
-// let links = document.querySelectorAll(".page-link");
+document.getElementById("logo").addEventListener("click", () => {
+    window.location.href = "http://127.0.0.1:5501/index.html";
+});
 
-// links.forEach((butunLinkler) => {
-//   butunLinkler.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     let clickedLink = e.target;
-//     let linkHref = clickedLink.getAttribute("href");
-//     let currentURL = window.location.href; // Обновляем текущий URL
+// const links = document.querySelectorAll(".header-container header nav ul a ");
+// links.forEach((link) => {
+//     link.addEventListener("click", function (event) {
+//         // Remove the "active" class from all links
+//         links.forEach((link) => {
+//             link.classList.remove("active");
+//         });
 
-//     console.log("на какой мы кликнули", linkHref);
-//     console.log("на каком мы находимся", currentURL);
-
-//     if (linkHref !== currentURL) {
-//       butunLinkler.style.color = "#E16A00";
-//       butunLinkler.fontWeight = "bold";
-//       butunLinkler.style.textDecoration = "underline";
-//       window.location.href = linkHref;
-//     }
-//   });
+//         // Add the "active" class to the clicked link
+//         link.classList.add("active");
+//     });
 // });
