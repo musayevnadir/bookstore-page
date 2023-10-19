@@ -38,19 +38,22 @@ const userContactRef = ref(db, `/userContact`);
 const contactForm = document.querySelector("#contactForm");
 contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    const userName = contactForm.elements["name"].value;
-    const userEmail = contactForm.elements["email"].value;
-    const userAdress = contactForm.elements["adress"].value;
-    const userPhone = contactForm.elements["phone"].value;
+    const userName = contactForm.elements["name"];
+    const userEmail = contactForm.elements["email"];
+    const userAdress = contactForm.elements["adress"];
+    const userPhone = contactForm.elements["phone"];
+    const userNameValue = userName.value;
+    const userEmailValue = userEmail.value;
+    const userAdressValue = userAdress.value;
+    const userPhoneValue = userPhone.value;
 
     const userContact = {
-        name: userName,
-        email: userEmail,
-        adress: userAdress,
-        phone: userPhone,
+        name: userNameValue,
+        email: userEmailValue,
+        adress: userAdressValue,
+        phone: userPhoneValue,
     };
 
     const newUserContact = push(child(ref(db), `/userContact`)).key;
-
     set(ref(db, `/userContact/${newUserContact}`), userContact);
 });

@@ -1,4 +1,5 @@
 /** @format */
+
 const swiper = new Swiper(".swiper", {
     direction: "horizontal",
     loop: false,
@@ -221,7 +222,7 @@ document.getElementById("all-books").addEventListener("click", () => {
     }
 });
 
-document.getElementById("fiction").addEventListener("click", () => {
+document.querySelector("#fiction").addEventListener("click", () => {
     const swiperCont = document.querySelectorAll(".all-books-container");
     swiperCont.forEach((element) => {
         element.style.display = "none";
@@ -270,7 +271,7 @@ document.getElementById("fiction").addEventListener("click", () => {
     }
 });
 
-document.getElementById("philosophy").addEventListener("click", () => {
+document.querySelector("#philosophy").addEventListener("click", () => {
     const swiperCont = document.querySelectorAll(".all-books-container");
     swiperCont.forEach((element) => {
         element.style.display = "none";
@@ -325,6 +326,7 @@ document.getElementById("philosophy").addEventListener("click", () => {
         });
     }
 });
+
 document.getElementById("drama").addEventListener("click", () => {
     const swiperCont = document.querySelectorAll(".all-books-container");
     swiperCont.forEach((element) => {
@@ -426,4 +428,47 @@ document.getElementById("biography").addEventListener("click", () => {
 
 document.getElementById("logo").addEventListener("click", () => {
     window.location.href = "http://127.0.0.1:5501/index.html";
+});
+
+let hamburger = document.getElementById("checkbox");
+let swiperMob = document.querySelectorAll(".swiper");
+hamburger.addEventListener("click", () => {
+    if (hamburger.checked) {
+        swiperMob.forEach((element) => {
+            element.style.zIndex = "-1";
+        });
+    } else {
+        swiperMob.forEach((element) => {
+            element.style.zIndex = "1";
+        });
+    }
+});
+
+const popup = document.querySelector(".popup");
+const showPopupIcon = document.querySelector(".showPopupIcon");
+const showPopupButton = document.querySelector(".showPopupBtn");
+const closePopupButton = document.getElementById("closePopup");
+
+function openPopup() {
+    popup.style.display = "block";
+    swiperMob.forEach((element) => {
+        element.style.zIndex = "-1";
+    });
+}
+
+function closePopup() {
+    popup.style.display = "none";
+    swiperMob.forEach((element) => {
+        element.style.zIndex = "1";
+    });
+}
+
+showPopupIcon.addEventListener("click", openPopup);
+showPopupButton.addEventListener("click", openPopup);
+closePopupButton.addEventListener("click", closePopup);
+
+window.addEventListener("click", (event) => {
+    if (event.target === popup) {
+        closePopup();
+    }
 });

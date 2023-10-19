@@ -57,7 +57,7 @@ window.addEventListener("click", (event) => {
 });
 
 // Hamburger menu
-const hamburger = document.getElementById("checkbox");
+let hamburger = document.getElementById("checkbox");
 const sideBar = document.querySelector(".burger header nav ul ");
 const wrapper = document.querySelector(".wrapper");
 
@@ -127,16 +127,3 @@ document.getElementById("form").addEventListener("submit", (e) => {
 document.getElementById("logo").addEventListener("click", () => {
     window.location.href = "http://127.0.0.1:5501/index.html";
 });
-
-// const links = document.querySelectorAll(".header-container header nav ul a ");
-// links.forEach((link) => {
-//     link.addEventListener("click", function (event) {
-//         // Remove the "active" class from all links
-//         links.forEach((link) => {
-//             link.classList.remove("active");
-//         });
-
-//         // Add the "active" class to the clicked link
-//         link.classList.add("active");
-//     });
-// });
