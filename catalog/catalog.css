@@ -223,6 +223,19 @@ body {
       align-items: center;
     }
   } */
+@media all and (max-width: 650px) {
+  html {
+    font-size: 12px;
+  }
+  .nav-links {
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-links p {
+    margin: 0.5rem 0;
+  }
+}
 @media all and (max-width: 510px) {
   html {
     font-size: 10px;

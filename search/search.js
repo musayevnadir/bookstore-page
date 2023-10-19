@@ -25,51 +25,50 @@ const btnSliderRight = document.querySelector(".slider-btn-rigth");
 
 // ! Click Button Slider
 const swiper = new Swiper(".swiper", {
-  direction: "horizontal",
-  // loop: true,
+    direction: "horizontal",
+    // loop: true,
 
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
 
-  speed: 800,
+    speed: 800,
 });
 
 // ! Click Search API
 
 myForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  SLIDER.innerHTML = "";
-  if (inputSearch.value !== "") {
-    fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${inputSearch.value}&key=${apiKey}`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        inputSearch.value = "";
-        console.log("salam");
-        const dataItems = data.items;
-        manageSlider(dataItems);
-      });
-  } else {
-    alert("Введите текст !!");
-  }
+    event.preventDefault();
+    SLIDER.innerHTML = "";
+    if (inputSearch.value !== "") {
+        fetch(
+            `https://www.googleapis.com/books/v1/volumes?q=${inputSearch.value}&key=${apiKey}`
+        )
+            .then((response) => response.json())
+            .then((data) => {
+                inputSearch.value = "";
+                const dataItems = data.items;
+                manageSlider(dataItems);
+            });
+    } else {
+        alert("Fill in the blanks");
+    }
 });
 
 // ! Function ManageSlider
 function manageSlider(dataItems) {
-  bookInfoContainer.style.display = "block";
-  let arrayBookAuthors = [];
-  for (let i = 0; i < dataItems.length; i++) {
-    const title = dataItems[i].volumeInfo.title;
-    const description = dataItems[i].volumeInfo.description;
-    const imgBook = dataItems[i].volumeInfo.imageLinks.thumbnail;
+    bookInfoContainer.style.display = "block";
+    let arrayBookAuthors = [];
+    for (let i = 0; i < dataItems.length; i++) {
+        const title = dataItems[i].volumeInfo.title;
+        const description = dataItems[i].volumeInfo.description;
+        const imgBook = dataItems[i].volumeInfo.imageLinks.thumbnail;
 
-    //  authors push in array
-    const authors = dataItems[i].volumeInfo.authors;
-    arrayBookAuthors.push(authors);
-    SLIDER.innerHTML += `
+        //  authors push in array
+        const authors = dataItems[i].volumeInfo.authors;
+        arrayBookAuthors.push(authors);
+        SLIDER.innerHTML += `
     <div class="swiper-slide">
     <div class="info-main">
       <div class="img-container">
@@ -83,5 +82,15 @@ function manageSlider(dataItems) {
     </div>
   </div>
     `;
-  }
+    }
 }
+
+const hamburger = document.getElementById("checkbox");
+const searchMain = document.querySelector(".search-main");
+hamburger.addEventListener("click", () => {
+    if (hamburger.checked) {
+        searchMain.style.zIndex = "-1";
+    } else {
+        searchMain.style.zIndex = "1";
+    }
+});

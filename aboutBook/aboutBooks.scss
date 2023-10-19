@@ -4,20 +4,15 @@
     margin: 10rem 0 5rem;
 }
 
-main {
+.main {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     font-family: $ff-montserrat;
 
-    .main-section-right {
-        img {
-            width: 300px;
-        }
-    }
     .main-section-right img {
-        // margin-right: 10rem;
-        width: 200px;
+        width: 100%;
+        margin-right: 2rem;
     }
     .main-section-left {
         width: 50%;

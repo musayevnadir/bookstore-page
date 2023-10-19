@@ -102,22 +102,20 @@ select {
   margin: 10rem 0 5rem;
 }
 
-main {
+.main {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   font-family: "Montserrat", sans-serif;
 }
-main .main-section-right img {
-  width: 300px;
+.main .main-section-right img {
+  width: 100%;
+  margin-right: 2rem;
 }
-main .main-section-right img {
-  width: 200px;
-}
-main .main-section-left {
+.main .main-section-left {
   width: 50%;
 }
-main .main-section-left button {
+.main .main-section-left button {
   color: #fff;
   background-color: #e16a00;
   font-weight: 700;
@@ -129,7 +127,7 @@ main .main-section-left button {
   border: none;
   border-radius: 5px;
 }
-main .main-section-left #bookPublishedDate {
+.main .main-section-left #bookPublishedDate {
   color: #fff;
   background-color: #2f80ed;
   width: 69px;
@@ -139,19 +137,19 @@ main .main-section-left #bookPublishedDate {
   font-weight: 700;
   margin-bottom: 1rem;
 }
-main .main-section-left #bookName {
+.main .main-section-left #bookName {
   color: #241400;
   font-size: 2rem;
 }
-main .main-section-left #bookAuthor {
+.main .main-section-left #bookAuthor {
   font-weight: 500;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
-main .main-section-left #bookDescription {
+.main .main-section-left #bookDescription {
   font-size: 0.9rem;
   line-height: 196.187%;
 }
-main .main-section-left button:hover {
+.main .main-section-left button:hover {
   transform: scale(1.1);
 }/*# sourceMappingURL=aboutBooks.css.map */
