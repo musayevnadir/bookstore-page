@@ -1,7 +1,5 @@
 Online book store website developed with HTML, SASS, Javascript and SwiperJs library.
 
-Home page link:
-
 Features
 Homepage
 
