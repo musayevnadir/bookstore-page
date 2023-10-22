@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the Awesome Bookstore Website! This project is a combination of HTML, SASS, JavaScript, and the SwiperJs library. It features a visually appealing bookstore with an admin panel for easy book management.
+Welcome to the Awesome Bookstore Website! This project is a combination of HTML, SASS, JavaScript, and the SwiperJs library.
 
 ## Features
 
