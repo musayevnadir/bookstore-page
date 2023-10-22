@@ -10,6 +10,7 @@ Welcome to the Our Bookstore Website! This project is a combination of HTML, SAS
 
 # Admin panel link:
 
+-   https://bookstore-admin-alihuseynzade23.netlify.app/
 -   Login: ali
 -   Password: 12345
 
