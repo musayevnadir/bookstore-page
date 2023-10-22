@@ -24,7 +24,6 @@ The admin panel simplifies book management:
 
 -   **Delete Books:** Remove books from your collection with a click.
 
-````markdown
 ## Technologies Used
 
 This project leverages the following technologies:
@@ -46,4 +45,7 @@ To run this project locally, follow these steps:
     ```bash
     git clone https://github.com/your-username/awesome-bookstore.git
     ```
-````
+
+```
+
+```
