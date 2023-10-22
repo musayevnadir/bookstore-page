@@ -6,10 +6,12 @@ Welcome to the Our Bookstore Website! This project is a combination of HTML, SAS
 
 # Live server link:
 
+-   https://bookstore-page-alihuseynzade23.netlify.app/
+
 # Admin panel link:
 
-Login: ali
-Password: 12345
+-   Login: ali
+-   Password: 12345
 
 ## Features
 
@@ -51,9 +53,4 @@ To run this project locally, follow these steps:
 
     ```bash
     git clone https://github.com/alihuseynzade23/bookstore-page.git
-
     ```
-
-```
-
-```
