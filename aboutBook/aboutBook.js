@@ -19,5 +19,5 @@ const imageOfBook = document.getElementById("bookImage");
 imageOfBook.setAttribute("src", bookImage);
 // imageOfBook.style.marginRight = "5rem";
 document.getElementById("goBackBtn").addEventListener("click", () => {
-    window.location.href = "http://127.0.0.1:5501/catalog/catalog.html";
+    window.location.href = "/catalog/catalog.html";
 });

@@ -153,8 +153,7 @@ onValue(bookDataRef, (snapshot) => {
         );
         buttons.forEach((element) => {
             element.addEventListener("click", () => {
-                window.location.href =
-                    "http://127.0.0.1:5501/aboutBook/aboutBook.html";
+                window.location.href = "/aboutBook/aboutBook.html";
                 // bookName = bookDatas[key].name;
                 window.localStorage.setItem("bookName", bookDatas[key].name);
                 window.localStorage.setItem(
@@ -203,8 +202,7 @@ document.getElementById("all-books").addEventListener("click", () => {
         allBooksID.forEach((element) => {
             console.log("test");
             element.addEventListener("click", () => {
-                window.location.href =
-                    "http://127.0.0.1:5501/aboutBook/aboutBook.html";
+                window.location.href = "/aboutBook/aboutBook.html";
                 // bookName = bookDatas[key].name;
                 window.localStorage.setItem("bookName", allBooks[i].name);
                 window.localStorage.setItem(
@@ -249,8 +247,7 @@ document.querySelector("#fiction").addEventListener("click", () => {
         );
         fictionBooksID.forEach((element) => {
             element.addEventListener("click", () => {
-                window.location.href =
-                    "http://127.0.0.1:5501/aboutBook/aboutBook.html";
+                window.location.href = "/aboutBook/aboutBook.html";
                 // bookName = bookDatas[key].name;
                 window.localStorage.setItem("bookName", fictionBooks[i].name);
                 window.localStorage.setItem(
@@ -299,8 +296,7 @@ document.querySelector("#philosophy").addEventListener("click", () => {
         );
         philosophyBooksID.forEach((element) => {
             element.addEventListener("click", () => {
-                window.location.href =
-                    "http://127.0.0.1:5501/aboutBook/aboutBook.html";
+                window.location.href = "/aboutBook/aboutBook.html";
                 // bookName = bookDatas[key].name;
                 window.localStorage.setItem(
                     "bookName",
@@ -354,8 +350,7 @@ document.getElementById("drama").addEventListener("click", () => {
         );
         dramaBooksID.forEach((element) => {
             element.addEventListener("click", () => {
-                window.location.href =
-                    "http://127.0.0.1:5501/aboutBook/aboutBook.html";
+                window.location.href = "/aboutBook/aboutBook.html";
                 // bookName = bookDatas[key].name;
                 window.localStorage.setItem("bookName", dramaBooks[i].name);
                 window.localStorage.setItem(
@@ -400,8 +395,7 @@ document.getElementById("biography").addEventListener("click", () => {
         );
         biographyBooksID.forEach((element) => {
             element.addEventListener("click", () => {
-                window.location.href =
-                    "http://127.0.0.1:5501/aboutBook/aboutBook.html";
+                window.location.href = "/aboutBook/aboutBook.html";
                 // bookName = bookDatas[key].name;
                 window.localStorage.setItem("bookName", biographyBooks[i].name);
                 window.localStorage.setItem(
@@ -427,7 +421,7 @@ document.getElementById("biography").addEventListener("click", () => {
 // export let bookName;
 
 document.getElementById("logo").addEventListener("click", () => {
-    window.location.href = "http://127.0.0.1:5501/index.html";
+    window.location.href = "/index.html";
 });
 
 let hamburger = document.getElementById("checkbox");
