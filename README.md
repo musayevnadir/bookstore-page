@@ -1,8 +1,8 @@
-# Awesome Bookstore Website
+# Bookstore Website
 
 ## Introduction
 
-Welcome to the Awesome Bookstore Website! This project is a combination of HTML, SASS, JavaScript, and the SwiperJs library.
+Welcome to the Our Bookstore Website! This project is a combination of HTML, SASS, JavaScript, and the SwiperJs library.
 
 ## Features
 
@@ -14,6 +14,29 @@ Welcome to the Awesome Bookstore Website! This project is a combination of HTML,
 
 -   **Responsive Design:** The website adapts perfectly to various devices, from desktops to mobile phones.
 
+## Admin Panel
+
+The admin panel simplifies book management:
+
+-   **Add Books:** Easily add new books by completing a simple form with title, author, description, and cover image.
+
+-   **Update Books:** Keep your collection accurate by updating book information.
+
+-   **Delete Books:** Remove books from your collection with a click.
+
+````markdown
+## Technologies Used
+
+This project leverages the following technologies:
+
+-   **HTML:** The backbone of the website's structure and content.
+
+-   **SASS:** For efficient and maintainable CSS styling.
+
+-   **JavaScript:** To provide interactivity and functionality.
+
+-   **SwiperJs:** To create a beautiful book slider for the homepage.
+
 ## Getting Started
 
 To run this project locally, follow these steps:
@@ -23,3 +46,4 @@ To run this project locally, follow these steps:
     ```bash
     git clone https://github.com/your-username/awesome-bookstore.git
     ```
+````
