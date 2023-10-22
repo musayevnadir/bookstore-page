@@ -91,6 +91,30 @@ hamburger.addEventListener("click", () => {
     if (hamburger.checked) {
         searchMain.style.zIndex = "-1";
     } else {
-        searchMain.style.zIndex = "1";
+        searchMain.style.zIndex = "0";
     }
 });
+
+// const popup = document.querySelector(".popup");
+// const showPopupIcon = document.querySelector(".showPopupIcon");
+// const showPopupButton = document.querySelector(".showPopupBtn");
+// const closePopupButton = document.getElementById("closePopup");
+// function openPopup() {
+//     popup.style.display = "block";
+//     searchMain.style.zIndex = " -1";
+// }
+
+// function closePopup() {
+//     popup.style.display = "none";
+//     searchMain.style.zIndex = " 0";
+// }
+
+// showPopupIcon.addEventListener("click", openPopup);
+// showPopupButton.addEventListener("click", openPopup);
+// closePopupButton.addEventListener("click", closePopup);
+
+// window.addEventListener("click", (event) => {
+//     if (event.target === popup) {
+//         closePopup();
+//     }
+// });
