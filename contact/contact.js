@@ -42,6 +42,7 @@ contactForm.addEventListener("submit", (event) => {
     const userEmail = contactForm.elements["email"];
     const userAdress = contactForm.elements["adress"];
     const userPhone = contactForm.elements["phone"];
+    const note = contactForm.elements["note"];
     const userNameValue = userName.value;
     const userEmailValue = userEmail.value;
     const userAdressValue = userAdress.value;
@@ -56,4 +57,9 @@ contactForm.addEventListener("submit", (event) => {
 
     const newUserContact = push(child(ref(db), `/userContact`)).key;
     set(ref(db, `/userContact/${newUserContact}`), userContact);
+    userName.value = "";
+    userEmail.value = "";
+    userAdress.value = "";
+    userPhone.value = "";
+    note.value = "";
 });

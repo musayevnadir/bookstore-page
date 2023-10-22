@@ -254,7 +254,7 @@
                         <p style="margin-bottom: 0.9rem">
                             Library Bookstore Eacamp
                         </p>
-                        <p>© 2003-2023</p>
+                        <p class="terms-mobile"></p>
                     </div>
 
                     <div class="footer-container">
@@ -284,10 +284,7 @@
                             <button>Request a call</button>
                         </div>
                     </div>
-                    <p class="terms">
-                        All rights reserved © 2003-2023 LIBRARY TERMS OF USE |
-                        Privacy Policy
-                    </p>
+                    <p class="terms"></p>
                 </div>
             </footer>
         </div>
@@ -295,8 +292,7 @@
         <script>
             const goToCatalog = document.querySelector("#go-to-catalog");
             goToCatalog.addEventListener("click", () => {
-                window.location.href =
-                    "http://127.0.0.1:5501/catalog/catalog.html";
+                window.location.href = "/catalog/catalog.html";
             });
 
             const hamburger = document.getElementById("checkbox");

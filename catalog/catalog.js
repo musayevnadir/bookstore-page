@@ -466,3 +466,7 @@ window.addEventListener("click", (event) => {
         closePopup();
     }
 });
+const footerText = document.querySelector(".terms");
+footerText.innerHTML = `All rights reserved © 2003-${new Date().getFullYear()} LIBRARY TERMS OF USE | Privacy Policy`;
+const footerTextMobile = document.querySelector(".terms-mobile");
+footerTextMobile.innerHTML = `© 2003-${new Date().getFullYear()}`;
