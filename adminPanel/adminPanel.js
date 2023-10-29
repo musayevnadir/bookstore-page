@@ -66,16 +66,15 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCOPLmzbWpJJqh3v9jxPilDKFrJlgiZi6E",
-    authDomain: "bookstore-3597f.firebaseapp.com",
+    apiKey: "AIzaSyDuJ4z0tdBfg2pTCLLMDNrhFyAjCiAitRs",
+    authDomain: "bookstore-abb15.firebaseapp.com",
     databaseURL:
-        "https://bookstore-3597f-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "bookstore-3597f",
-    storageBucket: "bookstore-3597f.appspot.com",
-    messagingSenderId: "659320410615",
-    appId: "1:659320410615:web:0c78bc27aef1b9c2b65ef2",
+        "https://bookstore-abb15-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "bookstore-abb15",
+    storageBucket: "bookstore-abb15.appspot.com",
+    messagingSenderId: "825569914637",
+    appId: "1:825569914637:web:861e27fa24660daf24ca44",
 };
-
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const joinTableBody = document.getElementById("join-tbody");
@@ -176,7 +175,7 @@ const booksAPI = {
                     bookDescription.value = bookInfo[i].volumeInfo.description;
                     bookType.value = bookInfo[i].volumeInfo.categories;
                     bookID = bookInfo[i].id;
-                    bookSaleInfo = bookInfo[i].saleInfo.listPrice.amount;
+                    // bookSaleInfo = bookInfo[i].saleInfo.listPrice.amount;
                     bookPublishDate = bookInfo[i].volumeInfo.publishedDate;
                 }
             });
@@ -191,7 +190,7 @@ const booksAPI = {
             image: bookImage.value,
             type: bookType.value,
             id: bookID,
-            saleInfo: bookSaleInfo,
+            // saleInfo: bookSaleInfo,
             publishedDate: bookPublishDate,
         };
         console.log(bookData.description);
