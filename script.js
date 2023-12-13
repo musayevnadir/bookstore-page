@@ -1,3 +1,5 @@
+/** @format */
+
 // Initialize Firebase
 // Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
@@ -13,16 +15,15 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCOPLmzbWpJJqh3v9jxPilDKFrJlgiZi6E",
-    authDomain: "bookstore-3597f.firebaseapp.com",
+    apiKey: "AIzaSyDuJ4z0tdBfg2pTCLLMDNrhFyAjCiAitRs",
+    authDomain: "bookstore-abb15.firebaseapp.com",
     databaseURL:
-        "https://bookstore-3597f-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "bookstore-3597f",
-    storageBucket: "bookstore-3597f.appspot.com",
-    messagingSenderId: "659320410615",
-    appId: "1:659320410615:web:0c78bc27aef1b9c2b65ef2",
+        "https://bookstore-abb15-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "bookstore-abb15",
+    storageBucket: "bookstore-abb15.appspot.com",
+    messagingSenderId: "825569914637",
+    appId: "1:825569914637:web:861e27fa24660daf24ca44",
 };
-
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
@@ -55,7 +56,7 @@ window.addEventListener("click", (event) => {
 });
 
 // Hamburger menu
-const hamburger = document.getElementById("checkbox");
+let hamburger = document.getElementById("checkbox");
 const sideBar = document.querySelector(".burger header nav ul ");
 const wrapper = document.querySelector(".wrapper");
 
@@ -121,3 +122,12 @@ document.getElementById("form").addEventListener("submit", (e) => {
         });
     }
 });
+
+document.getElementById("logo").addEventListener("click", () => {
+    window.location.href = "/index.html";
+});
+
+const footerText = document.querySelector(".terms");
+footerText.innerHTML = `All rights reserved © 2003-${new Date().getFullYear()} LIBRARY TERMS OF USE | Privacy Policy`;
+const footerTextMobile = document.querySelector(".terms-mobile");
+footerTextMobile.innerHTML = `© 2003-${new Date().getFullYear()}`;

@@ -29,7 +29,7 @@
       <!-- Header -->
       <div class="header-container burger">
         <header>
-          <img src="/images/Лого.svg" alt="Logo" />
+          <img id="logo" src="/images/Лого.svg" alt="Logo" />
           <!-- Navigation -->
           <nav>
             <ul>
@@ -91,7 +91,6 @@
               <div class="swiper-wrapper wrapper-allbooks">
                 <!-- Slides -->
               </div>
-            </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination noqte"></div>
 
@@ -101,17 +100,18 @@
             <div class="swiper-scrollbar swiper-scrollbar-drag"></div>
 
             <div class="swiper-button-prev">
-              <img src="./img/Vector 2.svg" alt="" />
+              <img src="./img/Vector 2.svg" height="40px" alt="" />
             </div>
 
             <div class="swiper-button-next">
-              <img src="./img/Vector 3.svg" alt="" />
+              <img src="./img/Vector 3.svg" height="40px"  alt="" />
+            </div>
             </div>
           </div>
 
           <!-- ! BESTSELLER--------------------------->
           <div class="nav-tex-bestseller">
-            <h1>Besteller</h1>
+            <h1>Bestellers</h1>
 
             <div class="nav-links-2"></div>
           </div>
@@ -121,9 +121,6 @@
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper wrapper-bestsellers">
                 <!-- Slides -->
-                <div class="swiper-slide slide-contect-container">
-                 
-                </div>
               </div>
               <!-- If we need pagination -->
               <div class="swiper-pagination"></div>
@@ -133,10 +130,10 @@
               <!-- If we need scrollbar -->
               <div class="swiper-scrollbar swiper-scrollbar-drag"></div>
               <div class="swiper-button-prev">
-                <img src="./img/Vector 2.svg" alt="" />
+                <img src="./img/Vector 2.svg" height="40px" alt="" />
               </div>
               <div class="swiper-button-next">
-                <img src="./img/Vector 3.svg" alt="" />
+                <img src="./img/Vector 3.svg" height="40px" alt="" />
               </div>
             </div>
           </div>
@@ -151,11 +148,8 @@
             <!-- Slider main container -->
             <div class="swiper">
               <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper wrapper-newReleases">
                 <!-- Slides -->
-                <div class="swiper-slide slide-contect-container wrapper-newReleases">
-                 
-                </div>
               </div>
               <!-- If we need pagination -->
               <div class="swiper-pagination"></div>
@@ -165,10 +159,10 @@
               <!-- If we need scrollbar -->
               <div class="swiper-scrollbar swiper-scrollbar-drag"></div>
               <div class="swiper-button-prev">
-                <img src="./img/Vector 2.svg" alt="" />
+                <img src="./img/Vector 2.svg" height="40px" alt="" />
               </div>
               <div class="swiper-button-next">
-                <img src="./img/Vector 3.svg" alt="" />
+                <img src="./img/Vector 3.svg" height="40px" alt="" />
               </div>
             </div>
           </div>
@@ -193,6 +187,8 @@
           </div>
         </section>
       </div>
+    </div>
+
       <!-- Footer -->
       <footer>
         <div class="main-container">
@@ -220,7 +216,7 @@
               "
             ></div>
             <p style="margin-bottom: 0.9rem">Library Bookstore Eacamp</p>
-            <p>© 2003-2023</p>
+            <p class="terms-mobile"></p>
           </div>
 
           <div class="footer-container">
@@ -250,12 +246,8 @@
               <button>Request a call</button>
             </div>
           </div>
-          <p class="terms">
-            All rights reserved © 2003-2023 LIBRARY TERMS OF USE | Privacy
-            Policy
-          </p>
+          <p class="terms"></p>
         </div>
       </footer>
-    </div>
   </body>
 </html>

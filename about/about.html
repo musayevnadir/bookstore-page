@@ -6,6 +6,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Book Page</title>
+        <!-- ? Styles Css -->
         <link rel="stylesheet" href="/styles/style.css" />
         <link rel="stylesheet" href="./about.css" />
         <link
@@ -14,7 +15,7 @@
             sizes="32x32"
             href="/images/favicon-32x32.png"
         />
-
+        <!-- ? Script JS -->
         <script src="/script.js" type="module" defer></script>
         <script src="./about.js" type="module" defer></script>
     </head>
@@ -23,13 +24,15 @@
             <!-- Header -->
             <div class="header-container burger">
                 <header>
-                    <img src="/images/Лого.svg" alt="Logo" />
+                    <img id="logo" src="/images/Лого.svg" alt="Logo" />
                     <!-- Navigation -->
                     <nav>
                         <ul>
                             <a href="/index.html"><li>Home</li></a>
                             <a href="/catalog/catalog.html"><li>Catalog</li></a>
-                            <a href="/about/about.html"><li>About Store</li></a>
+                            <a class="about-btn" href="/about/about.html"
+                                ><li>About Store</li></a
+                            >
                             <a href="/contact/contact.html"
                                 ><li>Contact Us</li></a
                             >
@@ -174,7 +177,7 @@
                         <p style="margin-bottom: 0.9rem">
                             Library Bookstore Eacamp
                         </p>
-                        <p>© 2003-2023</p>
+                        <p class="terms-mobile"></p>
                     </div>
 
                     <div class="footer-container">
@@ -204,10 +207,7 @@
                             <button>Request a call</button>
                         </div>
                     </div>
-                    <p class="terms">
-                        All rights reserved © 2003-2023 LIBRARY TERMS OF USE |
-                        Privacy Policy
-                    </p>
+                    <p class="terms"></p>
                 </div>
             </footer>
         </div>

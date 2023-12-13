@@ -21,36 +21,45 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCOPLmzbWpJJqh3v9jxPilDKFrJlgiZi6E",
-    authDomain: "bookstore-3597f.firebaseapp.com",
+    apiKey: "AIzaSyDuJ4z0tdBfg2pTCLLMDNrhFyAjCiAitRs",
+    authDomain: "bookstore-abb15.firebaseapp.com",
     databaseURL:
-        "https://bookstore-3597f-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "bookstore-3597f",
-    storageBucket: "bookstore-3597f.appspot.com",
-    messagingSenderId: "659320410615",
-    appId: "1:659320410615:web:0c78bc27aef1b9c2b65ef2",
+        "https://bookstore-abb15-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "bookstore-abb15",
+    storageBucket: "bookstore-abb15.appspot.com",
+    messagingSenderId: "825569914637",
+    appId: "1:825569914637:web:861e27fa24660daf24ca44",
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const userContactRef = ref(db, `/userContact`);
 
-const form = document.querySelector("#form");
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const userName = form.elements["name"].value;
-    const userEmail = form.elements["email"].value;
-    const userAdress = form.elements["adress"].value;
-    const userPhone = form.elements["phone"].value;
+const contactForm = document.querySelector("#contactForm");
+contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const userName = contactForm.elements["name"];
+    const userEmail = contactForm.elements["email"];
+    const userAdress = contactForm.elements["adress"];
+    const userPhone = contactForm.elements["phone"];
+    const note = contactForm.elements["note"];
+    const userNameValue = userName.value;
+    const userEmailValue = userEmail.value;
+    const userAdressValue = userAdress.value;
+    const userPhoneValue = userPhone.value;
 
     const userContact = {
-        name: userName,
-        email: userEmail,
-        adress: userAdress,
-        phone: userPhone,
+        name: userNameValue,
+        email: userEmailValue,
+        adress: userAdressValue,
+        phone: userPhoneValue,
     };
 
     const newUserContact = push(child(ref(db), `/userContact`)).key;
-
     set(ref(db, `/userContact/${newUserContact}`), userContact);
+    userName.value = "";
+    userEmail.value = "";
+    userAdress.value = "";
+    userPhone.value = "";
+    note.value = "";
 });

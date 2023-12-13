@@ -86,7 +86,7 @@ body {
 .book-img-container {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
   /* border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
-    border-top: 0.1px solid rgba(0, 0, 0, 0.25); */
+  border-top: 0.1px solid rgba(0, 0, 0, 0.25); */
 }
 
 .book-img-container img {
@@ -223,6 +223,19 @@ body {
       align-items: center;
     }
   } */
+@media all and (max-width: 650px) {
+  html {
+    font-size: 12px;
+  }
+  .nav-links {
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-links p {
+    margin: 0.5rem 0;
+  }
+}
 @media all and (max-width: 510px) {
   html {
     font-size: 10px;
@@ -232,4 +245,8 @@ body {
   html {
     font-size: 7px;
   }
+}
+.main-container {
+  width: 90%;
+  margin: 0 auto;
 }/*# sourceMappingURL=catalog.css.map */
